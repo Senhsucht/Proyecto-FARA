@@ -1,0 +1,9 @@
+C:\Users\Angel\Documents\GitHub\Proyecto-FARA\Proyecto-FARA\Proyecto-FARA\bin\Debug\Proyecto-FARA.exe.config
+C:\Users\Angel\Documents\GitHub\Proyecto-FARA\Proyecto-FARA\Proyecto-FARA\bin\Debug\Proyecto-FARA.exe
+C:\Users\Angel\Documents\GitHub\Proyecto-FARA\Proyecto-FARA\Proyecto-FARA\bin\Debug\Proyecto-FARA.pdb
+C:\Users\Angel\Documents\GitHub\Proyecto-FARA\Proyecto-FARA\Proyecto-FARA\obj\x86\Debug\Proyecto_FARA.Atenticacion.resources
+C:\Users\Angel\Documents\GitHub\Proyecto-FARA\Proyecto-FARA\Proyecto-FARA\obj\x86\Debug\Proyecto_FARA.Form1.resources
+C:\Users\Angel\Documents\GitHub\Proyecto-FARA\Proyecto-FARA\Proyecto-FARA\obj\x86\Debug\Proyecto_FARA.Properties.Resources.resources
+C:\Users\Angel\Documents\GitHub\Proyecto-FARA\Proyecto-FARA\Proyecto-FARA\obj\x86\Debug\Proyecto-FARA.csproj.GenerateResource.Cache
+C:\Users\Angel\Documents\GitHub\Proyecto-FARA\Proyecto-FARA\Proyecto-FARA\obj\x86\Debug\Proyecto-FARA.exe
+C:\Users\Angel\Documents\GitHub\Proyecto-FARA\Proyecto-FARA\Proyecto-FARA\obj\x86\Debug\Proyecto-FARA.pdb
