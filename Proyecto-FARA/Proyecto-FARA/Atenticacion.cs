@@ -6,39 +6,77 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace Proyecto_FARA
 {
     public partial class Atenticacion : Form
     {
+        
+
         public Atenticacion()
         {
             InitializeComponent();
         }
 
-        private void Atenticacion_Load(object sender, EventArgs e)
-        {
-
-        }
-
 
         private void Conexion_Click(object sender, EventArgs e)
         {
+            //Establecer y confirmar conexión
             System.Threading.Thread.Sleep(1000);
             gpbLogin.Enabled = true;
             lblConexion.Text = "Conexion establecida correctamente";
             lblConexion.ForeColor = System.Drawing.Color.Lime;
         }
 
-        private void LoginSesion(string usr, string pwd)
+        private bool LoginSesion(string usr, string pwd)
         {
-            
+            bool login = false;
+            User UsuarioOp = new User();
+            UsuarioOp.user = usr;
+            UsuarioOp.contraseña = pwd;
+            if (UsuarioOp.Buscar() == true)
+            {
+                MessageBox.Show(UsuarioOp.Mensaje, "Login");
+                login = true;
+            }
+            else
+            {
+                MessageBox.Show(UsuarioOp.Mensaje, "Cerrar");
+            }
+
+            return login;
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
+            Atenticacion au = new Atenticacion();
+            //Inicio de sesion
+            if (LoginSesion(txtUser.Text.ToUpper(), txtPwd.Text) == true)
+            {
+                // carga de Form1 = home              
+                Program.Home();
+            }
 
-            LoginSesion(txtUser.Text, txtPwd.Text);
+        }
+
+        private void spbLogin_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnCerrar_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+
+        private void txtPwd_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                btnLogin.PerformClick();
+            }
 
         }
 

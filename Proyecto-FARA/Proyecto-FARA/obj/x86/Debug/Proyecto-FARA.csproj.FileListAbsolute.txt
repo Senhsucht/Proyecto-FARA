@@ -7,3 +7,4 @@ C:\Users\Angel\Documents\GitHub\Proyecto-FARA\Proyecto-FARA\Proyecto-FARA\obj\x8
 C:\Users\Angel\Documents\GitHub\Proyecto-FARA\Proyecto-FARA\Proyecto-FARA\obj\x86\Debug\Proyecto-FARA.csproj.GenerateResource.Cache
 C:\Users\Angel\Documents\GitHub\Proyecto-FARA\Proyecto-FARA\Proyecto-FARA\obj\x86\Debug\Proyecto-FARA.exe
 C:\Users\Angel\Documents\GitHub\Proyecto-FARA\Proyecto-FARA\Proyecto-FARA\obj\x86\Debug\Proyecto-FARA.pdb
+C:\Users\Angel\Documents\GitHub\Proyecto-FARA\Proyecto-FARA\Proyecto-FARA\obj\x86\Debug\Proyecto-FARA.csprojResolveAssemblyReference.cache

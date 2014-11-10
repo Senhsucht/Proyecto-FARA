@@ -31,14 +31,15 @@
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.spbLogin = new System.Windows.Forms.ToolStripProgressBar();
             this.gpbLogin = new System.Windows.Forms.GroupBox();
-            this.txtUser = new System.Windows.Forms.TextBox();
-            this.txtPwd = new System.Windows.Forms.TextBox();
-            this.lblUser = new System.Windows.Forms.Label();
-            this.lblPwd = new System.Windows.Forms.Label();
+            this.btnLogin = new System.Windows.Forms.Button();
             this.lblInicio = new System.Windows.Forms.Label();
+            this.lblPwd = new System.Windows.Forms.Label();
+            this.lblUser = new System.Windows.Forms.Label();
+            this.txtPwd = new System.Windows.Forms.TextBox();
+            this.txtUser = new System.Windows.Forms.TextBox();
             this.btnConectar = new System.Windows.Forms.Button();
             this.lblConexion = new System.Windows.Forms.Label();
-            this.btnLogin = new System.Windows.Forms.Button();
+            this.btnCerrar = new System.Windows.Forms.Button();
             this.statusStrip1.SuspendLayout();
             this.gpbLogin.SuspendLayout();
             this.SuspendLayout();
@@ -57,6 +58,7 @@
             // 
             this.spbLogin.Name = "spbLogin";
             this.spbLogin.Size = new System.Drawing.Size(100, 16);
+            this.spbLogin.Click += new System.EventHandler(this.spbLogin_Click);
             // 
             // gpbLogin
             // 
@@ -73,40 +75,15 @@
             this.gpbLogin.TabIndex = 1;
             this.gpbLogin.TabStop = false;
             // 
-            // txtUser
+            // btnLogin
             // 
-            this.txtUser.Location = new System.Drawing.Point(81, 74);
-            this.txtUser.Name = "txtUser";
-            this.txtUser.Size = new System.Drawing.Size(166, 20);
-            this.txtUser.TabIndex = 0;
-            // 
-            // txtPwd
-            // 
-            this.txtPwd.Location = new System.Drawing.Point(81, 123);
-            this.txtPwd.Name = "txtPwd";
-            this.txtPwd.PasswordChar = '*';
-            this.txtPwd.Size = new System.Drawing.Size(166, 20);
-            this.txtPwd.TabIndex = 1;
-            // 
-            // lblUser
-            // 
-            this.lblUser.AutoSize = true;
-            this.lblUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUser.Location = new System.Drawing.Point(45, 51);
-            this.lblUser.Name = "lblUser";
-            this.lblUser.Size = new System.Drawing.Size(64, 20);
-            this.lblUser.TabIndex = 2;
-            this.lblUser.Text = "Usuario";
-            // 
-            // lblPwd
-            // 
-            this.lblPwd.AutoSize = true;
-            this.lblPwd.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPwd.Location = new System.Drawing.Point(45, 100);
-            this.lblPwd.Name = "lblPwd";
-            this.lblPwd.Size = new System.Drawing.Size(92, 20);
-            this.lblPwd.TabIndex = 3;
-            this.lblPwd.Text = "Contraseña";
+            this.btnLogin.Location = new System.Drawing.Point(105, 158);
+            this.btnLogin.Name = "btnLogin";
+            this.btnLogin.Size = new System.Drawing.Size(93, 23);
+            this.btnLogin.TabIndex = 5;
+            this.btnLogin.Text = "Iniciar sesion";
+            this.btnLogin.UseVisualStyleBackColor = true;
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
             // lblInicio
             // 
@@ -119,9 +96,45 @@
             this.lblInicio.TabIndex = 4;
             this.lblInicio.Text = "Inicio de sesion ";
             // 
+            // lblPwd
+            // 
+            this.lblPwd.AutoSize = true;
+            this.lblPwd.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPwd.Location = new System.Drawing.Point(45, 100);
+            this.lblPwd.Name = "lblPwd";
+            this.lblPwd.Size = new System.Drawing.Size(92, 20);
+            this.lblPwd.TabIndex = 3;
+            this.lblPwd.Text = "Contraseña";
+            // 
+            // lblUser
+            // 
+            this.lblUser.AutoSize = true;
+            this.lblUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUser.Location = new System.Drawing.Point(45, 51);
+            this.lblUser.Name = "lblUser";
+            this.lblUser.Size = new System.Drawing.Size(64, 20);
+            this.lblUser.TabIndex = 2;
+            this.lblUser.Text = "Usuario";
+            // 
+            // txtPwd
+            // 
+            this.txtPwd.Location = new System.Drawing.Point(81, 123);
+            this.txtPwd.Name = "txtPwd";
+            this.txtPwd.PasswordChar = '*';
+            this.txtPwd.Size = new System.Drawing.Size(166, 20);
+            this.txtPwd.TabIndex = 1;
+            this.txtPwd.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtPwd_KeyDown);
+            // 
+            // txtUser
+            // 
+            this.txtUser.Location = new System.Drawing.Point(81, 74);
+            this.txtUser.Name = "txtUser";
+            this.txtUser.Size = new System.Drawing.Size(166, 20);
+            this.txtUser.TabIndex = 0;
+            // 
             // btnConectar
             // 
-            this.btnConectar.Location = new System.Drawing.Point(186, 235);
+            this.btnConectar.Location = new System.Drawing.Point(146, 235);
             this.btnConectar.Name = "btnConectar";
             this.btnConectar.Size = new System.Drawing.Size(75, 23);
             this.btnConectar.TabIndex = 2;
@@ -137,28 +150,28 @@
             this.lblConexion.Size = new System.Drawing.Size(0, 13);
             this.lblConexion.TabIndex = 3;
             // 
-            // btnLogin
+            // btnCerrar
             // 
-            this.btnLogin.Location = new System.Drawing.Point(92, 161);
-            this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(93, 23);
-            this.btnLogin.TabIndex = 5;
-            this.btnLogin.Text = "Iniciar sesion";
-            this.btnLogin.UseVisualStyleBackColor = true;
-            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
+            this.btnCerrar.Location = new System.Drawing.Point(256, 235);
+            this.btnCerrar.Name = "btnCerrar";
+            this.btnCerrar.Size = new System.Drawing.Size(75, 23);
+            this.btnCerrar.TabIndex = 6;
+            this.btnCerrar.Text = "Cerrar";
+            this.btnCerrar.UseVisualStyleBackColor = true;
+            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
             // 
             // Atenticacion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(484, 311);
+            this.Controls.Add(this.btnCerrar);
             this.Controls.Add(this.lblConexion);
             this.Controls.Add(this.btnConectar);
             this.Controls.Add(this.gpbLogin);
             this.Controls.Add(this.statusStrip1);
             this.Name = "Atenticacion";
-            this.Text = "Atenticacion";
-            this.Load += new System.EventHandler(this.Atenticacion_Load);
+            this.Text = "Autenticacion";
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
             this.gpbLogin.ResumeLayout(false);
@@ -181,5 +194,6 @@
         private System.Windows.Forms.Button btnConectar;
         private System.Windows.Forms.Label lblConexion;
         private System.Windows.Forms.Button btnLogin;
+        private System.Windows.Forms.Button btnCerrar;
     }
 }

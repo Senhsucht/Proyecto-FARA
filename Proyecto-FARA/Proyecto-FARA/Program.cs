@@ -17,5 +17,16 @@ namespace Proyecto_FARA
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Atenticacion());
         }
+
+        public static void Home()
+        {
+            Form1 home = new Form1();
+
+            Application.EnableVisualStyles();
+            home.ShowDialog();
+            
+        }
+
+
     }
 }
