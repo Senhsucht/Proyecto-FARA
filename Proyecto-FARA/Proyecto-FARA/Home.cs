@@ -10,9 +10,9 @@ using System.Data.SqlClient;
 
 namespace Proyecto_FARA
 {
-    public partial class Form1 : Form
+    public partial class Home : Form
     {
-        public Form1()
+        public Home()
         {
             InitializeComponent();
 
@@ -23,6 +23,7 @@ namespace Proyecto_FARA
             //this.TopMost = true;
             //this.FormBorderStyle = FormBorderStyle.None;
             //this.WindowState = FormWindowState.Maximized;
+            label1.Text = UsuarioON.nombre;
         }
     }
 }

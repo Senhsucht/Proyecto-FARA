@@ -1,6 +1,6 @@
 ﻿namespace Proyecto_FARA
 {
-    partial class Atenticacion
+    partial class Autenticacion
     {
         /// <summary>
         /// Required designer variable.

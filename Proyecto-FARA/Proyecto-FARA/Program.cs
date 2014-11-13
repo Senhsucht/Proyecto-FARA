@@ -15,12 +15,12 @@ namespace Proyecto_FARA
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Atenticacion());
+            Application.Run(new Autenticacion());
         }
 
         public static void Home()
         {
-            Form1 home = new Form1();
+            Home home = new Home();
 
             Application.EnableVisualStyles();
             home.ShowDialog();

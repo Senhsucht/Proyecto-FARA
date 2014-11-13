@@ -10,11 +10,11 @@ using System.Data.SqlClient;
 
 namespace Proyecto_FARA
 {
-    public partial class Atenticacion : Form
+    public partial class Autenticacion : Form
     {
         
 
-        public Atenticacion()
+        public Autenticacion()
         {
             InitializeComponent();
         }
@@ -50,7 +50,7 @@ namespace Proyecto_FARA
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            Atenticacion au = new Atenticacion();
+            Autenticacion au = new Autenticacion();
             //Inicio de sesion
             if (LoginSesion(txtUser.Text.ToUpper(), txtPwd.Text) == true)
             {

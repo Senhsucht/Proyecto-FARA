@@ -10,42 +10,51 @@ namespace Proyecto_FARA
     {
         private string usr;
         private string pwd;
-        private int id_afil;
-        private int id_tusr;
+        private string nombre;
+        private string ape_pat;
+        private string ape_mat;
+        private string edad;
+        private string direccion;
+        private string tel;
+        private string email;
+        private string tafil;
+        private string tusr;
+        private string activo;
 
-        public User()
+
+
+        public User(string usuario, string pass, string name,string apepat,string apemat,string direc, string tele, string mail,string tafiliado,string tusuario,string active,string edadU)
         {
-            usr = string.Empty;
-            pwd = string.Empty;
-            id_afil = 0;
-            id_tusr = 0;
+            usr = usuario;
+            pwd = pass;
+            nombre = name;
+            ape_pat = apepat;
+            ape_mat = apemat;
+            direccion = direc;
+            tel = tele;
+            email = mail;
+            tafil = tafiliado;
+            tusr = tusuario;
+            activo = active;
+            edad = edadU;
             this.sql = string.Empty;
         }
 
-        public string user
+/*
+
+        public string tafiliado
         {
-            get { return this.usr; }
-            set { this.usr = value; }
+            get { return this.tafil; }
+            set { this.tafil = value; }
         }
 
-        public string contraseña
+        public string tusuario
         {
-            get { return this.pwd; }
-            set { this.pwd = value; }
+            get { return this.tusr; }
+            set { this.tusr = value; }
         }
 
-        public int afiliado
-        {
-            get { return this.id_afil; }
-            set { this.id_afil = value; }
-        }
-
-        public int tusuario
-        {
-            get { return this.id_tusr; }
-            set { this.id_tusr = value; }
-        }
-
+ */
         public bool Buscar()
         {
             bool resultado = false;
@@ -54,10 +63,12 @@ namespace Proyecto_FARA
             this.cnn.Open();
             SqlDataReader reg = null;
             reg = this.cmdsql.ExecuteReader();
-            if (reg.Read())
+            reg.Read();
+            if (reg["ACTIVO"].ToString() == "True")
             {
-                resultado = true;
-                this.mensaje = "Bienvenido";
+                    resultado = true;
+                    this.mensaje = "Bienvenido "+this.usr.ToString();
+                    CreateUser(this.usr);
             }
 
             else
@@ -68,6 +79,21 @@ namespace Proyecto_FARA
             this.cnn.Close();
             return resultado;
         }
+
+        private void CreateUser(string p)
+        {
+            
+            this.sql = string.Format(@"SELECT U.USR,U.PWD,A.NOMBRE,A.APE_PAT,A.APE_MAT,A.EDAD,A.DIRECCION,A.TEL,A.EMAIL,TA.TAFIL,TU.TUSR,U.ACTIVO,U.ULT_ACT FROM USR U INNER JOIN AFIL A ON U.ID_AFIL=A.ID INNER JOIN TUSR TU ON TU.ID=U.ID_TUSR INNER JOIN TAFIL TA ON TA.ID=A.ID_TAFIL WHERE U.USR='{0}'", p);
+            this.cmdsql = new SqlCommand(this.sql, this.cnn);
+            this.cnn.Open();
+            SqlDataReader reg = null;
+            reg = this.cmdsql.ExecuteReader();
+            reg.Read();
+            User UsuarioON = new User(reg["USR"].ToString(), reg["PWD"].ToString(), reg["NOMBRE"].ToString(), reg["APE_PAT"].ToString(), reg["APE_MAT"].ToString(), reg["DIRECCION"].ToString(), reg["TEL"].ToString(), reg["EMAIL"].ToString(), reg["TAFIL"].ToString(), reg["TUSR"].ToString(), reg["ACTIVO"].ToString(), reg["EDAD"].ToString());
+           // usuario.
+            
+        }
+
 
     }
 }
