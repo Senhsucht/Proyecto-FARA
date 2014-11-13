@@ -32,17 +32,18 @@ namespace Proyecto_FARA
         private bool LoginSesion(string usr, string pwd)
         {
             bool login = false;
-            User UsuarioOp = new User();
-            UsuarioOp.user = usr;
-            UsuarioOp.contraseña = pwd;
-            if (UsuarioOp.Buscar() == true)
+
+            Metodos UsuarioOp = new Metodos();
+            //UsuarioOp.user = usr;
+            //UsuarioOp.contraseña = pwd;
+            if (UsuarioOp.Buscar(usr,pwd) == true)
             {
-                MessageBox.Show(UsuarioOp.Mensaje, "Login");
+                MessageBox.Show(UsuarioOp.Mensaje, "Iniciando sesión");
                 login = true;
             }
             else
             {
-                MessageBox.Show(UsuarioOp.Mensaje, "Cerrar");
+                MessageBox.Show(UsuarioOp.Mensaje, "Error");
             }
 
             return login;

@@ -13,12 +13,13 @@ namespace Proyecto_FARA
         //protected int resultado;
         protected SqlConnection cnn;
         protected SqlCommand cmdsql;
+        protected SqlCommand cmdsql0;
         protected string mensaje;
 
         public conexion()
         {
 
-            this.cadenaconexion = (@"Data Source = KASUMI-II\SQLEXPRESS; Initial Catalog = PROYECTO_FARA; integrated security=true");
+            this.cadenaconexion = (@"Data Source = KASUMI-II\SQLEXPRESS; Initial Catalog = PROYECTO_FARA; integrated security=true;" + "Trusted_Connection=True;MultipleActiveResultSets=True;");
             this.cnn = new SqlConnection(this.cadenaconexion);
             
         }

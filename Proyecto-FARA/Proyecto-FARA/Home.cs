@@ -10,7 +10,7 @@ using System.Data.SqlClient;
 
 namespace Proyecto_FARA
 {
-    public partial class Home : Form
+    public partial class Home : Form 
     {
         public Home()
         {
@@ -20,10 +20,17 @@ namespace Proyecto_FARA
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            //this.TopMost = true;
-            //this.FormBorderStyle = FormBorderStyle.None;
-            //this.WindowState = FormWindowState.Maximized;
-            label1.Text = UsuarioON.nombre;
+            this.TopMost = true;
+            this.FormBorderStyle = FormBorderStyle.None;
+            this.WindowState = FormWindowState.Maximized;
+            
+            
+            //label1.Text = UsuarioON.nombre;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }

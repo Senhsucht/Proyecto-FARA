@@ -8,21 +8,19 @@ namespace Proyecto_FARA
 {
     class User:conexion
     {
-        private string usr;
-        private string pwd;
-        private string nombre;
-        private string ape_pat;
-        private string ape_mat;
-        private string edad;
-        private string direccion;
-        private string tel;
-        private string email;
-        private string tafil;
-        private string tusr;
-        private string activo;
-
-
-
+        private string usr {get; set;}
+        private string pwd { get; set; }
+        private string nombre { get; set; }
+        private string ape_pat { get; set; }
+        private string ape_mat { get; set; }
+        private string edad { get; set; }
+        private string direccion { get; set; }
+        private string tel { get; set; }
+        private string email { get; set; }
+        private string tafil { get; set; }
+        private string tusr { get; set; }
+        private string activo { get; set; }
+        
         public User(string usuario, string pass, string name,string apepat,string apemat,string direc, string tele, string mail,string tafiliado,string tusuario,string active,string edadU)
         {
             usr = usuario;
@@ -54,7 +52,6 @@ namespace Proyecto_FARA
             set { this.tusr = value; }
         }
 
- */
         public bool Buscar()
         {
             bool resultado = false;
@@ -93,7 +90,7 @@ namespace Proyecto_FARA
            // usuario.
             
         }
-
+        */
 
     }
 }
