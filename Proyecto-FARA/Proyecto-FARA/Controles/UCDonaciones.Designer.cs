@@ -31,6 +31,16 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UCDonaciones));
             this.gpbDonante = new System.Windows.Forms.GroupBox();
+            this.aDOPTANTEDataGridView = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.aDOPTANTEBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.pROYECTO_FARADataSet = new Proyecto_FARA.PROYECTO_FARADataSet();
             this.btnBuscarD = new System.Windows.Forms.Button();
             this.lblRFCD = new System.Windows.Forms.Label();
             this.textBox4 = new System.Windows.Forms.TextBox();
@@ -41,52 +51,19 @@
             this.lblNombreD = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.gpbProd = new System.Windows.Forms.GroupBox();
-            this.btnBuscarP = new System.Windows.Forms.Button();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.lblMarcaP = new System.Windows.Forms.Label();
-            this.lblNombreP = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.gpbEve = new System.Windows.Forms.GroupBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.lblTipEv = new System.Windows.Forms.Label();
-            this.lblNombreE = new System.Windows.Forms.Label();
-            this.btnBuscarE = new System.Windows.Forms.Button();
-            this.pROYECTO_FARADataSet = new Proyecto_FARA.PROYECTO_FARADataSet();
-            this.aDOPTANTEBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.aDOPTANTETableAdapter = new Proyecto_FARA.PROYECTO_FARADataSetTableAdapters.ADOPTANTETableAdapter();
-            this.tableAdapterManager = new Proyecto_FARA.PROYECTO_FARADataSetTableAdapters.TableAdapterManager();
-            this.aDOPTANTEBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
-            this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
-            this.bindingNavigatorPositionItem = new System.Windows.Forms.ToolStripTextBox();
-            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
-            this.bindingNavigatorSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
-            this.aDOPTANTEBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
-            this.aDOPTANTEDataGridView = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pRODUCTOBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.pRODUCTOTableAdapter = new Proyecto_FARA.PROYECTO_FARADataSetTableAdapters.PRODUCTOTableAdapter();
             this.pRODUCTODataGridView = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.eVENTOBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.eVENTOTableAdapter = new Proyecto_FARA.PROYECTO_FARADataSetTableAdapters.EVENTOTableAdapter();
+            this.pRODUCTOBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.btnBuscarP = new System.Windows.Forms.Button();
+            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.lblMarcaP = new System.Windows.Forms.Label();
+            this.lblNombreP = new System.Windows.Forms.Label();
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.gpbEve = new System.Windows.Forms.GroupBox();
             this.eVENTODataGridView = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -94,18 +71,41 @@
             this.dataGridViewTextBoxColumn17 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn18 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn19 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.eVENTOBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.lblTipEv = new System.Windows.Forms.Label();
+            this.lblNombreE = new System.Windows.Forms.Label();
+            this.btnBuscarE = new System.Windows.Forms.Button();
+            this.aDOPTANTETableAdapter = new Proyecto_FARA.PROYECTO_FARADataSetTableAdapters.ADOPTANTETableAdapter();
+            this.tableAdapterManager = new Proyecto_FARA.PROYECTO_FARADataSetTableAdapters.TableAdapterManager();
+            this.eVENTOTableAdapter = new Proyecto_FARA.PROYECTO_FARADataSetTableAdapters.EVENTOTableAdapter();
+            this.pRODUCTOTableAdapter = new Proyecto_FARA.PROYECTO_FARADataSetTableAdapters.PRODUCTOTableAdapter();
+            this.aDOPTANTEBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
+            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
+            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
+            this.bindingNavigatorPositionItem = new System.Windows.Forms.ToolStripTextBox();
+            this.bindingNavigatorSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.aDOPTANTEBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
             this.gpbDonante.SuspendLayout();
-            this.gpbProd.SuspendLayout();
-            this.gpbEve.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pROYECTO_FARADataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.aDOPTANTEDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.aDOPTANTEBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pROYECTO_FARADataSet)).BeginInit();
+            this.gpbProd.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pRODUCTODataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pRODUCTOBindingSource)).BeginInit();
+            this.gpbEve.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.eVENTODataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.eVENTOBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.aDOPTANTEBindingNavigator)).BeginInit();
             this.aDOPTANTEBindingNavigator.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.aDOPTANTEDataGridView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pRODUCTOBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pRODUCTODataGridView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.eVENTOBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.eVENTODataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // gpbDonante
@@ -120,12 +120,82 @@
             this.gpbDonante.Controls.Add(this.lblApe_MatD);
             this.gpbDonante.Controls.Add(this.lblNombreD);
             this.gpbDonante.Controls.Add(this.textBox1);
-            this.gpbDonante.Location = new System.Drawing.Point(18, 19);
+            this.gpbDonante.Location = new System.Drawing.Point(24, 19);
             this.gpbDonante.Name = "gpbDonante";
             this.gpbDonante.Size = new System.Drawing.Size(700, 356);
             this.gpbDonante.TabIndex = 0;
             this.gpbDonante.TabStop = false;
             this.gpbDonante.Text = "Donante";
+            // 
+            // aDOPTANTEDataGridView
+            // 
+            this.aDOPTANTEDataGridView.AutoGenerateColumns = false;
+            this.aDOPTANTEDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.aDOPTANTEDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn2,
+            this.dataGridViewTextBoxColumn3,
+            this.dataGridViewTextBoxColumn4,
+            this.dataGridViewTextBoxColumn5,
+            this.dataGridViewTextBoxColumn6,
+            this.dataGridViewTextBoxColumn7,
+            this.dataGridViewTextBoxColumn8});
+            this.aDOPTANTEDataGridView.DataSource = this.aDOPTANTEBindingSource;
+            this.aDOPTANTEDataGridView.Location = new System.Drawing.Point(19, 61);
+            this.aDOPTANTEDataGridView.Name = "aDOPTANTEDataGridView";
+            this.aDOPTANTEDataGridView.Size = new System.Drawing.Size(630, 220);
+            this.aDOPTANTEDataGridView.TabIndex = 9;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "NOMBRE";
+            this.dataGridViewTextBoxColumn2.HeaderText = "NOMBRE";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "APE_PAT";
+            this.dataGridViewTextBoxColumn3.HeaderText = "APE_PAT";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "APE_MAT";
+            this.dataGridViewTextBoxColumn4.HeaderText = "APE_MAT";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "EDAD";
+            this.dataGridViewTextBoxColumn5.HeaderText = "EDAD";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            this.dataGridViewTextBoxColumn6.DataPropertyName = "DIRECCION";
+            this.dataGridViewTextBoxColumn6.HeaderText = "DIRECCION";
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            // 
+            // dataGridViewTextBoxColumn7
+            // 
+            this.dataGridViewTextBoxColumn7.DataPropertyName = "TEL";
+            this.dataGridViewTextBoxColumn7.HeaderText = "TEL";
+            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            // 
+            // dataGridViewTextBoxColumn8
+            // 
+            this.dataGridViewTextBoxColumn8.DataPropertyName = "EMAIL";
+            this.dataGridViewTextBoxColumn8.HeaderText = "EMAIL";
+            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
+            // 
+            // aDOPTANTEBindingSource
+            // 
+            this.aDOPTANTEBindingSource.DataMember = "ADOPTANTE";
+            this.aDOPTANTEBindingSource.DataSource = this.pROYECTO_FARADataSet;
+            // 
+            // pROYECTO_FARADataSet
+            // 
+            this.pROYECTO_FARADataSet.DataSetName = "PROYECTO_FARADataSet";
+            this.pROYECTO_FARADataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // btnBuscarD
             // 
@@ -208,347 +278,12 @@
             this.gpbProd.Controls.Add(this.lblMarcaP);
             this.gpbProd.Controls.Add(this.lblNombreP);
             this.gpbProd.Controls.Add(this.textBox5);
-            this.gpbProd.Location = new System.Drawing.Point(18, 330);
+            this.gpbProd.Location = new System.Drawing.Point(24, 381);
             this.gpbProd.Name = "gpbProd";
             this.gpbProd.Size = new System.Drawing.Size(700, 390);
             this.gpbProd.TabIndex = 1;
             this.gpbProd.TabStop = false;
             this.gpbProd.Text = "Producto";
-            // 
-            // btnBuscarP
-            // 
-            this.btnBuscarP.Location = new System.Drawing.Point(374, 40);
-            this.btnBuscarP.Name = "btnBuscarP";
-            this.btnBuscarP.Size = new System.Drawing.Size(75, 23);
-            this.btnBuscarP.TabIndex = 4;
-            this.btnBuscarP.Text = "Buscar";
-            this.btnBuscarP.UseVisualStyleBackColor = true;
-            // 
-            // textBox6
-            // 
-            this.textBox6.Location = new System.Drawing.Point(237, 44);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(100, 20);
-            this.textBox6.TabIndex = 3;
-            // 
-            // lblMarcaP
-            // 
-            this.lblMarcaP.AutoSize = true;
-            this.lblMarcaP.Location = new System.Drawing.Point(220, 28);
-            this.lblMarcaP.Name = "lblMarcaP";
-            this.lblMarcaP.Size = new System.Drawing.Size(37, 13);
-            this.lblMarcaP.TabIndex = 2;
-            this.lblMarcaP.Text = "Marca";
-            // 
-            // lblNombreP
-            // 
-            this.lblNombreP.AutoSize = true;
-            this.lblNombreP.Location = new System.Drawing.Point(56, 28);
-            this.lblNombreP.Name = "lblNombreP";
-            this.lblNombreP.Size = new System.Drawing.Size(106, 13);
-            this.lblNombreP.TabIndex = 1;
-            this.lblNombreP.Text = "Nombre del producto";
-            // 
-            // textBox5
-            // 
-            this.textBox5.Location = new System.Drawing.Point(74, 44);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(100, 20);
-            this.textBox5.TabIndex = 0;
-            // 
-            // gpbEve
-            // 
-            this.gpbEve.Controls.Add(this.eVENTODataGridView);
-            this.gpbEve.Controls.Add(this.textBox7);
-            this.gpbEve.Controls.Add(this.comboBox2);
-            this.gpbEve.Controls.Add(this.lblTipEv);
-            this.gpbEve.Controls.Add(this.lblNombreE);
-            this.gpbEve.Controls.Add(this.btnBuscarE);
-            this.gpbEve.Location = new System.Drawing.Point(18, 636);
-            this.gpbEve.Name = "gpbEve";
-            this.gpbEve.Size = new System.Drawing.Size(700, 371);
-            this.gpbEve.TabIndex = 2;
-            this.gpbEve.TabStop = false;
-            this.gpbEve.Text = "Evento";
-            // 
-            // textBox7
-            // 
-            this.textBox7.Location = new System.Drawing.Point(74, 50);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(100, 20);
-            this.textBox7.TabIndex = 6;
-            // 
-            // comboBox2
-            // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(237, 50);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(121, 21);
-            this.comboBox2.TabIndex = 5;
-            // 
-            // lblTipEv
-            // 
-            this.lblTipEv.AutoSize = true;
-            this.lblTipEv.Location = new System.Drawing.Point(220, 37);
-            this.lblTipEv.Name = "lblTipEv";
-            this.lblTipEv.Size = new System.Drawing.Size(79, 13);
-            this.lblTipEv.TabIndex = 2;
-            this.lblTipEv.Text = "Tipo de evento";
-            // 
-            // lblNombreE
-            // 
-            this.lblNombreE.AutoSize = true;
-            this.lblNombreE.Location = new System.Drawing.Point(56, 38);
-            this.lblNombreE.Name = "lblNombreE";
-            this.lblNombreE.Size = new System.Drawing.Size(95, 13);
-            this.lblNombreE.TabIndex = 1;
-            this.lblNombreE.Text = "Nombre de evento";
-            // 
-            // btnBuscarE
-            // 
-            this.btnBuscarE.Location = new System.Drawing.Point(374, 50);
-            this.btnBuscarE.Name = "btnBuscarE";
-            this.btnBuscarE.Size = new System.Drawing.Size(75, 21);
-            this.btnBuscarE.TabIndex = 0;
-            this.btnBuscarE.Text = "Buscar";
-            this.btnBuscarE.UseVisualStyleBackColor = true;
-            // 
-            // pROYECTO_FARADataSet
-            // 
-            this.pROYECTO_FARADataSet.DataSetName = "PROYECTO_FARADataSet";
-            this.pROYECTO_FARADataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // aDOPTANTEBindingSource
-            // 
-            this.aDOPTANTEBindingSource.DataMember = "ADOPTANTE";
-            this.aDOPTANTEBindingSource.DataSource = this.pROYECTO_FARADataSet;
-            // 
-            // aDOPTANTETableAdapter
-            // 
-            this.aDOPTANTETableAdapter.ClearBeforeFill = true;
-            // 
-            // tableAdapterManager
-            // 
-            this.tableAdapterManager.ADO_EDOTableAdapter = null;
-            this.tableAdapterManager.ADOPCIONTableAdapter = null;
-            this.tableAdapterManager.ADOPTANTETableAdapter = this.aDOPTANTETableAdapter;
-            this.tableAdapterManager.AFILTableAdapter = null;
-            this.tableAdapterManager.ANIMALTableAdapter = null;
-            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager.DOCTORTableAdapter = null;
-            this.tableAdapterManager.DONANTETableAdapter = null;
-            this.tableAdapterManager.EVE_ASISTTableAdapter = null;
-            this.tableAdapterManager.EVE_EDOTableAdapter = null;
-            this.tableAdapterManager.EVE_PATROTableAdapter = null;
-            this.tableAdapterManager.EVENTOTableAdapter = this.eVENTOTableAdapter;
-            this.tableAdapterManager.INV_HISTTableAdapter = null;
-            this.tableAdapterManager.INVENTARIOTableAdapter = null;
-            this.tableAdapterManager.OPERACIONTableAdapter = null;
-            this.tableAdapterManager.PATROCINADORTableAdapter = null;
-            this.tableAdapterManager.PRODUCTOTableAdapter = this.pRODUCTOTableAdapter;
-            this.tableAdapterManager.RAZATableAdapter = null;
-            this.tableAdapterManager.RESCATETableAdapter = null;
-            this.tableAdapterManager.TAFILTableAdapter = null;
-            this.tableAdapterManager.TANIMALTableAdapter = null;
-            this.tableAdapterManager.TEVENTOTableAdapter = null;
-            this.tableAdapterManager.TUSRTableAdapter = null;
-            this.tableAdapterManager.UpdateOrder = Proyecto_FARA.PROYECTO_FARADataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
-            this.tableAdapterManager.USRTableAdapter = null;
-            this.tableAdapterManager.VISITATableAdapter = null;
-            // 
-            // aDOPTANTEBindingNavigator
-            // 
-            this.aDOPTANTEBindingNavigator.AddNewItem = this.bindingNavigatorAddNewItem;
-            this.aDOPTANTEBindingNavigator.BindingSource = this.aDOPTANTEBindingSource;
-            this.aDOPTANTEBindingNavigator.CountItem = this.bindingNavigatorCountItem;
-            this.aDOPTANTEBindingNavigator.DeleteItem = this.bindingNavigatorDeleteItem;
-            this.aDOPTANTEBindingNavigator.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.bindingNavigatorMoveFirstItem,
-            this.bindingNavigatorMovePreviousItem,
-            this.bindingNavigatorSeparator,
-            this.bindingNavigatorPositionItem,
-            this.bindingNavigatorCountItem,
-            this.bindingNavigatorSeparator1,
-            this.bindingNavigatorMoveNextItem,
-            this.bindingNavigatorMoveLastItem,
-            this.bindingNavigatorSeparator2,
-            this.bindingNavigatorAddNewItem,
-            this.bindingNavigatorDeleteItem,
-            this.aDOPTANTEBindingNavigatorSaveItem});
-            this.aDOPTANTEBindingNavigator.Location = new System.Drawing.Point(0, 0);
-            this.aDOPTANTEBindingNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
-            this.aDOPTANTEBindingNavigator.MoveLastItem = this.bindingNavigatorMoveLastItem;
-            this.aDOPTANTEBindingNavigator.MoveNextItem = this.bindingNavigatorMoveNextItem;
-            this.aDOPTANTEBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
-            this.aDOPTANTEBindingNavigator.Name = "aDOPTANTEBindingNavigator";
-            this.aDOPTANTEBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.aDOPTANTEBindingNavigator.Size = new System.Drawing.Size(768, 25);
-            this.aDOPTANTEBindingNavigator.TabIndex = 3;
-            this.aDOPTANTEBindingNavigator.Text = "bindingNavigator1";
-            this.aDOPTANTEBindingNavigator.Visible = false;
-            // 
-            // bindingNavigatorMoveFirstItem
-            // 
-            this.bindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMoveFirstItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem.Image")));
-            this.bindingNavigatorMoveFirstItem.Name = "bindingNavigatorMoveFirstItem";
-            this.bindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorMoveFirstItem.Text = "Move first";
-            // 
-            // bindingNavigatorMovePreviousItem
-            // 
-            this.bindingNavigatorMovePreviousItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMovePreviousItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMovePreviousItem.Image")));
-            this.bindingNavigatorMovePreviousItem.Name = "bindingNavigatorMovePreviousItem";
-            this.bindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorMovePreviousItem.Text = "Move previous";
-            // 
-            // bindingNavigatorSeparator
-            // 
-            this.bindingNavigatorSeparator.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 25);
-            // 
-            // bindingNavigatorPositionItem
-            // 
-            this.bindingNavigatorPositionItem.AccessibleName = "Position";
-            this.bindingNavigatorPositionItem.AutoSize = false;
-            this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
-            this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 23);
-            this.bindingNavigatorPositionItem.Text = "0";
-            this.bindingNavigatorPositionItem.ToolTipText = "Current position";
-            // 
-            // bindingNavigatorCountItem
-            // 
-            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(35, 15);
-            this.bindingNavigatorCountItem.Text = "of {0}";
-            this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
-            // 
-            // bindingNavigatorSeparator1
-            // 
-            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 6);
-            // 
-            // bindingNavigatorMoveNextItem
-            // 
-            this.bindingNavigatorMoveNextItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMoveNextItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem.Image")));
-            this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
-            this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(23, 20);
-            this.bindingNavigatorMoveNextItem.Text = "Move next";
-            // 
-            // bindingNavigatorMoveLastItem
-            // 
-            this.bindingNavigatorMoveLastItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMoveLastItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem.Image")));
-            this.bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
-            this.bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(23, 20);
-            this.bindingNavigatorMoveLastItem.Text = "Move last";
-            // 
-            // bindingNavigatorSeparator2
-            // 
-            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 6);
-            // 
-            // bindingNavigatorAddNewItem
-            // 
-            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
-            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
-            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorAddNewItem.Text = "Add new";
-            // 
-            // bindingNavigatorDeleteItem
-            // 
-            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
-            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
-            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 20);
-            this.bindingNavigatorDeleteItem.Text = "Delete";
-            // 
-            // aDOPTANTEBindingNavigatorSaveItem
-            // 
-            this.aDOPTANTEBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.aDOPTANTEBindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("aDOPTANTEBindingNavigatorSaveItem.Image")));
-            this.aDOPTANTEBindingNavigatorSaveItem.Name = "aDOPTANTEBindingNavigatorSaveItem";
-            this.aDOPTANTEBindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 23);
-            this.aDOPTANTEBindingNavigatorSaveItem.Text = "Save Data";
-            this.aDOPTANTEBindingNavigatorSaveItem.Click += new System.EventHandler(this.aDOPTANTEBindingNavigatorSaveItem_Click);
-            // 
-            // aDOPTANTEDataGridView
-            // 
-            this.aDOPTANTEDataGridView.AutoGenerateColumns = false;
-            this.aDOPTANTEDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.aDOPTANTEDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn2,
-            this.dataGridViewTextBoxColumn3,
-            this.dataGridViewTextBoxColumn4,
-            this.dataGridViewTextBoxColumn5,
-            this.dataGridViewTextBoxColumn6,
-            this.dataGridViewTextBoxColumn7,
-            this.dataGridViewTextBoxColumn8});
-            this.aDOPTANTEDataGridView.DataSource = this.aDOPTANTEBindingSource;
-            this.aDOPTANTEDataGridView.Location = new System.Drawing.Point(19, 61);
-            this.aDOPTANTEDataGridView.Name = "aDOPTANTEDataGridView";
-            this.aDOPTANTEDataGridView.Size = new System.Drawing.Size(630, 220);
-            this.aDOPTANTEDataGridView.TabIndex = 9;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "NOMBRE";
-            this.dataGridViewTextBoxColumn2.HeaderText = "NOMBRE";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "APE_PAT";
-            this.dataGridViewTextBoxColumn3.HeaderText = "APE_PAT";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "APE_MAT";
-            this.dataGridViewTextBoxColumn4.HeaderText = "APE_MAT";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.DataPropertyName = "EDAD";
-            this.dataGridViewTextBoxColumn5.HeaderText = "EDAD";
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            // 
-            // dataGridViewTextBoxColumn6
-            // 
-            this.dataGridViewTextBoxColumn6.DataPropertyName = "DIRECCION";
-            this.dataGridViewTextBoxColumn6.HeaderText = "DIRECCION";
-            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            // 
-            // dataGridViewTextBoxColumn7
-            // 
-            this.dataGridViewTextBoxColumn7.DataPropertyName = "TEL";
-            this.dataGridViewTextBoxColumn7.HeaderText = "TEL";
-            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
-            // 
-            // dataGridViewTextBoxColumn8
-            // 
-            this.dataGridViewTextBoxColumn8.DataPropertyName = "EMAIL";
-            this.dataGridViewTextBoxColumn8.HeaderText = "EMAIL";
-            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
-            // 
-            // pRODUCTOBindingSource
-            // 
-            this.pRODUCTOBindingSource.DataMember = "PRODUCTO";
-            this.pRODUCTOBindingSource.DataSource = this.pROYECTO_FARADataSet;
-            // 
-            // pRODUCTOTableAdapter
-            // 
-            this.pRODUCTOTableAdapter.ClearBeforeFill = true;
             // 
             // pRODUCTODataGridView
             // 
@@ -597,14 +332,66 @@
             this.dataGridViewTextBoxColumn12.HeaderText = "ULT_ACT";
             this.dataGridViewTextBoxColumn12.Name = "dataGridViewTextBoxColumn12";
             // 
-            // eVENTOBindingSource
+            // pRODUCTOBindingSource
             // 
-            this.eVENTOBindingSource.DataMember = "EVENTO";
-            this.eVENTOBindingSource.DataSource = this.pROYECTO_FARADataSet;
+            this.pRODUCTOBindingSource.DataMember = "PRODUCTO";
+            this.pRODUCTOBindingSource.DataSource = this.pROYECTO_FARADataSet;
             // 
-            // eVENTOTableAdapter
+            // btnBuscarP
             // 
-            this.eVENTOTableAdapter.ClearBeforeFill = true;
+            this.btnBuscarP.Location = new System.Drawing.Point(374, 40);
+            this.btnBuscarP.Name = "btnBuscarP";
+            this.btnBuscarP.Size = new System.Drawing.Size(75, 23);
+            this.btnBuscarP.TabIndex = 4;
+            this.btnBuscarP.Text = "Buscar";
+            this.btnBuscarP.UseVisualStyleBackColor = true;
+            // 
+            // textBox6
+            // 
+            this.textBox6.Location = new System.Drawing.Point(237, 43);
+            this.textBox6.Name = "textBox6";
+            this.textBox6.Size = new System.Drawing.Size(121, 20);
+            this.textBox6.TabIndex = 3;
+            // 
+            // lblMarcaP
+            // 
+            this.lblMarcaP.AutoSize = true;
+            this.lblMarcaP.Location = new System.Drawing.Point(220, 28);
+            this.lblMarcaP.Name = "lblMarcaP";
+            this.lblMarcaP.Size = new System.Drawing.Size(37, 13);
+            this.lblMarcaP.TabIndex = 2;
+            this.lblMarcaP.Text = "Marca";
+            // 
+            // lblNombreP
+            // 
+            this.lblNombreP.AutoSize = true;
+            this.lblNombreP.Location = new System.Drawing.Point(56, 28);
+            this.lblNombreP.Name = "lblNombreP";
+            this.lblNombreP.Size = new System.Drawing.Size(106, 13);
+            this.lblNombreP.TabIndex = 1;
+            this.lblNombreP.Text = "Nombre del producto";
+            // 
+            // textBox5
+            // 
+            this.textBox5.Location = new System.Drawing.Point(74, 44);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(100, 20);
+            this.textBox5.TabIndex = 0;
+            // 
+            // gpbEve
+            // 
+            this.gpbEve.Controls.Add(this.eVENTODataGridView);
+            this.gpbEve.Controls.Add(this.textBox7);
+            this.gpbEve.Controls.Add(this.comboBox2);
+            this.gpbEve.Controls.Add(this.lblTipEv);
+            this.gpbEve.Controls.Add(this.lblNombreE);
+            this.gpbEve.Controls.Add(this.btnBuscarE);
+            this.gpbEve.Location = new System.Drawing.Point(24, 777);
+            this.gpbEve.Name = "gpbEve";
+            this.gpbEve.Size = new System.Drawing.Size(700, 371);
+            this.gpbEve.TabIndex = 2;
+            this.gpbEve.TabStop = false;
+            this.gpbEve.Text = "Evento";
             // 
             // eVENTODataGridView
             // 
@@ -659,6 +446,219 @@
             this.dataGridViewTextBoxColumn19.HeaderText = "ID_EVE_EDO";
             this.dataGridViewTextBoxColumn19.Name = "dataGridViewTextBoxColumn19";
             // 
+            // eVENTOBindingSource
+            // 
+            this.eVENTOBindingSource.DataMember = "EVENTO";
+            this.eVENTOBindingSource.DataSource = this.pROYECTO_FARADataSet;
+            // 
+            // textBox7
+            // 
+            this.textBox7.Location = new System.Drawing.Point(74, 54);
+            this.textBox7.Name = "textBox7";
+            this.textBox7.Size = new System.Drawing.Size(100, 20);
+            this.textBox7.TabIndex = 6;
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Location = new System.Drawing.Point(237, 54);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(121, 21);
+            this.comboBox2.TabIndex = 5;
+            // 
+            // lblTipEv
+            // 
+            this.lblTipEv.AutoSize = true;
+            this.lblTipEv.Location = new System.Drawing.Point(220, 37);
+            this.lblTipEv.Name = "lblTipEv";
+            this.lblTipEv.Size = new System.Drawing.Size(79, 13);
+            this.lblTipEv.TabIndex = 2;
+            this.lblTipEv.Text = "Tipo de evento";
+            // 
+            // lblNombreE
+            // 
+            this.lblNombreE.AutoSize = true;
+            this.lblNombreE.Location = new System.Drawing.Point(56, 38);
+            this.lblNombreE.Name = "lblNombreE";
+            this.lblNombreE.Size = new System.Drawing.Size(95, 13);
+            this.lblNombreE.TabIndex = 1;
+            this.lblNombreE.Text = "Nombre de evento";
+            // 
+            // btnBuscarE
+            // 
+            this.btnBuscarE.Location = new System.Drawing.Point(374, 50);
+            this.btnBuscarE.Name = "btnBuscarE";
+            this.btnBuscarE.Size = new System.Drawing.Size(75, 21);
+            this.btnBuscarE.TabIndex = 0;
+            this.btnBuscarE.Text = "Buscar";
+            this.btnBuscarE.UseVisualStyleBackColor = true;
+            // 
+            // aDOPTANTETableAdapter
+            // 
+            this.aDOPTANTETableAdapter.ClearBeforeFill = true;
+            // 
+            // tableAdapterManager
+            // 
+            this.tableAdapterManager.ADO_EDOTableAdapter = null;
+            this.tableAdapterManager.ADOPCIONTableAdapter = null;
+            this.tableAdapterManager.ADOPTANTETableAdapter = this.aDOPTANTETableAdapter;
+            this.tableAdapterManager.AFILTableAdapter = null;
+            this.tableAdapterManager.ANIMALTableAdapter = null;
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.DOCTORTableAdapter = null;
+            this.tableAdapterManager.DONANTETableAdapter = null;
+            this.tableAdapterManager.EVE_ASISTTableAdapter = null;
+            this.tableAdapterManager.EVE_EDOTableAdapter = null;
+            this.tableAdapterManager.EVE_PATROTableAdapter = null;
+            this.tableAdapterManager.EVENTOTableAdapter = this.eVENTOTableAdapter;
+            this.tableAdapterManager.INV_HISTTableAdapter = null;
+            this.tableAdapterManager.INVENTARIOTableAdapter = null;
+            this.tableAdapterManager.OPERACIONTableAdapter = null;
+            this.tableAdapterManager.PATROCINADORTableAdapter = null;
+            this.tableAdapterManager.PRODUCTOTableAdapter = this.pRODUCTOTableAdapter;
+            this.tableAdapterManager.RAZATableAdapter = null;
+            this.tableAdapterManager.RESCATETableAdapter = null;
+            this.tableAdapterManager.TAFILTableAdapter = null;
+            this.tableAdapterManager.TANIMALTableAdapter = null;
+            this.tableAdapterManager.TEVENTOTableAdapter = null;
+            this.tableAdapterManager.TUSRTableAdapter = null;
+            this.tableAdapterManager.UpdateOrder = Proyecto_FARA.PROYECTO_FARADataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            this.tableAdapterManager.USRTableAdapter = null;
+            this.tableAdapterManager.VISITATableAdapter = null;
+            // 
+            // eVENTOTableAdapter
+            // 
+            this.eVENTOTableAdapter.ClearBeforeFill = true;
+            // 
+            // pRODUCTOTableAdapter
+            // 
+            this.pRODUCTOTableAdapter.ClearBeforeFill = true;
+            // 
+            // aDOPTANTEBindingNavigator
+            // 
+            this.aDOPTANTEBindingNavigator.AddNewItem = this.bindingNavigatorAddNewItem;
+            this.aDOPTANTEBindingNavigator.BindingSource = this.aDOPTANTEBindingSource;
+            this.aDOPTANTEBindingNavigator.CountItem = this.bindingNavigatorCountItem;
+            this.aDOPTANTEBindingNavigator.DeleteItem = this.bindingNavigatorDeleteItem;
+            this.aDOPTANTEBindingNavigator.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.bindingNavigatorMoveFirstItem,
+            this.bindingNavigatorMovePreviousItem,
+            this.bindingNavigatorSeparator,
+            this.bindingNavigatorPositionItem,
+            this.bindingNavigatorCountItem,
+            this.bindingNavigatorSeparator1,
+            this.bindingNavigatorMoveNextItem,
+            this.bindingNavigatorMoveLastItem,
+            this.bindingNavigatorSeparator2,
+            this.bindingNavigatorAddNewItem,
+            this.bindingNavigatorDeleteItem,
+            this.aDOPTANTEBindingNavigatorSaveItem});
+            this.aDOPTANTEBindingNavigator.Location = new System.Drawing.Point(0, 0);
+            this.aDOPTANTEBindingNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
+            this.aDOPTANTEBindingNavigator.MoveLastItem = this.bindingNavigatorMoveLastItem;
+            this.aDOPTANTEBindingNavigator.MoveNextItem = this.bindingNavigatorMoveNextItem;
+            this.aDOPTANTEBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
+            this.aDOPTANTEBindingNavigator.Name = "aDOPTANTEBindingNavigator";
+            this.aDOPTANTEBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
+            this.aDOPTANTEBindingNavigator.Size = new System.Drawing.Size(768, 25);
+            this.aDOPTANTEBindingNavigator.TabIndex = 3;
+            this.aDOPTANTEBindingNavigator.Text = "bindingNavigator1";
+            this.aDOPTANTEBindingNavigator.Visible = false;
+            // 
+            // bindingNavigatorAddNewItem
+            // 
+            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
+            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
+            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorAddNewItem.Text = "Add new";
+            // 
+            // bindingNavigatorCountItem
+            // 
+            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(35, 22);
+            this.bindingNavigatorCountItem.Text = "of {0}";
+            this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
+            // 
+            // bindingNavigatorDeleteItem
+            // 
+            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
+            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
+            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorDeleteItem.Text = "Delete";
+            // 
+            // bindingNavigatorMoveFirstItem
+            // 
+            this.bindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMoveFirstItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem.Image")));
+            this.bindingNavigatorMoveFirstItem.Name = "bindingNavigatorMoveFirstItem";
+            this.bindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMoveFirstItem.Text = "Move first";
+            // 
+            // bindingNavigatorMovePreviousItem
+            // 
+            this.bindingNavigatorMovePreviousItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMovePreviousItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMovePreviousItem.Image")));
+            this.bindingNavigatorMovePreviousItem.Name = "bindingNavigatorMovePreviousItem";
+            this.bindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMovePreviousItem.Text = "Move previous";
+            // 
+            // bindingNavigatorSeparator
+            // 
+            this.bindingNavigatorSeparator.Name = "bindingNavigatorSeparator";
+            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 25);
+            // 
+            // bindingNavigatorPositionItem
+            // 
+            this.bindingNavigatorPositionItem.AccessibleName = "Position";
+            this.bindingNavigatorPositionItem.AutoSize = false;
+            this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
+            this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 23);
+            this.bindingNavigatorPositionItem.Text = "0";
+            this.bindingNavigatorPositionItem.ToolTipText = "Current position";
+            // 
+            // bindingNavigatorSeparator1
+            // 
+            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
+            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 25);
+            // 
+            // bindingNavigatorMoveNextItem
+            // 
+            this.bindingNavigatorMoveNextItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMoveNextItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem.Image")));
+            this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
+            this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMoveNextItem.Text = "Move next";
+            // 
+            // bindingNavigatorMoveLastItem
+            // 
+            this.bindingNavigatorMoveLastItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMoveLastItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem.Image")));
+            this.bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
+            this.bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMoveLastItem.Text = "Move last";
+            // 
+            // bindingNavigatorSeparator2
+            // 
+            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
+            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 25);
+            // 
+            // aDOPTANTEBindingNavigatorSaveItem
+            // 
+            this.aDOPTANTEBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.aDOPTANTEBindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("aDOPTANTEBindingNavigatorSaveItem.Image")));
+            this.aDOPTANTEBindingNavigatorSaveItem.Name = "aDOPTANTEBindingNavigatorSaveItem";
+            this.aDOPTANTEBindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 22);
+            this.aDOPTANTEBindingNavigatorSaveItem.Text = "Save Data";
+            this.aDOPTANTEBindingNavigatorSaveItem.Click += new System.EventHandler(this.aDOPTANTEBindingNavigatorSaveItem_Click);
+            // 
             // UCDonaciones
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -668,23 +668,23 @@
             this.Controls.Add(this.gpbProd);
             this.Controls.Add(this.gpbDonante);
             this.Name = "UCDonaciones";
-            this.Size = new System.Drawing.Size(768, 1156);
+            this.Size = new System.Drawing.Size(768, 1177);
             this.gpbDonante.ResumeLayout(false);
             this.gpbDonante.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.aDOPTANTEDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.aDOPTANTEBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pROYECTO_FARADataSet)).EndInit();
             this.gpbProd.ResumeLayout(false);
             this.gpbProd.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pRODUCTODataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pRODUCTOBindingSource)).EndInit();
             this.gpbEve.ResumeLayout(false);
             this.gpbEve.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pROYECTO_FARADataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.aDOPTANTEBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.eVENTODataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.eVENTOBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.aDOPTANTEBindingNavigator)).EndInit();
             this.aDOPTANTEBindingNavigator.ResumeLayout(false);
             this.aDOPTANTEBindingNavigator.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.aDOPTANTEDataGridView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pRODUCTOBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pRODUCTODataGridView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.eVENTOBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.eVENTODataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

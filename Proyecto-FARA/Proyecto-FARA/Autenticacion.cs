@@ -12,7 +12,7 @@ namespace Proyecto_FARA
 {
     public partial class Autenticacion : Form
     {
-        
+
 
         public Autenticacion()
         {
@@ -34,9 +34,9 @@ namespace Proyecto_FARA
             bool login = false;
 
             Metodos UsuarioOp = new Metodos();
-            //UsuarioOp.user = usr;
-            //UsuarioOp.contraseña = pwd;
-            if (UsuarioOp.Buscar(usr,pwd) == true)
+
+            //Comprobar que el usuario existe y se encuentra activo
+            if (UsuarioOp.Buscar(usr, pwd) == true)
             {
                 MessageBox.Show(UsuarioOp.Mensaje, "Iniciando sesión");
                 login = true;
@@ -74,19 +74,14 @@ namespace Proyecto_FARA
 
         private void txtPwd_KeyDown(object sender, KeyEventArgs e)
         {
+            //Activar la comprobacion al dar ENTER sobre el txtPwd
             if (e.KeyCode == Keys.Enter)
             {
                 btnLogin.PerformClick();
             }
 
+
         }
-
-        private void Autenticacion_Load(object sender, EventArgs e)
-        {
-            //Metodos mt = new Metodos();
-            //Delegados.miUsuario = mt.Iniciado;
-        }
-
-
     }
+
 }

@@ -12,6 +12,8 @@ namespace Proyecto_FARA
 {
     public partial class Home: Form
     {
+        private iModulo actualMod { get; set; }
+
         public Home()
         {
             InitializeComponent();
@@ -25,6 +27,8 @@ namespace Proyecto_FARA
             //this.FormBorderStyle = FormBorderStyle.None;
             //this.WindowState = FormWindowState.Maximized;
 
+
+            //Mostrar datos del usuario
             lblUsr.Text = "USUARIO: "+ Metodos.UsuarioON.usr;
             lblNombre.Text = "NOMBRE: " + Metodos.UsuarioON.nombre + " " + Metodos.UsuarioON.ape_pat + " " + Metodos.UsuarioON.ape_mat;
             lblEdad.Text = "EDAD: "+Metodos.UsuarioON.edad;
@@ -36,6 +40,7 @@ namespace Proyecto_FARA
 
         private void button1_Click(object sender, EventArgs e)
         {
+            //Cerrar ventana
             Close();
         }
 
@@ -44,11 +49,32 @@ namespace Proyecto_FARA
             //MinimizeBox = false;
         }
 
-        private void btnModDon_Click(object sender, EventArgs e)
+
+        private void cambiarMod(UserControl nMod)
         {
+            if (actualMod != null)
+            {
+                ((IDisposable)actualMod).Dispose();
+            }
+
+            actualMod = (iModulo)nMod;
+            nMod.Dock = DockStyle.Fill;
+            nMod.Parent = splitContainer1.Panel2;
 
         }
 
+        private void seleccionarControl(object sender, EventArgs e)
+        {
+            string nomMod = ((Button)sender).Text;
+
+            switch (nomMod)
+            {
+                case "DONACIONES":
+                    cambiarMod(new UCDonaciones());
+                    break;
+
+            }
+        }
 
     }
 }

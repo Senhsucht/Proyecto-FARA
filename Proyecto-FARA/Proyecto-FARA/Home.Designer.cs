@@ -64,13 +64,13 @@
             this.groupBox1.Controls.Add(this.lblUsr);
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(959, 118);
+            this.groupBox1.Size = new System.Drawing.Size(921, 118);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             // 
             // btnMinimizar
             // 
-            this.btnMinimizar.Location = new System.Drawing.Point(823, 11);
+            this.btnMinimizar.Location = new System.Drawing.Point(780, 11);
             this.btnMinimizar.Name = "btnMinimizar";
             this.btnMinimizar.Size = new System.Drawing.Size(62, 23);
             this.btnMinimizar.TabIndex = 7;
@@ -80,7 +80,7 @@
             // 
             // btnCerrar
             // 
-            this.btnCerrar.Location = new System.Drawing.Point(891, 11);
+            this.btnCerrar.Location = new System.Drawing.Point(848, 11);
             this.btnCerrar.Name = "btnCerrar";
             this.btnCerrar.Size = new System.Drawing.Size(62, 23);
             this.btnCerrar.TabIndex = 2;
@@ -91,7 +91,7 @@
             // lblTusr
             // 
             this.lblTusr.AutoSize = true;
-            this.lblTusr.Location = new System.Drawing.Point(678, 79);
+            this.lblTusr.Location = new System.Drawing.Point(621, 79);
             this.lblTusr.Name = "lblTusr";
             this.lblTusr.Size = new System.Drawing.Size(38, 13);
             this.lblTusr.TabIndex = 6;
@@ -100,7 +100,7 @@
             // lblTafil
             // 
             this.lblTafil.AutoSize = true;
-            this.lblTafil.Location = new System.Drawing.Point(678, 52);
+            this.lblTafil.Location = new System.Drawing.Point(621, 52);
             this.lblTafil.Name = "lblTafil";
             this.lblTafil.Size = new System.Drawing.Size(37, 13);
             this.lblTafil.TabIndex = 5;
@@ -164,61 +164,65 @@
             this.splitContainer1.Panel1.Controls.Add(this.btnModResc);
             this.splitContainer1.Panel1.Controls.Add(this.btnModAfil);
             this.splitContainer1.Panel1.Controls.Add(this.btnModUsr);
-            this.splitContainer1.Size = new System.Drawing.Size(959, 601);
-            this.splitContainer1.SplitterDistance = 172;
+            // 
+            // splitContainer1.Panel2
+            // 
+            this.splitContainer1.Panel2.AutoScroll = true;
+            this.splitContainer1.Size = new System.Drawing.Size(921, 601);
+            this.splitContainer1.SplitterDistance = 164;
             this.splitContainer1.TabIndex = 1;
             // 
             // btnModEve
             // 
-            this.btnModEve.Location = new System.Drawing.Point(3, 368);
+            this.btnModEve.Location = new System.Drawing.Point(3, 386);
             this.btnModEve.Name = "btnModEve";
-            this.btnModEve.Size = new System.Drawing.Size(166, 67);
+            this.btnModEve.Size = new System.Drawing.Size(158, 67);
             this.btnModEve.TabIndex = 0;
             this.btnModEve.Text = "EVENTOS";
             this.btnModEve.UseVisualStyleBackColor = true;
             // 
             // btnModDon
             // 
-            this.btnModDon.Location = new System.Drawing.Point(3, 295);
+            this.btnModDon.Location = new System.Drawing.Point(3, 313);
             this.btnModDon.Name = "btnModDon";
-            this.btnModDon.Size = new System.Drawing.Size(166, 67);
+            this.btnModDon.Size = new System.Drawing.Size(158, 67);
             this.btnModDon.TabIndex = 0;
             this.btnModDon.Text = "DONACIONES";
             this.btnModDon.UseVisualStyleBackColor = true;
-            this.btnModDon.Click += new System.EventHandler(this.btnModDon_Click);
+            this.btnModDon.Click += new System.EventHandler(this.seleccionarControl);
             // 
             // btnModInv
             // 
-            this.btnModInv.Location = new System.Drawing.Point(3, 222);
+            this.btnModInv.Location = new System.Drawing.Point(3, 240);
             this.btnModInv.Name = "btnModInv";
-            this.btnModInv.Size = new System.Drawing.Size(166, 67);
+            this.btnModInv.Size = new System.Drawing.Size(158, 67);
             this.btnModInv.TabIndex = 0;
             this.btnModInv.Text = "INVENTARIO";
             this.btnModInv.UseVisualStyleBackColor = true;
             // 
             // btnModResc
             // 
-            this.btnModResc.Location = new System.Drawing.Point(3, 149);
+            this.btnModResc.Location = new System.Drawing.Point(3, 167);
             this.btnModResc.Name = "btnModResc";
-            this.btnModResc.Size = new System.Drawing.Size(166, 67);
+            this.btnModResc.Size = new System.Drawing.Size(158, 67);
             this.btnModResc.TabIndex = 0;
             this.btnModResc.Text = "RESCATE";
             this.btnModResc.UseVisualStyleBackColor = true;
             // 
             // btnModAfil
             // 
-            this.btnModAfil.Location = new System.Drawing.Point(3, 76);
+            this.btnModAfil.Location = new System.Drawing.Point(3, 94);
             this.btnModAfil.Name = "btnModAfil";
-            this.btnModAfil.Size = new System.Drawing.Size(166, 67);
+            this.btnModAfil.Size = new System.Drawing.Size(158, 67);
             this.btnModAfil.TabIndex = 0;
             this.btnModAfil.Text = "AFILIADOS";
             this.btnModAfil.UseVisualStyleBackColor = true;
             // 
             // btnModUsr
             // 
-            this.btnModUsr.Location = new System.Drawing.Point(3, 3);
+            this.btnModUsr.Location = new System.Drawing.Point(3, 21);
             this.btnModUsr.Name = "btnModUsr";
-            this.btnModUsr.Size = new System.Drawing.Size(166, 67);
+            this.btnModUsr.Size = new System.Drawing.Size(158, 67);
             this.btnModUsr.TabIndex = 0;
             this.btnModUsr.Text = "USUARIOS";
             this.btnModUsr.UseVisualStyleBackColor = true;
@@ -227,7 +231,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(976, 749);
+            this.ClientSize = new System.Drawing.Size(950, 741);
             this.Controls.Add(this.splitContainer1);
             this.Controls.Add(this.groupBox1);
             this.Name = "Home";

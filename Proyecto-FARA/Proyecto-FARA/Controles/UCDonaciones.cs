@@ -6,10 +6,11 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using Proyecto_FARA;
 
 namespace Proyecto_FARA
 {
-    public partial class UCDonaciones : UserControl
+    public partial class UCDonaciones : UserControl,iModulo
     {
         public UCDonaciones()
         {

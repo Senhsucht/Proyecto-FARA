@@ -5,11 +5,8 @@ using System.Text;
 
 namespace Proyecto_FARA
 {
-    delegate User UsuarioD();
-
-    class Delegados
+    public interface iModulo
     {
-        public static UsuarioD miUsuario;
-
+        //Clase de interface
     }
 }

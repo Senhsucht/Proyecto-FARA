@@ -172,7 +172,6 @@
             this.Controls.Add(this.statusStrip1);
             this.Name = "Autenticacion";
             this.Text = "Autenticacion";
-            this.Load += new System.EventHandler(this.Autenticacion_Load);
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
             this.gpbLogin.ResumeLayout(false);
