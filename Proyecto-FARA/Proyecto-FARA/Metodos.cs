@@ -6,8 +6,11 @@ using System.Data.SqlClient;
 
 namespace Proyecto_FARA
 {
+
     class Metodos:conexion
     {
+        public static User UsuarioON = null;
+
 
         public bool Buscar(string usr, string pwd)
         {
@@ -23,6 +26,7 @@ namespace Proyecto_FARA
                 resultado = true;
                 this.mensaje = "Bienvenido " + usr.ToString();
                 CreateUser(usr);
+                
             }
 
             else
@@ -42,11 +46,21 @@ namespace Proyecto_FARA
             SqlDataReader cus = null;
             cus = this.cmdsql0.ExecuteReader();
             cus.Read();
-            User UsuarioON = new User(cus["USR"].ToString(), cus["PWD"].ToString(), cus["NOMBRE"].ToString(), cus["APE_PAT"].ToString(), cus["APE_MAT"].ToString(), cus["DIRECCION"].ToString(), cus["TEL"].ToString(), cus["EMAIL"].ToString(), cus["TAFIL"].ToString(), cus["TUSR"].ToString(), cus["ACTIVO"].ToString(), cus["EDAD"].ToString());
-            // usuario.
+            User u = new User(cus["USR"].ToString(), cus["PWD"].ToString(), cus["NOMBRE"].ToString(), cus["APE_PAT"].ToString(), cus["APE_MAT"].ToString(), cus["DIRECCION"].ToString(), cus["TEL"].ToString(), cus["EMAIL"].ToString(), cus["TAFIL"].ToString(), cus["TUSR"].ToString(), cus["ACTIVO"].ToString(), cus["EDAD"].ToString());
+            // usuario..
+             UsuarioON = u;
+
+            //return UsuarioON;
 
         }
 
+
+        public  User Iniciado()
+        {
+            return UsuarioON;
+        }
+
+        
 
     }
 }

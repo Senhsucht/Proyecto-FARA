@@ -68,6 +68,7 @@
       <DependentUpon>Autenticacion.cs</DependentUpon>
     </Compile>
     <Compile Include="conexion.cs" />
+    <Compile Include="Delegados.cs" />
     <Compile Include="Home.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -81,6 +82,12 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>PROYECTO_FARADataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="UCDonaciones.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCDonaciones.Designer.cs">
+      <DependentUpon>UCDonaciones.cs</DependentUpon>
     </Compile>
     <Compile Include="User.cs" />
     <EmbeddedResource Include="Autenticacion.resx">
@@ -98,6 +105,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="UCDonaciones.resx">
+      <DependentUpon>UCDonaciones.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="app.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

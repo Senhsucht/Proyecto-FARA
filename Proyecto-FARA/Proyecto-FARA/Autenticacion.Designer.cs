@@ -160,7 +160,7 @@
             this.btnCerrar.UseVisualStyleBackColor = true;
             this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
             // 
-            // Atenticacion
+            // Autenticacion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -170,8 +170,9 @@
             this.Controls.Add(this.btnConectar);
             this.Controls.Add(this.gpbLogin);
             this.Controls.Add(this.statusStrip1);
-            this.Name = "Atenticacion";
+            this.Name = "Autenticacion";
             this.Text = "Autenticacion";
+            this.Load += new System.EventHandler(this.Autenticacion_Load);
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
             this.gpbLogin.ResumeLayout(false);

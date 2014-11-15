@@ -8,3 +8,4 @@ C:\Users\Angel\Documents\GitHub\Proyecto-FARA\Proyecto-FARA\Proyecto-FARA\obj\x8
 C:\Users\Angel\Documents\GitHub\Proyecto-FARA\Proyecto-FARA\Proyecto-FARA\obj\x86\Debug\Proyecto-FARA.csprojResolveAssemblyReference.cache
 C:\Users\Angel\Documents\GitHub\Proyecto-FARA\Proyecto-FARA\Proyecto-FARA\obj\x86\Debug\Proyecto_FARA.Autenticacion.resources
 C:\Users\Angel\Documents\GitHub\Proyecto-FARA\Proyecto-FARA\Proyecto-FARA\obj\x86\Debug\Proyecto_FARA.Home.resources
+C:\Users\Angel\Documents\GitHub\Proyecto-FARA\Proyecto-FARA\Proyecto-FARA\obj\x86\Debug\Proyecto_FARA.UCDonaciones.resources

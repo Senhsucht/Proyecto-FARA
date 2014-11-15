@@ -16,6 +16,7 @@ namespace Proyecto_FARA
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Autenticacion());
+            
         }
 
         public static void Home()
@@ -27,6 +28,11 @@ namespace Proyecto_FARA
             
         }
 
+        //public void iniciarDelegados()
+        //{
+        //    Metodos mt = new Metodos();
+        //    Delegados.miUsuario = mt.Iniciado;
+        //}
 
     }
 }

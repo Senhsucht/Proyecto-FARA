@@ -8,18 +8,18 @@ namespace Proyecto_FARA
 {
     class User:conexion
     {
-        private string usr {get; set;}
-        private string pwd { get; set; }
-        private string nombre { get; set; }
-        private string ape_pat { get; set; }
-        private string ape_mat { get; set; }
-        private string edad { get; set; }
-        private string direccion { get; set; }
-        private string tel { get; set; }
-        private string email { get; set; }
-        private string tafil { get; set; }
-        private string tusr { get; set; }
-        private string activo { get; set; }
+        public string usr { get; set; }
+        public string pwd { get; set; }
+        public string nombre { get; set; }
+        public string ape_pat { get; set; }
+        public string ape_mat { get; set; }
+        public string edad { get; set; }
+        public string direccion { get; set; }
+        public string tel { get; set; }
+        public string email { get; set; }
+        public string tafil { get; set; }
+        public string tusr { get; set; }
+        public string activo { get; set; }
         
         public User(string usuario, string pass, string name,string apepat,string apemat,string direc, string tele, string mail,string tafiliado,string tusuario,string active,string edadU)
         {
@@ -77,7 +77,7 @@ namespace Proyecto_FARA
             return resultado;
         }
 
-        private void CreateUser(string p)
+        public void CreateUser(string p)
         {
             
             this.sql = string.Format(@"SELECT U.USR,U.PWD,A.NOMBRE,A.APE_PAT,A.APE_MAT,A.EDAD,A.DIRECCION,A.TEL,A.EMAIL,TA.TAFIL,TU.TUSR,U.ACTIVO,U.ULT_ACT FROM USR U INNER JOIN AFIL A ON U.ID_AFIL=A.ID INNER JOIN TUSR TU ON TU.ID=U.ID_TUSR INNER JOIN TAFIL TA ON TA.ID=A.ID_TAFIL WHERE U.USR='{0}'", p);

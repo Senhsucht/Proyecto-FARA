@@ -81,6 +81,12 @@ namespace Proyecto_FARA
 
         }
 
+        private void Autenticacion_Load(object sender, EventArgs e)
+        {
+            //Metodos mt = new Metodos();
+            //Delegados.miUsuario = mt.Iniciado;
+        }
+
 
     }
 }
