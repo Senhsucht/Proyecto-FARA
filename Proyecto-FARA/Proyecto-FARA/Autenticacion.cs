@@ -23,6 +23,7 @@ namespace Proyecto_FARA
         private void Conexion_Click(object sender, EventArgs e)
         {
             //Establecer y confirmar conexión
+            
             System.Threading.Thread.Sleep(1000);
             gpbLogin.Enabled = true;
             lblConexion.Text = "Conexion establecida correctamente";

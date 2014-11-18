@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Data.SqlClient;
+using System.Data;
 
 namespace Proyecto_FARA
 {
@@ -62,6 +63,224 @@ namespace Proyecto_FARA
             return UsuarioON;
         }
 
+        public SqlDataAdapter BusquedaC(string cmd)
+        {
+            
+            this.sql = string.Format(@"{0}", cmd);
+            this.cmdsql = new SqlCommand(this.sql, this.cnn);
+            this.cnn.Open();
+            SqlDataAdapter da = new SqlDataAdapter(cmdsql);
+            
+            this.cnn.Close();
 
+            return da;
+
+        }
+
+        public static int ConsultaIds(string cmd)
+        {
+            int total = 0;
+            SqlConnection cnn = conect();
+            SqlCommand cmdsql= new SqlCommand(cmd, cnn);
+            cnn.Open();
+            SqlDataReader lector = cmdsql.ExecuteReader();
+            while (lector.Read())
+            {
+                total++;
+            }
+
+            return total;
+        }
+
+        public static int[] colecDatos(string cmd)
+        {
+            SqlConnection cnn = conect();
+
+            int[] temp = new int[1];
+            int total = ConsultaIds(cmd);
+            Array.Resize(ref temp, total);
+            cnn.Open();
+            SqlCommand cmdsql = new SqlCommand(cmd, cnn);
+            SqlDataReader lector = cmdsql.ExecuteReader();
+            int c = 0;
+
+            while (lector.Read())
+            {
+                temp[c]=lector.GetInt32(lector.GetOrdinal("ID"));
+                c++;
+            }
+
+            return temp;
+        }
+
+        public static Boolean consultarDatos(int id, string tcon)
+        {
+            Boolean r = false;
+
+            SqlConnection cnn = conect();
+            cnn.Open();
+
+            string querysql = string.Empty;
+
+            switch (tcon)
+            {
+                case "donante":
+                     querysql = string.Format(@"SELECT * FROM DONANTE WHERE ID = {0}",id);
+                    break;
+                case "producto":
+                     querysql = string.Format(@"SELECT * FROM PRODUCTO WHERE ID = {0}", id);
+                    break;
+                case "evento":
+                     querysql = string.Format(@"SELECT * FROM EVENTO WHERE ID = {0}", id);
+                    break;
+            }
+
+            SqlCommand cmdsql = new SqlCommand(querysql, cnn);
+            SqlDataReader lector = cmdsql.ExecuteReader();
+            while(lector.Read())
+            {
+                switch (tcon)
+                {
+                    case "donante":
+                        ID = (lector.GetInt32(lector.GetOrdinal("ID"))).ToString();
+                        Nom = lector.GetString(lector.GetOrdinal("NOMBRE"));
+                        ApeP = lector.GetString(lector.GetOrdinal("APE_PAT"));
+                        ApeM = lector.GetString(lector.GetOrdinal("APE_MAT"));
+
+                        if (lector.IsDBNull(lector.GetOrdinal("RFC")))
+                        {
+                            RFCD = "";
+                        }
+                        else
+                        {
+                            RFCD = lector.GetString(lector.GetOrdinal("RFC"));
+                            
+                        }
+                        TelD = lector.GetString(lector.GetOrdinal("TEL"));
+                        DirD = lector.GetString(lector.GetOrdinal("DIRECCION"));
+                        UA = (lector.GetDateTime(lector.GetOrdinal("ULT_ACT"))).ToString();
+
+                        break;
+
+                    case "producto":
+                        ID = (lector.GetInt32(lector.GetOrdinal("ID"))).ToString();
+                        Nom = lector.GetString(lector.GetOrdinal("NOMBRE"));
+                        if (lector.IsDBNull(lector.GetOrdinal("MARCA")))
+                        {
+                            MarPro = "";
+
+                        }
+                        else
+                        {
+                            MarPro = lector.GetString(lector.GetOrdinal("MARCA"));
+
+                        }
+                       // MarPro = lector.GetString(lector.GetOrdinal("MARCA"));
+
+                        if (lector.IsDBNull(lector.GetOrdinal("CNETO")))
+                        {
+                            CNetPro = "";
+
+                        }
+                        else
+                        {
+                            CNetPro = lector.GetString(lector.GetOrdinal("CNETO"));
+
+                        }
+                        //CNetPro = lector.GetString(lector.GetOrdinal("CNETO"));
+                        UA = (lector.GetDateTime(lector.GetOrdinal("ULT_ACT"))).ToString();
+
+                        break;
+
+                    case "evento":
+                        ID = (lector.GetInt32(lector.GetOrdinal("ID"))).ToString();
+                        Nom = lector.GetString(lector.GetOrdinal("NOMBRE"));
+                        //Descr = lector.GetString(lector.GetOrdinal("DESCR"));
+
+                        if (lector.IsDBNull(lector.GetOrdinal("DESCR")))
+                        {
+                            Descr = "";
+
+                        }
+                        else
+                        {
+                            Descr = lector.GetString(lector.GetOrdinal("DESCR"));
+
+                        }
+
+                        LugEve = lector.GetString(lector.GetOrdinal("LUGAR"));
+                        FecEve = (lector.GetDateTime(lector.GetOrdinal("FECHA"))).ToString();
+                        IDtEve = (lector.GetInt32(lector.GetOrdinal("ID_TEVENTO"))).ToString();
+                        EveEdo = (lector.GetInt32(lector.GetOrdinal("ID_EVE_EDO"))).ToString();
+                        UA = (lector.GetDateTime(lector.GetOrdinal("ULT_ACT"))).ToString();
+                        
+                        break;
+
+                }
+                r = true;
+            }
+
+
+
+            return r;
+
+        }
+
+
+
+
+        //-----Variables de consulta----//
+
+        public static string Nom { get; set; }
+
+        public static string RFCD { get; set; }
+
+        public static string TelD { get; set; }
+
+        public static string DirD { get; set; }
+
+        public static string UA { get; set; }
+
+        public static string ID { get; set; }
+
+        public static string ApeP { get; set; }
+
+        public static string ApeM { get; set; }
+
+        public static string MarPro { get; set; }
+
+        public static string CNetPro { get; set; }
+
+        public static string Descr { get; set; }
+
+        public static string LugEve { get; set; }
+
+        public static string FecEve { get; set; }
+
+        public static string IDtEve { get; set; }
+
+        public static string EveEdo { get; set; }
+
+        //---- ******* -----//
+
+
+
+        internal static void AltaInv(string idDon, string Cant, string idProd, string idEve)
+        {
+            string usrU = UsuarioON.usr;
+            string sqlInv = string.Format(@"INSERT INTO INVENTARIO(ID_PRODUCTO,CANTIDAD,DESCR,ULT_ACT) VALUES ({0},{1},'',GETDATE());",idProd,Cant);
+            string sqlInvH = string.Format(@"INSERT INTO INV_HIST(ID_AFILIADO,ID_PRODUCTO,CANTIDAD,DESCR,CADUCIDAD,ID_DONANTE,ID_EVENTO,ALTA_BAJA,ULT_ACT) SELECT (SELECT ID_AFIL FROM USR WHERE USR='{0}'),{1},{2},'','TEMPORAL/PRUEBA',{3},{4},1,GETDATE()",usrU,idProd,Cant,idDon,idEve);
+
+            SqlConnection con = conect();
+            con.Open();
+
+            SqlCommand cmd = new SqlCommand(sqlInv, con);
+            cmd.ExecuteNonQuery();
+
+            cmd = new SqlCommand(sqlInvH, con);
+            cmd.ExecuteNonQuery();
+
+            con.Close();
+        }
     }
 }

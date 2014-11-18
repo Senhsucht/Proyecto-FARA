@@ -73,6 +73,9 @@ namespace Proyecto_FARA
             switch (nomMod)
             {
                 case "DONACIONES":
+                    Muestra m = new Muestra();
+
+                    m.ShowDialog();
                     gpbComm.Text = "Donaciones";
                     cambiarMod(new UCDonaciones());
                     break;

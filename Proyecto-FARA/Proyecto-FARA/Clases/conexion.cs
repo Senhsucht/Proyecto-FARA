@@ -24,6 +24,13 @@ namespace Proyecto_FARA
             
         }
 
+        public static SqlConnection conect()
+        {
+            string cc = (@"Data Source = KASUMI-II\SQLEXPRESS; Initial Catalog = PROYECTO_FARA; integrated security=true;" + "Trusted_Connection=True;MultipleActiveResultSets=True;");
+            SqlConnection cnn = new SqlConnection(cc);
+            return cnn;
+        }
+
         public string Mensaje
         {
             get

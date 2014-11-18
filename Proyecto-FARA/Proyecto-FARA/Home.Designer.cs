@@ -51,6 +51,7 @@
             this.btnConU = new System.Windows.Forms.Button();
             this.btnAltaU = new System.Windows.Forms.Button();
             this.btnModU = new System.Windows.Forms.Button();
+            this.btnAdop = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -185,6 +186,7 @@
             // 
             // gpbMods
             // 
+            this.gpbMods.Controls.Add(this.btnAdop);
             this.gpbMods.Controls.Add(this.btnModEve);
             this.gpbMods.Controls.Add(this.btnModUsr);
             this.gpbMods.Controls.Add(this.btnModDon);
@@ -200,7 +202,7 @@
             // 
             // btnModEve
             // 
-            this.btnModEve.Location = new System.Drawing.Point(6, 398);
+            this.btnModEve.Location = new System.Drawing.Point(6, 483);
             this.btnModEve.Name = "btnModEve";
             this.btnModEve.Size = new System.Drawing.Size(146, 67);
             this.btnModEve.TabIndex = 0;
@@ -218,7 +220,7 @@
             // 
             // btnModDon
             // 
-            this.btnModDon.Location = new System.Drawing.Point(6, 325);
+            this.btnModDon.Location = new System.Drawing.Point(6, 410);
             this.btnModDon.Name = "btnModDon";
             this.btnModDon.Size = new System.Drawing.Size(146, 67);
             this.btnModDon.TabIndex = 0;
@@ -314,6 +316,15 @@
             this.btnModU.Text = "Modificacion de usuario";
             this.btnModU.UseVisualStyleBackColor = true;
             // 
+            // btnAdop
+            // 
+            this.btnAdop.Location = new System.Drawing.Point(6, 325);
+            this.btnAdop.Name = "btnAdop";
+            this.btnAdop.Size = new System.Drawing.Size(146, 79);
+            this.btnAdop.TabIndex = 0;
+            this.btnAdop.Text = "ADOPCIONES";
+            this.btnAdop.UseVisualStyleBackColor = true;
+            // 
             // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -364,6 +375,7 @@
         private System.Windows.Forms.Button btnAltaU;
         private System.Windows.Forms.GroupBox gpbMods;
         private System.Windows.Forms.GroupBox gpbComm;
+        private System.Windows.Forms.Button btnAdop;
     }
 }
 
