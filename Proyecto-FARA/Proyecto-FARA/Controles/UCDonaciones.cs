@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using Proyecto_FARA;
+using System.Data.SqlClient;
 
 namespace Proyecto_FARA
 {
@@ -22,6 +23,11 @@ namespace Proyecto_FARA
             this.Validate();
             this.aDOPTANTEBindingSource.EndEdit();
             this.tableAdapterManager.UpdateAll(this.pROYECTO_FARADataSet);
+
+        }
+
+        private void dONANTEDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
 
         }
     }

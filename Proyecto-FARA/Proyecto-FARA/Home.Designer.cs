@@ -39,16 +39,28 @@
             this.lblNombre = new System.Windows.Forms.Label();
             this.lblUsr = new System.Windows.Forms.Label();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.gpbMods = new System.Windows.Forms.GroupBox();
             this.btnModEve = new System.Windows.Forms.Button();
+            this.btnModUsr = new System.Windows.Forms.Button();
             this.btnModDon = new System.Windows.Forms.Button();
+            this.btnModAfil = new System.Windows.Forms.Button();
             this.btnModInv = new System.Windows.Forms.Button();
             this.btnModResc = new System.Windows.Forms.Button();
-            this.btnModAfil = new System.Windows.Forms.Button();
-            this.btnModUsr = new System.Windows.Forms.Button();
+            this.splitContainer2 = new System.Windows.Forms.SplitContainer();
+            this.gpbComm = new System.Windows.Forms.GroupBox();
+            this.btnConU = new System.Windows.Forms.Button();
+            this.btnAltaU = new System.Windows.Forms.Button();
+            this.btnModU = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
+            this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
+            this.gpbMods.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).BeginInit();
+            this.splitContainer2.Panel1.SuspendLayout();
+            this.splitContainer2.SuspendLayout();
+            this.gpbComm.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -153,79 +165,154 @@
             // 
             // splitContainer1
             // 
+            this.splitContainer1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.splitContainer1.Location = new System.Drawing.Point(12, 136);
             this.splitContainer1.Name = "splitContainer1";
             // 
             // splitContainer1.Panel1
             // 
-            this.splitContainer1.Panel1.Controls.Add(this.btnModEve);
-            this.splitContainer1.Panel1.Controls.Add(this.btnModDon);
-            this.splitContainer1.Panel1.Controls.Add(this.btnModInv);
-            this.splitContainer1.Panel1.Controls.Add(this.btnModResc);
-            this.splitContainer1.Panel1.Controls.Add(this.btnModAfil);
-            this.splitContainer1.Panel1.Controls.Add(this.btnModUsr);
+            this.splitContainer1.Panel1.Controls.Add(this.gpbMods);
             // 
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.AutoScroll = true;
+            this.splitContainer1.Panel2.Controls.Add(this.splitContainer2);
             this.splitContainer1.Size = new System.Drawing.Size(921, 601);
             this.splitContainer1.SplitterDistance = 164;
             this.splitContainer1.TabIndex = 1;
             // 
+            // gpbMods
+            // 
+            this.gpbMods.Controls.Add(this.btnModEve);
+            this.gpbMods.Controls.Add(this.btnModUsr);
+            this.gpbMods.Controls.Add(this.btnModDon);
+            this.gpbMods.Controls.Add(this.btnModAfil);
+            this.gpbMods.Controls.Add(this.btnModInv);
+            this.gpbMods.Controls.Add(this.btnModResc);
+            this.gpbMods.Location = new System.Drawing.Point(3, 3);
+            this.gpbMods.Name = "gpbMods";
+            this.gpbMods.Size = new System.Drawing.Size(158, 590);
+            this.gpbMods.TabIndex = 0;
+            this.gpbMods.TabStop = false;
+            this.gpbMods.Text = "Apartados";
+            // 
             // btnModEve
             // 
-            this.btnModEve.Location = new System.Drawing.Point(3, 386);
+            this.btnModEve.Location = new System.Drawing.Point(6, 398);
             this.btnModEve.Name = "btnModEve";
-            this.btnModEve.Size = new System.Drawing.Size(158, 67);
+            this.btnModEve.Size = new System.Drawing.Size(146, 67);
             this.btnModEve.TabIndex = 0;
             this.btnModEve.Text = "EVENTOS";
             this.btnModEve.UseVisualStyleBackColor = true;
             // 
+            // btnModUsr
+            // 
+            this.btnModUsr.Location = new System.Drawing.Point(6, 33);
+            this.btnModUsr.Name = "btnModUsr";
+            this.btnModUsr.Size = new System.Drawing.Size(146, 67);
+            this.btnModUsr.TabIndex = 0;
+            this.btnModUsr.Text = "USUARIOS";
+            this.btnModUsr.UseVisualStyleBackColor = true;
+            // 
             // btnModDon
             // 
-            this.btnModDon.Location = new System.Drawing.Point(3, 313);
+            this.btnModDon.Location = new System.Drawing.Point(6, 325);
             this.btnModDon.Name = "btnModDon";
-            this.btnModDon.Size = new System.Drawing.Size(158, 67);
+            this.btnModDon.Size = new System.Drawing.Size(146, 67);
             this.btnModDon.TabIndex = 0;
             this.btnModDon.Text = "DONACIONES";
             this.btnModDon.UseVisualStyleBackColor = true;
             this.btnModDon.Click += new System.EventHandler(this.seleccionarControl);
             // 
+            // btnModAfil
+            // 
+            this.btnModAfil.Location = new System.Drawing.Point(6, 106);
+            this.btnModAfil.Name = "btnModAfil";
+            this.btnModAfil.Size = new System.Drawing.Size(146, 67);
+            this.btnModAfil.TabIndex = 0;
+            this.btnModAfil.Text = "AFILIADOS";
+            this.btnModAfil.UseVisualStyleBackColor = true;
+            // 
             // btnModInv
             // 
-            this.btnModInv.Location = new System.Drawing.Point(3, 240);
+            this.btnModInv.Location = new System.Drawing.Point(6, 252);
             this.btnModInv.Name = "btnModInv";
-            this.btnModInv.Size = new System.Drawing.Size(158, 67);
+            this.btnModInv.Size = new System.Drawing.Size(146, 67);
             this.btnModInv.TabIndex = 0;
             this.btnModInv.Text = "INVENTARIO";
             this.btnModInv.UseVisualStyleBackColor = true;
             // 
             // btnModResc
             // 
-            this.btnModResc.Location = new System.Drawing.Point(3, 167);
+            this.btnModResc.Location = new System.Drawing.Point(6, 179);
             this.btnModResc.Name = "btnModResc";
-            this.btnModResc.Size = new System.Drawing.Size(158, 67);
+            this.btnModResc.Size = new System.Drawing.Size(146, 67);
             this.btnModResc.TabIndex = 0;
             this.btnModResc.Text = "RESCATE";
             this.btnModResc.UseVisualStyleBackColor = true;
             // 
-            // btnModAfil
+            // splitContainer2
             // 
-            this.btnModAfil.Location = new System.Drawing.Point(3, 94);
-            this.btnModAfil.Name = "btnModAfil";
-            this.btnModAfil.Size = new System.Drawing.Size(158, 67);
-            this.btnModAfil.TabIndex = 0;
-            this.btnModAfil.Text = "AFILIADOS";
-            this.btnModAfil.UseVisualStyleBackColor = true;
+            this.splitContainer2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.splitContainer2.Location = new System.Drawing.Point(3, 0);
+            this.splitContainer2.Name = "splitContainer2";
+            this.splitContainer2.Orientation = System.Windows.Forms.Orientation.Horizontal;
             // 
-            // btnModUsr
+            // splitContainer2.Panel1
             // 
-            this.btnModUsr.Location = new System.Drawing.Point(3, 21);
-            this.btnModUsr.Name = "btnModUsr";
-            this.btnModUsr.Size = new System.Drawing.Size(158, 67);
-            this.btnModUsr.TabIndex = 0;
-            this.btnModUsr.Text = "USUARIOS";
-            this.btnModUsr.UseVisualStyleBackColor = true;
+            this.splitContainer2.Panel1.Controls.Add(this.gpbComm);
+            // 
+            // splitContainer2.Panel2
+            // 
+            this.splitContainer2.Panel2.AutoScroll = true;
+            this.splitContainer2.Panel2.Scroll += new System.Windows.Forms.ScrollEventHandler(this.splitContainer2_Panel2_Scroll);
+            this.splitContainer2.Size = new System.Drawing.Size(750, 593);
+            this.splitContainer2.SplitterDistance = 79;
+            this.splitContainer2.TabIndex = 0;
+            this.splitContainer2.Scroll += new System.Windows.Forms.ScrollEventHandler(this.splitContainer2_Scroll);
+            // 
+            // gpbComm
+            // 
+            this.gpbComm.Controls.Add(this.btnConU);
+            this.gpbComm.Controls.Add(this.btnAltaU);
+            this.gpbComm.Controls.Add(this.btnModU);
+            this.gpbComm.Location = new System.Drawing.Point(14, 3);
+            this.gpbComm.Name = "gpbComm";
+            this.gpbComm.Size = new System.Drawing.Size(725, 66);
+            this.gpbComm.TabIndex = 0;
+            this.gpbComm.TabStop = false;
+            this.gpbComm.Text = "gpbComm";
+            // 
+            // btnConU
+            // 
+            this.btnConU.Location = new System.Drawing.Point(545, 18);
+            this.btnConU.Name = "btnConU";
+            this.btnConU.Size = new System.Drawing.Size(102, 36);
+            this.btnConU.TabIndex = 2;
+            this.btnConU.Text = "Consulta de usuario";
+            this.btnConU.UseVisualStyleBackColor = true;
+            // 
+            // btnAltaU
+            // 
+            this.btnAltaU.Location = new System.Drawing.Point(67, 19);
+            this.btnAltaU.Name = "btnAltaU";
+            this.btnAltaU.Size = new System.Drawing.Size(114, 36);
+            this.btnAltaU.TabIndex = 0;
+            this.btnAltaU.Text = "Alta de usuario";
+            this.btnAltaU.UseVisualStyleBackColor = true;
+            // 
+            // btnModU
+            // 
+            this.btnModU.Location = new System.Drawing.Point(297, 19);
+            this.btnModU.Name = "btnModU";
+            this.btnModU.Size = new System.Drawing.Size(103, 35);
+            this.btnModU.TabIndex = 1;
+            this.btnModU.Text = "Modificacion de usuario";
+            this.btnModU.UseVisualStyleBackColor = true;
             // 
             // Home
             // 
@@ -240,8 +327,14 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.splitContainer1.Panel1.ResumeLayout(false);
+            this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
+            this.gpbMods.ResumeLayout(false);
+            this.splitContainer2.Panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).EndInit();
+            this.splitContainer2.ResumeLayout(false);
+            this.gpbComm.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -265,6 +358,12 @@
         private System.Windows.Forms.Button btnModResc;
         private System.Windows.Forms.Button btnModAfil;
         private System.Windows.Forms.Button btnModUsr;
+        private System.Windows.Forms.SplitContainer splitContainer2;
+        private System.Windows.Forms.Button btnConU;
+        private System.Windows.Forms.Button btnModU;
+        private System.Windows.Forms.Button btnAltaU;
+        private System.Windows.Forms.GroupBox gpbMods;
+        private System.Windows.Forms.GroupBox gpbComm;
     }
 }
 

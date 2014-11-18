@@ -13,10 +13,13 @@ namespace Proyecto_FARA
     public partial class Home: Form
     {
         private iModulo actualMod { get; set; }
+        VScrollBar SB = new VScrollBar();
 
         public Home()
         {
             InitializeComponent();
+            this.splitContainer2.Panel2.AutoScroll = true;
+            this.splitContainer2.Panel2.VerticalScroll.Visible = true;
 
         }
 
@@ -59,7 +62,7 @@ namespace Proyecto_FARA
 
             actualMod = (iModulo)nMod;
             nMod.Dock = DockStyle.Fill;
-            nMod.Parent = splitContainer1.Panel2;
+            nMod.Parent = splitContainer2.Panel2;
 
         }
 
@@ -70,11 +73,27 @@ namespace Proyecto_FARA
             switch (nomMod)
             {
                 case "DONACIONES":
+                    gpbComm.Text = "Donaciones";
                     cambiarMod(new UCDonaciones());
                     break;
 
             }
         }
+
+        private void splitContainer2_Panel2_Scroll(object sender, ScrollEventArgs e)
+        {
+            this.splitContainer1.Panel1.VerticalScroll.Value = e.NewValue;
+        }
+
+        private void splitContainer2_Scroll(object sender, ScrollEventArgs e)
+        {
+            if (e.ScrollOrientation == ScrollOrientation.VerticalScroll)
+            {
+                splitContainer2.Panel2.VerticalScroll.Value = e.NewValue;
+            }
+        }
+
+
 
     }
 }

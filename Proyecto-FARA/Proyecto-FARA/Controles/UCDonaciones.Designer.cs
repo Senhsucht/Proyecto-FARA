@@ -31,14 +31,6 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UCDonaciones));
             this.gpbDonante = new System.Windows.Forms.GroupBox();
-            this.aDOPTANTEDataGridView = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.aDOPTANTEBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.pROYECTO_FARADataSet = new Proyecto_FARA.PROYECTO_FARADataSet();
             this.btnBuscarD = new System.Windows.Forms.Button();
@@ -51,12 +43,6 @@
             this.lblNombreD = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.gpbProd = new System.Windows.Forms.GroupBox();
-            this.pRODUCTODataGridView = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pRODUCTOBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.btnBuscarP = new System.Windows.Forms.Button();
             this.textBox6 = new System.Windows.Forms.TextBox();
@@ -64,13 +50,6 @@
             this.lblNombreP = new System.Windows.Forms.Label();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.gpbEve = new System.Windows.Forms.GroupBox();
-            this.eVENTODataGridView = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn17 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn18 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn19 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.eVENTOBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.textBox7 = new System.Windows.Forms.TextBox();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
@@ -94,23 +73,61 @@
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.aDOPTANTEBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
+            this.gpbResumen = new System.Windows.Forms.GroupBox();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dONANTEBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dONANTETableAdapter = new Proyecto_FARA.PROYECTO_FARADataSetTableAdapters.DONANTETableAdapter();
+            this.dONANTEDataGridView = new System.Windows.Forms.DataGridView();
+            this.pRODUCTODataGridView = new System.Windows.Forms.DataGridView();
+            this.eVENTODataGridView = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn17 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn18 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn19 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn20 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn21 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnAgre = new System.Windows.Forms.Button();
+            this.btnElim = new System.Windows.Forms.Button();
+            this.btnCarga = new System.Windows.Forms.Button();
+            this.cmnDonante = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cmnCantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cmn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cmnEve = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gpbDonante.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.aDOPTANTEDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.aDOPTANTEBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pROYECTO_FARADataSet)).BeginInit();
             this.gpbProd.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pRODUCTODataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pRODUCTOBindingSource)).BeginInit();
             this.gpbEve.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.eVENTODataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.eVENTOBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.aDOPTANTEBindingNavigator)).BeginInit();
             this.aDOPTANTEBindingNavigator.SuspendLayout();
+            this.gpbResumen.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dONANTEBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dONANTEDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pRODUCTODataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.eVENTODataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // gpbDonante
             // 
-            this.gpbDonante.Controls.Add(this.aDOPTANTEDataGridView);
+            this.gpbDonante.Controls.Add(this.dONANTEDataGridView);
             this.gpbDonante.Controls.Add(this.btnBuscarD);
             this.gpbDonante.Controls.Add(this.lblRFCD);
             this.gpbDonante.Controls.Add(this.textBox4);
@@ -122,70 +139,10 @@
             this.gpbDonante.Controls.Add(this.textBox1);
             this.gpbDonante.Location = new System.Drawing.Point(24, 19);
             this.gpbDonante.Name = "gpbDonante";
-            this.gpbDonante.Size = new System.Drawing.Size(700, 356);
+            this.gpbDonante.Size = new System.Drawing.Size(700, 342);
             this.gpbDonante.TabIndex = 0;
             this.gpbDonante.TabStop = false;
             this.gpbDonante.Text = "Donante";
-            // 
-            // aDOPTANTEDataGridView
-            // 
-            this.aDOPTANTEDataGridView.AutoGenerateColumns = false;
-            this.aDOPTANTEDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.aDOPTANTEDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn2,
-            this.dataGridViewTextBoxColumn3,
-            this.dataGridViewTextBoxColumn4,
-            this.dataGridViewTextBoxColumn5,
-            this.dataGridViewTextBoxColumn6,
-            this.dataGridViewTextBoxColumn7,
-            this.dataGridViewTextBoxColumn8});
-            this.aDOPTANTEDataGridView.DataSource = this.aDOPTANTEBindingSource;
-            this.aDOPTANTEDataGridView.Location = new System.Drawing.Point(19, 61);
-            this.aDOPTANTEDataGridView.Name = "aDOPTANTEDataGridView";
-            this.aDOPTANTEDataGridView.Size = new System.Drawing.Size(630, 220);
-            this.aDOPTANTEDataGridView.TabIndex = 9;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "NOMBRE";
-            this.dataGridViewTextBoxColumn2.HeaderText = "NOMBRE";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "APE_PAT";
-            this.dataGridViewTextBoxColumn3.HeaderText = "APE_PAT";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "APE_MAT";
-            this.dataGridViewTextBoxColumn4.HeaderText = "APE_MAT";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.DataPropertyName = "EDAD";
-            this.dataGridViewTextBoxColumn5.HeaderText = "EDAD";
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            // 
-            // dataGridViewTextBoxColumn6
-            // 
-            this.dataGridViewTextBoxColumn6.DataPropertyName = "DIRECCION";
-            this.dataGridViewTextBoxColumn6.HeaderText = "DIRECCION";
-            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            // 
-            // dataGridViewTextBoxColumn7
-            // 
-            this.dataGridViewTextBoxColumn7.DataPropertyName = "TEL";
-            this.dataGridViewTextBoxColumn7.HeaderText = "TEL";
-            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
-            // 
-            // dataGridViewTextBoxColumn8
-            // 
-            this.dataGridViewTextBoxColumn8.DataPropertyName = "EMAIL";
-            this.dataGridViewTextBoxColumn8.HeaderText = "EMAIL";
-            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
             // 
             // aDOPTANTEBindingSource
             // 
@@ -234,9 +191,9 @@
             this.lblApe_PatD.AutoSize = true;
             this.lblApe_PatD.Location = new System.Drawing.Point(186, 19);
             this.lblApe_PatD.Name = "lblApe_PatD";
-            this.lblApe_PatD.Size = new System.Drawing.Size(63, 13);
+            this.lblApe_PatD.Size = new System.Drawing.Size(84, 13);
             this.lblApe_PatD.TabIndex = 4;
-            this.lblApe_PatD.Text = "Apellido Pat";
+            this.lblApe_PatD.Text = "Apellido Paterno";
             // 
             // textBox2
             // 
@@ -250,9 +207,9 @@
             this.lblApe_MatD.AutoSize = true;
             this.lblApe_MatD.Location = new System.Drawing.Point(312, 21);
             this.lblApe_MatD.Name = "lblApe_MatD";
-            this.lblApe_MatD.Size = new System.Drawing.Size(65, 13);
+            this.lblApe_MatD.Size = new System.Drawing.Size(86, 13);
             this.lblApe_MatD.TabIndex = 2;
-            this.lblApe_MatD.Text = "Apellido Mat";
+            this.lblApe_MatD.Text = "Apellido Materno";
             // 
             // lblNombreD
             // 
@@ -278,59 +235,12 @@
             this.gpbProd.Controls.Add(this.lblMarcaP);
             this.gpbProd.Controls.Add(this.lblNombreP);
             this.gpbProd.Controls.Add(this.textBox5);
-            this.gpbProd.Location = new System.Drawing.Point(24, 381);
+            this.gpbProd.Location = new System.Drawing.Point(24, 399);
             this.gpbProd.Name = "gpbProd";
-            this.gpbProd.Size = new System.Drawing.Size(700, 390);
+            this.gpbProd.Size = new System.Drawing.Size(700, 350);
             this.gpbProd.TabIndex = 1;
             this.gpbProd.TabStop = false;
             this.gpbProd.Text = "Producto";
-            // 
-            // pRODUCTODataGridView
-            // 
-            this.pRODUCTODataGridView.AutoGenerateColumns = false;
-            this.pRODUCTODataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.pRODUCTODataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1,
-            this.dataGridViewTextBoxColumn9,
-            this.dataGridViewTextBoxColumn10,
-            this.dataGridViewTextBoxColumn11,
-            this.dataGridViewTextBoxColumn12});
-            this.pRODUCTODataGridView.DataSource = this.pRODUCTOBindingSource;
-            this.pRODUCTODataGridView.Location = new System.Drawing.Point(19, 80);
-            this.pRODUCTODataGridView.Name = "pRODUCTODataGridView";
-            this.pRODUCTODataGridView.Size = new System.Drawing.Size(543, 220);
-            this.pRODUCTODataGridView.TabIndex = 5;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "ID";
-            this.dataGridViewTextBoxColumn1.HeaderText = "ID";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn9
-            // 
-            this.dataGridViewTextBoxColumn9.DataPropertyName = "NOMBRE";
-            this.dataGridViewTextBoxColumn9.HeaderText = "NOMBRE";
-            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
-            // 
-            // dataGridViewTextBoxColumn10
-            // 
-            this.dataGridViewTextBoxColumn10.DataPropertyName = "MARCA";
-            this.dataGridViewTextBoxColumn10.HeaderText = "MARCA";
-            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
-            // 
-            // dataGridViewTextBoxColumn11
-            // 
-            this.dataGridViewTextBoxColumn11.DataPropertyName = "CNETO";
-            this.dataGridViewTextBoxColumn11.HeaderText = "CNETO";
-            this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
-            // 
-            // dataGridViewTextBoxColumn12
-            // 
-            this.dataGridViewTextBoxColumn12.DataPropertyName = "ULT_ACT";
-            this.dataGridViewTextBoxColumn12.HeaderText = "ULT_ACT";
-            this.dataGridViewTextBoxColumn12.Name = "dataGridViewTextBoxColumn12";
             // 
             // pRODUCTOBindingSource
             // 
@@ -339,7 +249,7 @@
             // 
             // btnBuscarP
             // 
-            this.btnBuscarP.Location = new System.Drawing.Point(374, 40);
+            this.btnBuscarP.Location = new System.Drawing.Point(355, 39);
             this.btnBuscarP.Name = "btnBuscarP";
             this.btnBuscarP.Size = new System.Drawing.Size(75, 23);
             this.btnBuscarP.TabIndex = 4;
@@ -348,7 +258,7 @@
             // 
             // textBox6
             // 
-            this.textBox6.Location = new System.Drawing.Point(237, 43);
+            this.textBox6.Location = new System.Drawing.Point(203, 42);
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(121, 20);
             this.textBox6.TabIndex = 3;
@@ -356,7 +266,7 @@
             // lblMarcaP
             // 
             this.lblMarcaP.AutoSize = true;
-            this.lblMarcaP.Location = new System.Drawing.Point(220, 28);
+            this.lblMarcaP.Location = new System.Drawing.Point(186, 27);
             this.lblMarcaP.Name = "lblMarcaP";
             this.lblMarcaP.Size = new System.Drawing.Size(37, 13);
             this.lblMarcaP.TabIndex = 2;
@@ -386,65 +296,12 @@
             this.gpbEve.Controls.Add(this.lblTipEv);
             this.gpbEve.Controls.Add(this.lblNombreE);
             this.gpbEve.Controls.Add(this.btnBuscarE);
-            this.gpbEve.Location = new System.Drawing.Point(24, 777);
+            this.gpbEve.Location = new System.Drawing.Point(24, 772);
             this.gpbEve.Name = "gpbEve";
-            this.gpbEve.Size = new System.Drawing.Size(700, 371);
+            this.gpbEve.Size = new System.Drawing.Size(700, 350);
             this.gpbEve.TabIndex = 2;
             this.gpbEve.TabStop = false;
             this.gpbEve.Text = "Evento";
-            // 
-            // eVENTODataGridView
-            // 
-            this.eVENTODataGridView.AutoGenerateColumns = false;
-            this.eVENTODataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.eVENTODataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn14,
-            this.dataGridViewTextBoxColumn15,
-            this.dataGridViewTextBoxColumn16,
-            this.dataGridViewTextBoxColumn17,
-            this.dataGridViewTextBoxColumn18,
-            this.dataGridViewTextBoxColumn19});
-            this.eVENTODataGridView.DataSource = this.eVENTOBindingSource;
-            this.eVENTODataGridView.Location = new System.Drawing.Point(19, 90);
-            this.eVENTODataGridView.Name = "eVENTODataGridView";
-            this.eVENTODataGridView.Size = new System.Drawing.Size(642, 220);
-            this.eVENTODataGridView.TabIndex = 6;
-            // 
-            // dataGridViewTextBoxColumn14
-            // 
-            this.dataGridViewTextBoxColumn14.DataPropertyName = "NOMBRE";
-            this.dataGridViewTextBoxColumn14.HeaderText = "NOMBRE";
-            this.dataGridViewTextBoxColumn14.Name = "dataGridViewTextBoxColumn14";
-            // 
-            // dataGridViewTextBoxColumn15
-            // 
-            this.dataGridViewTextBoxColumn15.DataPropertyName = "DESCR";
-            this.dataGridViewTextBoxColumn15.HeaderText = "DESCR";
-            this.dataGridViewTextBoxColumn15.Name = "dataGridViewTextBoxColumn15";
-            // 
-            // dataGridViewTextBoxColumn16
-            // 
-            this.dataGridViewTextBoxColumn16.DataPropertyName = "LUGAR";
-            this.dataGridViewTextBoxColumn16.HeaderText = "LUGAR";
-            this.dataGridViewTextBoxColumn16.Name = "dataGridViewTextBoxColumn16";
-            // 
-            // dataGridViewTextBoxColumn17
-            // 
-            this.dataGridViewTextBoxColumn17.DataPropertyName = "FECHA";
-            this.dataGridViewTextBoxColumn17.HeaderText = "FECHA";
-            this.dataGridViewTextBoxColumn17.Name = "dataGridViewTextBoxColumn17";
-            // 
-            // dataGridViewTextBoxColumn18
-            // 
-            this.dataGridViewTextBoxColumn18.DataPropertyName = "ID_TEVENTO";
-            this.dataGridViewTextBoxColumn18.HeaderText = "ID_TEVENTO";
-            this.dataGridViewTextBoxColumn18.Name = "dataGridViewTextBoxColumn18";
-            // 
-            // dataGridViewTextBoxColumn19
-            // 
-            this.dataGridViewTextBoxColumn19.DataPropertyName = "ID_EVE_EDO";
-            this.dataGridViewTextBoxColumn19.HeaderText = "ID_EVE_EDO";
-            this.dataGridViewTextBoxColumn19.Name = "dataGridViewTextBoxColumn19";
             // 
             // eVENTOBindingSource
             // 
@@ -461,7 +318,7 @@
             // comboBox2
             // 
             this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(237, 54);
+            this.comboBox2.Location = new System.Drawing.Point(203, 54);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(121, 21);
             this.comboBox2.TabIndex = 5;
@@ -469,7 +326,7 @@
             // lblTipEv
             // 
             this.lblTipEv.AutoSize = true;
-            this.lblTipEv.Location = new System.Drawing.Point(220, 37);
+            this.lblTipEv.Location = new System.Drawing.Point(186, 37);
             this.lblTipEv.Name = "lblTipEv";
             this.lblTipEv.Size = new System.Drawing.Size(79, 13);
             this.lblTipEv.TabIndex = 2;
@@ -486,7 +343,7 @@
             // 
             // btnBuscarE
             // 
-            this.btnBuscarE.Location = new System.Drawing.Point(374, 50);
+            this.btnBuscarE.Location = new System.Drawing.Point(355, 53);
             this.btnBuscarE.Name = "btnBuscarE";
             this.btnBuscarE.Size = new System.Drawing.Size(75, 21);
             this.btnBuscarE.TabIndex = 0;
@@ -659,32 +516,314 @@
             this.aDOPTANTEBindingNavigatorSaveItem.Text = "Save Data";
             this.aDOPTANTEBindingNavigatorSaveItem.Click += new System.EventHandler(this.aDOPTANTEBindingNavigatorSaveItem_Click);
             // 
+            // gpbResumen
+            // 
+            this.gpbResumen.Controls.Add(this.btnCarga);
+            this.gpbResumen.Controls.Add(this.btnElim);
+            this.gpbResumen.Controls.Add(this.btnAgre);
+            this.gpbResumen.Controls.Add(this.dataGridView1);
+            this.gpbResumen.Location = new System.Drawing.Point(24, 1156);
+            this.gpbResumen.Name = "gpbResumen";
+            this.gpbResumen.Size = new System.Drawing.Size(700, 384);
+            this.gpbResumen.TabIndex = 4;
+            this.gpbResumen.TabStop = false;
+            this.gpbResumen.Text = "Resumen";
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.cmnDonante,
+            this.cmnCantidad,
+            this.cmn,
+            this.cmnEve});
+            this.dataGridView1.Location = new System.Drawing.Point(19, 99);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.Size = new System.Drawing.Size(650, 238);
+            this.dataGridView1.TabIndex = 0;
+            // 
+            // dONANTEBindingSource
+            // 
+            this.dONANTEBindingSource.DataMember = "DONANTE";
+            this.dONANTEBindingSource.DataSource = this.pROYECTO_FARADataSet;
+            // 
+            // dONANTETableAdapter
+            // 
+            this.dONANTETableAdapter.ClearBeforeFill = true;
+            // 
+            // dONANTEDataGridView
+            // 
+            this.dONANTEDataGridView.AutoGenerateColumns = false;
+            this.dONANTEDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dONANTEDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn2,
+            this.dataGridViewTextBoxColumn3,
+            this.dataGridViewTextBoxColumn5,
+            this.dataGridViewTextBoxColumn4,
+            this.dataGridViewTextBoxColumn6,
+            this.dataGridViewTextBoxColumn7,
+            this.dataGridViewTextBoxColumn8,
+            this.dataGridViewTextBoxColumn13});
+            this.dONANTEDataGridView.DataSource = this.dONANTEBindingSource;
+            this.dONANTEDataGridView.Location = new System.Drawing.Point(19, 98);
+            this.dONANTEDataGridView.Name = "dONANTEDataGridView";
+            this.dONANTEDataGridView.Size = new System.Drawing.Size(650, 220);
+            this.dONANTEDataGridView.TabIndex = 9;
+            this.dONANTEDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dONANTEDataGridView_CellContentClick);
+            // 
+            // pRODUCTODataGridView
+            // 
+            this.pRODUCTODataGridView.AutoGenerateColumns = false;
+            this.pRODUCTODataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.pRODUCTODataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn1,
+            this.dataGridViewTextBoxColumn9,
+            this.dataGridViewTextBoxColumn10,
+            this.dataGridViewTextBoxColumn11,
+            this.dataGridViewTextBoxColumn12});
+            this.pRODUCTODataGridView.DataSource = this.pRODUCTOBindingSource;
+            this.pRODUCTODataGridView.Location = new System.Drawing.Point(19, 94);
+            this.pRODUCTODataGridView.Name = "pRODUCTODataGridView";
+            this.pRODUCTODataGridView.Size = new System.Drawing.Size(650, 220);
+            this.pRODUCTODataGridView.TabIndex = 5;
+            // 
+            // eVENTODataGridView
+            // 
+            this.eVENTODataGridView.AutoGenerateColumns = false;
+            this.eVENTODataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.eVENTODataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn14,
+            this.dataGridViewTextBoxColumn15,
+            this.dataGridViewTextBoxColumn16,
+            this.dataGridViewTextBoxColumn17,
+            this.dataGridViewTextBoxColumn18,
+            this.dataGridViewTextBoxColumn19,
+            this.dataGridViewTextBoxColumn20,
+            this.dataGridViewTextBoxColumn21});
+            this.eVENTODataGridView.DataSource = this.eVENTOBindingSource;
+            this.eVENTODataGridView.Location = new System.Drawing.Point(19, 99);
+            this.eVENTODataGridView.Name = "eVENTODataGridView";
+            this.eVENTODataGridView.Size = new System.Drawing.Size(650, 220);
+            this.eVENTODataGridView.TabIndex = 6;
+            // 
+            // dataGridViewTextBoxColumn14
+            // 
+            this.dataGridViewTextBoxColumn14.DataPropertyName = "ID";
+            this.dataGridViewTextBoxColumn14.HeaderText = "ID";
+            this.dataGridViewTextBoxColumn14.Name = "dataGridViewTextBoxColumn14";
+            this.dataGridViewTextBoxColumn14.ReadOnly = true;
+            this.dataGridViewTextBoxColumn14.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn15
+            // 
+            this.dataGridViewTextBoxColumn15.DataPropertyName = "NOMBRE";
+            this.dataGridViewTextBoxColumn15.HeaderText = "NOMBRE";
+            this.dataGridViewTextBoxColumn15.Name = "dataGridViewTextBoxColumn15";
+            // 
+            // dataGridViewTextBoxColumn16
+            // 
+            this.dataGridViewTextBoxColumn16.DataPropertyName = "DESCR";
+            this.dataGridViewTextBoxColumn16.HeaderText = "DESCRIPCION";
+            this.dataGridViewTextBoxColumn16.Name = "dataGridViewTextBoxColumn16";
+            // 
+            // dataGridViewTextBoxColumn17
+            // 
+            this.dataGridViewTextBoxColumn17.DataPropertyName = "LUGAR";
+            this.dataGridViewTextBoxColumn17.HeaderText = "LUGAR";
+            this.dataGridViewTextBoxColumn17.Name = "dataGridViewTextBoxColumn17";
+            // 
+            // dataGridViewTextBoxColumn18
+            // 
+            this.dataGridViewTextBoxColumn18.DataPropertyName = "FECHA";
+            this.dataGridViewTextBoxColumn18.HeaderText = "FECHA";
+            this.dataGridViewTextBoxColumn18.Name = "dataGridViewTextBoxColumn18";
+            // 
+            // dataGridViewTextBoxColumn19
+            // 
+            this.dataGridViewTextBoxColumn19.DataPropertyName = "ID_TEVENTO";
+            this.dataGridViewTextBoxColumn19.HeaderText = "ID_TEVENTO";
+            this.dataGridViewTextBoxColumn19.Name = "dataGridViewTextBoxColumn19";
+            this.dataGridViewTextBoxColumn19.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn20
+            // 
+            this.dataGridViewTextBoxColumn20.DataPropertyName = "ID_EVE_EDO";
+            this.dataGridViewTextBoxColumn20.HeaderText = "ESTADO";
+            this.dataGridViewTextBoxColumn20.Name = "dataGridViewTextBoxColumn20";
+            // 
+            // dataGridViewTextBoxColumn21
+            // 
+            this.dataGridViewTextBoxColumn21.DataPropertyName = "ULT_ACT";
+            this.dataGridViewTextBoxColumn21.HeaderText = "ULT_ACT";
+            this.dataGridViewTextBoxColumn21.Name = "dataGridViewTextBoxColumn21";
+            this.dataGridViewTextBoxColumn21.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "ID";
+            this.dataGridViewTextBoxColumn1.HeaderText = "ID";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            this.dataGridViewTextBoxColumn1.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn9
+            // 
+            this.dataGridViewTextBoxColumn9.DataPropertyName = "NOMBRE";
+            this.dataGridViewTextBoxColumn9.HeaderText = "NOMBRE";
+            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
+            // 
+            // dataGridViewTextBoxColumn10
+            // 
+            this.dataGridViewTextBoxColumn10.DataPropertyName = "MARCA";
+            this.dataGridViewTextBoxColumn10.HeaderText = "MARCA";
+            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
+            // 
+            // dataGridViewTextBoxColumn11
+            // 
+            this.dataGridViewTextBoxColumn11.DataPropertyName = "CNETO";
+            this.dataGridViewTextBoxColumn11.HeaderText = "CONTENIDO NETO";
+            this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
+            // 
+            // dataGridViewTextBoxColumn12
+            // 
+            this.dataGridViewTextBoxColumn12.DataPropertyName = "ULT_ACT";
+            this.dataGridViewTextBoxColumn12.HeaderText = "ULT_ACT";
+            this.dataGridViewTextBoxColumn12.Name = "dataGridViewTextBoxColumn12";
+            this.dataGridViewTextBoxColumn12.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "ID";
+            this.dataGridViewTextBoxColumn2.HeaderText = "ID";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            this.dataGridViewTextBoxColumn2.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "NOMBRE";
+            this.dataGridViewTextBoxColumn3.HeaderText = "NOMBRE";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "APE_PAT";
+            this.dataGridViewTextBoxColumn5.HeaderText = "APELLIDO PATERNO";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "APE_MAT";
+            this.dataGridViewTextBoxColumn4.HeaderText = "APELLIDO MATERNO";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            this.dataGridViewTextBoxColumn6.DataPropertyName = "RFC";
+            this.dataGridViewTextBoxColumn6.HeaderText = "RFC";
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            // 
+            // dataGridViewTextBoxColumn7
+            // 
+            this.dataGridViewTextBoxColumn7.DataPropertyName = "TEL";
+            this.dataGridViewTextBoxColumn7.HeaderText = "TELEFONO";
+            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            // 
+            // dataGridViewTextBoxColumn8
+            // 
+            this.dataGridViewTextBoxColumn8.DataPropertyName = "DIRECCION";
+            this.dataGridViewTextBoxColumn8.HeaderText = "DIRECCION";
+            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
+            // 
+            // dataGridViewTextBoxColumn13
+            // 
+            this.dataGridViewTextBoxColumn13.DataPropertyName = "ULT_ACT";
+            this.dataGridViewTextBoxColumn13.HeaderText = "ULT_ACT";
+            this.dataGridViewTextBoxColumn13.Name = "dataGridViewTextBoxColumn13";
+            this.dataGridViewTextBoxColumn13.Visible = false;
+            // 
+            // btnAgre
+            // 
+            this.btnAgre.Location = new System.Drawing.Point(19, 35);
+            this.btnAgre.Name = "btnAgre";
+            this.btnAgre.Size = new System.Drawing.Size(91, 45);
+            this.btnAgre.TabIndex = 1;
+            this.btnAgre.Text = "Agregar al listado";
+            this.btnAgre.UseVisualStyleBackColor = true;
+            // 
+            // btnElim
+            // 
+            this.btnElim.Location = new System.Drawing.Point(125, 35);
+            this.btnElim.Name = "btnElim";
+            this.btnElim.Size = new System.Drawing.Size(90, 45);
+            this.btnElim.TabIndex = 2;
+            this.btnElim.Text = "Eliminar seleccionado";
+            this.btnElim.UseVisualStyleBackColor = true;
+            // 
+            // btnCarga
+            // 
+            this.btnCarga.Location = new System.Drawing.Point(559, 35);
+            this.btnCarga.Name = "btnCarga";
+            this.btnCarga.Size = new System.Drawing.Size(90, 45);
+            this.btnCarga.TabIndex = 3;
+            this.btnCarga.Text = "Cargar donaciones";
+            this.btnCarga.UseVisualStyleBackColor = true;
+            // 
+            // cmnDonante
+            // 
+            this.cmnDonante.HeaderText = "Donante";
+            this.cmnDonante.Name = "cmnDonante";
+            this.cmnDonante.ReadOnly = true;
+            // 
+            // cmnCantidad
+            // 
+            this.cmnCantidad.HeaderText = "Cantidad";
+            this.cmnCantidad.Name = "cmnCantidad";
+            this.cmnCantidad.ReadOnly = true;
+            // 
+            // cmn
+            // 
+            this.cmn.HeaderText = "Producto";
+            this.cmn.Name = "cmn";
+            this.cmn.ReadOnly = true;
+            // 
+            // cmnEve
+            // 
+            this.cmnEve.HeaderText = "Evento";
+            this.cmnEve.Name = "cmnEve";
+            this.cmnEve.ReadOnly = true;
+            // 
             // UCDonaciones
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.gpbResumen);
             this.Controls.Add(this.aDOPTANTEBindingNavigator);
             this.Controls.Add(this.gpbEve);
             this.Controls.Add(this.gpbProd);
             this.Controls.Add(this.gpbDonante);
             this.Name = "UCDonaciones";
-            this.Size = new System.Drawing.Size(768, 1177);
+            this.Size = new System.Drawing.Size(751, 1623);
             this.gpbDonante.ResumeLayout(false);
             this.gpbDonante.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.aDOPTANTEDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.aDOPTANTEBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pROYECTO_FARADataSet)).EndInit();
             this.gpbProd.ResumeLayout(false);
             this.gpbProd.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pRODUCTODataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pRODUCTOBindingSource)).EndInit();
             this.gpbEve.ResumeLayout(false);
             this.gpbEve.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.eVENTODataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.eVENTOBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.aDOPTANTEBindingNavigator)).EndInit();
             this.aDOPTANTEBindingNavigator.ResumeLayout(false);
             this.aDOPTANTEBindingNavigator.PerformLayout();
+            this.gpbResumen.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dONANTEBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dONANTEDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pRODUCTODataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.eVENTODataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -731,21 +870,29 @@
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveLastItem;
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
         private System.Windows.Forms.ToolStripButton aDOPTANTEBindingNavigatorSaveItem;
-        private System.Windows.Forms.DataGridView aDOPTANTEDataGridView;
+        private System.Windows.Forms.BindingSource pRODUCTOBindingSource;
+        private System.Windows.Forms.BindingSource eVENTOBindingSource;
+        private PROYECTO_FARADataSetTableAdapters.EVENTOTableAdapter eVENTOTableAdapter;
+        private PROYECTO_FARADataSetTableAdapters.PRODUCTOTableAdapter pRODUCTOTableAdapter;
+        private System.Windows.Forms.DataGridView dONANTEDataGridView;
+        private System.Windows.Forms.BindingSource dONANTEBindingSource;
+        private System.Windows.Forms.GroupBox gpbResumen;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private PROYECTO_FARADataSetTableAdapters.DONANTETableAdapter dONANTETableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn13;
         private System.Windows.Forms.DataGridView pRODUCTODataGridView;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn12;
-        private System.Windows.Forms.BindingSource pRODUCTOBindingSource;
         private System.Windows.Forms.DataGridView eVENTODataGridView;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn14;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn15;
@@ -753,8 +900,14 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn17;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn18;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn19;
-        private System.Windows.Forms.BindingSource eVENTOBindingSource;
-        private PROYECTO_FARADataSetTableAdapters.EVENTOTableAdapter eVENTOTableAdapter;
-        private PROYECTO_FARADataSetTableAdapters.PRODUCTOTableAdapter pRODUCTOTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn20;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn21;
+        private System.Windows.Forms.Button btnCarga;
+        private System.Windows.Forms.Button btnElim;
+        private System.Windows.Forms.Button btnAgre;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cmnDonante;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cmnCantidad;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cmn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cmnEve;
     }
 }
