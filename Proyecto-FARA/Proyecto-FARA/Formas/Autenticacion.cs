@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using Proyecto_FARA;
 
 namespace Proyecto_FARA
 {
@@ -52,7 +53,7 @@ namespace Proyecto_FARA
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            Autenticacion au = new Autenticacion();
+            //Autenticacion au = new Autenticacion();
             //Inicio de sesion
             if (LoginSesion(txtUser.Text.ToUpper(), txtPwd.Text) == true)
             {

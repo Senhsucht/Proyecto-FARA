@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Autenticacion));
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.spbLogin = new System.Windows.Forms.ToolStripProgressBar();
             this.gpbLogin = new System.Windows.Forms.GroupBox();
@@ -170,6 +171,7 @@
             this.Controls.Add(this.btnConectar);
             this.Controls.Add(this.gpbLogin);
             this.Controls.Add(this.statusStrip1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Autenticacion";
             this.Text = "Autenticacion";
             this.statusStrip1.ResumeLayout(false);

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Forms;
+using Proyecto_FARA;
 
 namespace Proyecto_FARA
 {
@@ -28,6 +29,14 @@ namespace Proyecto_FARA
             
         }
 
+        public static void BuscaDonante()
+        {
+            conDonanate bdon = new conDonanate();
+
+            Application.EnableVisualStyles();
+            bdon.ShowDialog();
+
+        }
         //public void iniciarDelegados()
         //{
         //    Metodos mt = new Metodos();

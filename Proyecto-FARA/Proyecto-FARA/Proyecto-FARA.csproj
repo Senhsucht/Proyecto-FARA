@@ -61,28 +61,34 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Autenticacion.cs">
+    <Compile Include="Formas\Autenticacion.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Autenticacion.Designer.cs">
+    <Compile Include="Formas\Autenticacion.Designer.cs">
       <DependentUpon>Autenticacion.cs</DependentUpon>
     </Compile>
     <Compile Include="Clases\conexion.cs" />
-    <Compile Include="Home.cs">
+    <Compile Include="Controles\UCAltaDon.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controles\UCAltaDon.Designer.cs">
+      <DependentUpon>UCAltaDon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formas\conDonante.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Home.Designer.cs">
+    <Compile Include="Formas\conDonante.Designer.cs">
+      <DependentUpon>conDonante.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formas\Home.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formas\Home.Designer.cs">
       <DependentUpon>Home.cs</DependentUpon>
     </Compile>
     <Compile Include="Clases\iModulo.cs" />
     <Compile Include="Clases\Metodos.cs" />
     <Compile Include="Clases\Program.cs" />
-    <Compile Include="Muestra.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Muestra.Designer.cs">
-      <DependentUpon>Muestra.cs</DependentUpon>
-    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="PROYECTO_FARADataSet.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -96,14 +102,17 @@
       <DependentUpon>UCDonaciones.cs</DependentUpon>
     </Compile>
     <Compile Include="Clases\User.cs" />
-    <EmbeddedResource Include="Autenticacion.resx">
+    <EmbeddedResource Include="Formas\Autenticacion.resx">
       <DependentUpon>Autenticacion.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Home.resx">
-      <DependentUpon>Home.cs</DependentUpon>
+    <EmbeddedResource Include="Controles\UCAltaDon.resx">
+      <DependentUpon>UCAltaDon.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Muestra.resx">
-      <DependentUpon>Muestra.cs</DependentUpon>
+    <EmbeddedResource Include="Formas\conDonante.resx">
+      <DependentUpon>conDonante.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formas\Home.resx">
+      <DependentUpon>Home.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

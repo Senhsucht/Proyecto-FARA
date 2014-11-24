@@ -13,6 +13,7 @@ namespace Proyecto_FARA
 {
     public partial class UCDonaciones : UserControl,iModulo
     {
+        
         Metodos Mt = new Metodos();
         DataSet datos = new DataSet();
         SqlDataAdapter ad = new SqlDataAdapter();
@@ -259,7 +260,7 @@ namespace Proyecto_FARA
 
         private void btnCarga_Click(object sender, EventArgs e)
         {
-            int c = dgvRes.Rows.Count;
+            int c = dgvRes.Rows.Count - 1;
 
             for (int i = 0; i < c; i++)
             {

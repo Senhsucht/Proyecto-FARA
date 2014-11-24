@@ -30,6 +30,14 @@
         {
             this.gpbDonante = new System.Windows.Forms.GroupBox();
             this.dgvDon = new System.Windows.Forms.DataGridView();
+            this.clmID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clmNombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clmAPPAT = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clmAPMAT = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clmRFC = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clmTEL = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clmDIRECCION = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clmULTACT = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnBuscarD = new System.Windows.Forms.Button();
             this.lblRFCD = new System.Windows.Forms.Label();
             this.txtRFCDon = new System.Windows.Forms.TextBox();
@@ -40,12 +48,28 @@
             this.lblNombreD = new System.Windows.Forms.Label();
             this.txtNomDon = new System.Windows.Forms.TextBox();
             this.gpbProd = new System.Windows.Forms.GroupBox();
+            this.dgvProd = new System.Windows.Forms.DataGridView();
+            this.clmIDP = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clmNomP = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clmMARCA = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clmCNETO = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clmULT_ACT = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnBuscarP = new System.Windows.Forms.Button();
             this.txtMarProd = new System.Windows.Forms.TextBox();
             this.lblMarcaP = new System.Windows.Forms.Label();
             this.lblNombreP = new System.Windows.Forms.Label();
             this.txtNomProd = new System.Windows.Forms.TextBox();
             this.gpbEve = new System.Windows.Forms.GroupBox();
+            this.txtTEVE = new System.Windows.Forms.TextBox();
+            this.dgvEve = new System.Windows.Forms.DataGridView();
+            this.clmIDE = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clmNOMEVE = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clmDESCR = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clmLUGAR = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clmFECHA = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clmTEVE = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clmEVEEDO = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clmULT_ACT_EVE = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtNomEve = new System.Windows.Forms.TextBox();
             this.lblTipEv = new System.Windows.Forms.Label();
             this.lblNombreE = new System.Windows.Forms.Label();
@@ -55,30 +79,6 @@
             this.btnElim = new System.Windows.Forms.Button();
             this.btnAgre = new System.Windows.Forms.Button();
             this.dgvRes = new System.Windows.Forms.DataGridView();
-            this.dgvProd = new System.Windows.Forms.DataGridView();
-            this.dgvEve = new System.Windows.Forms.DataGridView();
-            this.clmIDP = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clmNomP = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clmMARCA = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clmCNETO = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clmULT_ACT = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clmID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clmNombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clmAPPAT = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clmAPMAT = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clmRFC = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clmTEL = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clmDIRECCION = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clmULTACT = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clmIDE = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clmNOMEVE = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clmDESCR = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clmLUGAR = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clmFECHA = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clmTEVE = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clmEVEEDO = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clmULT_ACT_EVE = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.txtTEVE = new System.Windows.Forms.TextBox();
             this.clmIDD = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cmnDonante = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cmnCantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -89,11 +89,11 @@
             this.gpbDonante.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDon)).BeginInit();
             this.gpbProd.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvProd)).BeginInit();
             this.gpbEve.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvEve)).BeginInit();
             this.gpbResumen.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRes)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvProd)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvEve)).BeginInit();
             this.SuspendLayout();
             // 
             // gpbDonante
@@ -110,7 +110,7 @@
             this.gpbDonante.Controls.Add(this.txtNomDon);
             this.gpbDonante.Location = new System.Drawing.Point(24, 19);
             this.gpbDonante.Name = "gpbDonante";
-            this.gpbDonante.Size = new System.Drawing.Size(700, 342);
+            this.gpbDonante.Size = new System.Drawing.Size(603, 287);
             this.gpbDonante.TabIndex = 0;
             this.gpbDonante.TabStop = false;
             this.gpbDonante.Text = "Donante";
@@ -132,12 +132,62 @@
             this.dgvDon.Location = new System.Drawing.Point(19, 61);
             this.dgvDon.Name = "dgvDon";
             this.dgvDon.ReadOnly = true;
-            this.dgvDon.Size = new System.Drawing.Size(650, 275);
+            this.dgvDon.Size = new System.Drawing.Size(562, 210);
             this.dgvDon.TabIndex = 10;
+            // 
+            // clmID
+            // 
+            this.clmID.HeaderText = "ID";
+            this.clmID.Name = "clmID";
+            this.clmID.ReadOnly = true;
+            this.clmID.Visible = false;
+            // 
+            // clmNombre
+            // 
+            this.clmNombre.HeaderText = "NOMBRE";
+            this.clmNombre.Name = "clmNombre";
+            this.clmNombre.ReadOnly = true;
+            // 
+            // clmAPPAT
+            // 
+            this.clmAPPAT.HeaderText = "APELLIDO PATERNO";
+            this.clmAPPAT.Name = "clmAPPAT";
+            this.clmAPPAT.ReadOnly = true;
+            // 
+            // clmAPMAT
+            // 
+            this.clmAPMAT.HeaderText = "APELLIDO MATERNO";
+            this.clmAPMAT.Name = "clmAPMAT";
+            this.clmAPMAT.ReadOnly = true;
+            // 
+            // clmRFC
+            // 
+            this.clmRFC.HeaderText = "RFC";
+            this.clmRFC.Name = "clmRFC";
+            this.clmRFC.ReadOnly = true;
+            // 
+            // clmTEL
+            // 
+            this.clmTEL.HeaderText = "TELEFONO";
+            this.clmTEL.Name = "clmTEL";
+            this.clmTEL.ReadOnly = true;
+            // 
+            // clmDIRECCION
+            // 
+            this.clmDIRECCION.HeaderText = "DIRECCION";
+            this.clmDIRECCION.Name = "clmDIRECCION";
+            this.clmDIRECCION.ReadOnly = true;
+            // 
+            // clmULTACT
+            // 
+            this.clmULTACT.HeaderText = "ULTIMA ACTUALIZACION";
+            this.clmULTACT.Name = "clmULTACT";
+            this.clmULTACT.ReadOnly = true;
+            this.clmULTACT.Visible = false;
             // 
             // btnBuscarD
             // 
-            this.btnBuscarD.Location = new System.Drawing.Point(574, 32);
+            this.btnBuscarD.Location = new System.Drawing.Point(506, 32);
             this.btnBuscarD.Name = "btnBuscarD";
             this.btnBuscarD.Size = new System.Drawing.Size(75, 23);
             this.btnBuscarD.TabIndex = 8;
@@ -148,7 +198,7 @@
             // lblRFCD
             // 
             this.lblRFCD.AutoSize = true;
-            this.lblRFCD.Location = new System.Drawing.Point(437, 21);
+            this.lblRFCD.Location = new System.Drawing.Point(383, 21);
             this.lblRFCD.Name = "lblRFCD";
             this.lblRFCD.Size = new System.Drawing.Size(28, 13);
             this.lblRFCD.TabIndex = 7;
@@ -156,14 +206,14 @@
             // 
             // txtRFCDon
             // 
-            this.txtRFCDon.Location = new System.Drawing.Point(454, 35);
+            this.txtRFCDon.Location = new System.Drawing.Point(400, 35);
             this.txtRFCDon.Name = "txtRFCDon";
             this.txtRFCDon.Size = new System.Drawing.Size(100, 20);
             this.txtRFCDon.TabIndex = 6;
             // 
             // txtApeMDon
             // 
-            this.txtApeMDon.Location = new System.Drawing.Point(330, 35);
+            this.txtApeMDon.Location = new System.Drawing.Point(276, 35);
             this.txtApeMDon.Name = "txtApeMDon";
             this.txtApeMDon.Size = new System.Drawing.Size(100, 20);
             this.txtApeMDon.TabIndex = 5;
@@ -171,7 +221,7 @@
             // lblApe_PatD
             // 
             this.lblApe_PatD.AutoSize = true;
-            this.lblApe_PatD.Location = new System.Drawing.Point(186, 19);
+            this.lblApe_PatD.Location = new System.Drawing.Point(132, 19);
             this.lblApe_PatD.Name = "lblApe_PatD";
             this.lblApe_PatD.Size = new System.Drawing.Size(84, 13);
             this.lblApe_PatD.TabIndex = 4;
@@ -179,7 +229,7 @@
             // 
             // txtApePDon
             // 
-            this.txtApePDon.Location = new System.Drawing.Point(203, 35);
+            this.txtApePDon.Location = new System.Drawing.Point(149, 35);
             this.txtApePDon.Name = "txtApePDon";
             this.txtApePDon.Size = new System.Drawing.Size(100, 20);
             this.txtApePDon.TabIndex = 3;
@@ -187,7 +237,7 @@
             // lblApe_MatD
             // 
             this.lblApe_MatD.AutoSize = true;
-            this.lblApe_MatD.Location = new System.Drawing.Point(312, 21);
+            this.lblApe_MatD.Location = new System.Drawing.Point(258, 21);
             this.lblApe_MatD.Name = "lblApe_MatD";
             this.lblApe_MatD.Size = new System.Drawing.Size(86, 13);
             this.lblApe_MatD.TabIndex = 2;
@@ -196,7 +246,7 @@
             // lblNombreD
             // 
             this.lblNombreD.AutoSize = true;
-            this.lblNombreD.Location = new System.Drawing.Point(56, 16);
+            this.lblNombreD.Location = new System.Drawing.Point(11, 16);
             this.lblNombreD.Name = "lblNombreD";
             this.lblNombreD.Size = new System.Drawing.Size(44, 13);
             this.lblNombreD.TabIndex = 1;
@@ -204,7 +254,7 @@
             // 
             // txtNomDon
             // 
-            this.txtNomDon.Location = new System.Drawing.Point(74, 35);
+            this.txtNomDon.Location = new System.Drawing.Point(29, 35);
             this.txtNomDon.Name = "txtNomDon";
             this.txtNomDon.Size = new System.Drawing.Size(100, 20);
             this.txtNomDon.TabIndex = 0;
@@ -217,12 +267,61 @@
             this.gpbProd.Controls.Add(this.lblMarcaP);
             this.gpbProd.Controls.Add(this.lblNombreP);
             this.gpbProd.Controls.Add(this.txtNomProd);
-            this.gpbProd.Location = new System.Drawing.Point(24, 386);
+            this.gpbProd.Location = new System.Drawing.Point(24, 312);
             this.gpbProd.Name = "gpbProd";
-            this.gpbProd.Size = new System.Drawing.Size(700, 350);
+            this.gpbProd.Size = new System.Drawing.Size(603, 281);
             this.gpbProd.TabIndex = 1;
             this.gpbProd.TabStop = false;
             this.gpbProd.Text = "Producto";
+            // 
+            // dgvProd
+            // 
+            this.dgvProd.AllowUserToAddRows = false;
+            this.dgvProd.AllowUserToDeleteRows = false;
+            this.dgvProd.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvProd.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.clmIDP,
+            this.clmNomP,
+            this.clmMARCA,
+            this.clmCNETO,
+            this.clmULT_ACT});
+            this.dgvProd.Location = new System.Drawing.Point(19, 68);
+            this.dgvProd.Name = "dgvProd";
+            this.dgvProd.ReadOnly = true;
+            this.dgvProd.Size = new System.Drawing.Size(562, 200);
+            this.dgvProd.TabIndex = 5;
+            // 
+            // clmIDP
+            // 
+            this.clmIDP.HeaderText = "ID";
+            this.clmIDP.Name = "clmIDP";
+            this.clmIDP.ReadOnly = true;
+            this.clmIDP.Visible = false;
+            // 
+            // clmNomP
+            // 
+            this.clmNomP.HeaderText = "NOMBRE";
+            this.clmNomP.Name = "clmNomP";
+            this.clmNomP.ReadOnly = true;
+            // 
+            // clmMARCA
+            // 
+            this.clmMARCA.HeaderText = "MARCA";
+            this.clmMARCA.Name = "clmMARCA";
+            this.clmMARCA.ReadOnly = true;
+            // 
+            // clmCNETO
+            // 
+            this.clmCNETO.HeaderText = "CONTENIDO NETO";
+            this.clmCNETO.Name = "clmCNETO";
+            this.clmCNETO.ReadOnly = true;
+            // 
+            // clmULT_ACT
+            // 
+            this.clmULT_ACT.HeaderText = "ULTIMA ACTUALIZACION";
+            this.clmULT_ACT.Name = "clmULT_ACT";
+            this.clmULT_ACT.ReadOnly = true;
+            this.clmULT_ACT.Visible = false;
             // 
             // btnBuscarP
             // 
@@ -274,123 +373,19 @@
             this.gpbEve.Controls.Add(this.lblTipEv);
             this.gpbEve.Controls.Add(this.lblNombreE);
             this.gpbEve.Controls.Add(this.btnBuscarE);
-            this.gpbEve.Location = new System.Drawing.Point(730, 19);
+            this.gpbEve.Location = new System.Drawing.Point(633, 19);
             this.gpbEve.Name = "gpbEve";
-            this.gpbEve.Size = new System.Drawing.Size(700, 350);
+            this.gpbEve.Size = new System.Drawing.Size(540, 287);
             this.gpbEve.TabIndex = 2;
             this.gpbEve.TabStop = false;
             this.gpbEve.Text = "Evento";
             // 
-            // txtNomEve
+            // txtTEVE
             // 
-            this.txtNomEve.Location = new System.Drawing.Point(74, 54);
-            this.txtNomEve.Name = "txtNomEve";
-            this.txtNomEve.Size = new System.Drawing.Size(100, 20);
-            this.txtNomEve.TabIndex = 6;
-            // 
-            // lblTipEv
-            // 
-            this.lblTipEv.AutoSize = true;
-            this.lblTipEv.Location = new System.Drawing.Point(186, 37);
-            this.lblTipEv.Name = "lblTipEv";
-            this.lblTipEv.Size = new System.Drawing.Size(79, 13);
-            this.lblTipEv.TabIndex = 2;
-            this.lblTipEv.Text = "Tipo de evento";
-            // 
-            // lblNombreE
-            // 
-            this.lblNombreE.AutoSize = true;
-            this.lblNombreE.Location = new System.Drawing.Point(56, 38);
-            this.lblNombreE.Name = "lblNombreE";
-            this.lblNombreE.Size = new System.Drawing.Size(95, 13);
-            this.lblNombreE.TabIndex = 1;
-            this.lblNombreE.Text = "Nombre de evento";
-            // 
-            // btnBuscarE
-            // 
-            this.btnBuscarE.Location = new System.Drawing.Point(355, 53);
-            this.btnBuscarE.Name = "btnBuscarE";
-            this.btnBuscarE.Size = new System.Drawing.Size(75, 21);
-            this.btnBuscarE.TabIndex = 0;
-            this.btnBuscarE.Text = "Buscar";
-            this.btnBuscarE.UseVisualStyleBackColor = true;
-            this.btnBuscarE.Click += new System.EventHandler(this.busquedaEVE);
-            // 
-            // gpbResumen
-            // 
-            this.gpbResumen.Controls.Add(this.btnCarga);
-            this.gpbResumen.Controls.Add(this.btnElim);
-            this.gpbResumen.Controls.Add(this.btnAgre);
-            this.gpbResumen.Controls.Add(this.dgvRes);
-            this.gpbResumen.Location = new System.Drawing.Point(730, 386);
-            this.gpbResumen.Name = "gpbResumen";
-            this.gpbResumen.Size = new System.Drawing.Size(700, 384);
-            this.gpbResumen.TabIndex = 4;
-            this.gpbResumen.TabStop = false;
-            this.gpbResumen.Text = "Resumen";
-            // 
-            // btnCarga
-            // 
-            this.btnCarga.Location = new System.Drawing.Point(559, 35);
-            this.btnCarga.Name = "btnCarga";
-            this.btnCarga.Size = new System.Drawing.Size(90, 45);
-            this.btnCarga.TabIndex = 3;
-            this.btnCarga.Text = "Cargar donaciones";
-            this.btnCarga.UseVisualStyleBackColor = true;
-            this.btnCarga.Click += new System.EventHandler(this.btnCarga_Click);
-            // 
-            // btnElim
-            // 
-            this.btnElim.Location = new System.Drawing.Point(125, 35);
-            this.btnElim.Name = "btnElim";
-            this.btnElim.Size = new System.Drawing.Size(90, 45);
-            this.btnElim.TabIndex = 2;
-            this.btnElim.Text = "Eliminar seleccionado";
-            this.btnElim.UseVisualStyleBackColor = true;
-            this.btnElim.Click += new System.EventHandler(this.btnElim_Click);
-            // 
-            // btnAgre
-            // 
-            this.btnAgre.Location = new System.Drawing.Point(19, 35);
-            this.btnAgre.Name = "btnAgre";
-            this.btnAgre.Size = new System.Drawing.Size(91, 45);
-            this.btnAgre.TabIndex = 1;
-            this.btnAgre.Text = "Agregar al listado";
-            this.btnAgre.UseVisualStyleBackColor = true;
-            this.btnAgre.Click += new System.EventHandler(this.btnAgre_Click);
-            // 
-            // dgvRes
-            // 
-            this.dgvRes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvRes.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.clmIDD,
-            this.cmnDonante,
-            this.cmnCantidad,
-            this.clmIDPR,
-            this.cmn,
-            this.clmIDEV,
-            this.cmnEve});
-            this.dgvRes.Location = new System.Drawing.Point(19, 86);
-            this.dgvRes.Name = "dgvRes";
-            this.dgvRes.Size = new System.Drawing.Size(650, 238);
-            this.dgvRes.TabIndex = 0;
-            // 
-            // dgvProd
-            // 
-            this.dgvProd.AllowUserToAddRows = false;
-            this.dgvProd.AllowUserToDeleteRows = false;
-            this.dgvProd.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvProd.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.clmIDP,
-            this.clmNomP,
-            this.clmMARCA,
-            this.clmCNETO,
-            this.clmULT_ACT});
-            this.dgvProd.Location = new System.Drawing.Point(19, 68);
-            this.dgvProd.Name = "dgvProd";
-            this.dgvProd.ReadOnly = true;
-            this.dgvProd.Size = new System.Drawing.Size(650, 249);
-            this.dgvProd.TabIndex = 5;
+            this.txtTEVE.Location = new System.Drawing.Point(174, 35);
+            this.txtTEVE.Name = "txtTEVE";
+            this.txtTEVE.Size = new System.Drawing.Size(121, 20);
+            this.txtTEVE.TabIndex = 8;
             // 
             // dgvEve
             // 
@@ -406,93 +401,11 @@
             this.clmTEVE,
             this.clmEVEEDO,
             this.clmULT_ACT_EVE});
-            this.dgvEve.Location = new System.Drawing.Point(19, 81);
+            this.dgvEve.Location = new System.Drawing.Point(19, 61);
             this.dgvEve.Name = "dgvEve";
             this.dgvEve.ReadOnly = true;
-            this.dgvEve.Size = new System.Drawing.Size(650, 248);
+            this.dgvEve.Size = new System.Drawing.Size(507, 210);
             this.dgvEve.TabIndex = 7;
-            // 
-            // clmIDP
-            // 
-            this.clmIDP.HeaderText = "ID";
-            this.clmIDP.Name = "clmIDP";
-            this.clmIDP.ReadOnly = true;
-            this.clmIDP.Visible = false;
-            // 
-            // clmNomP
-            // 
-            this.clmNomP.HeaderText = "NOMBRE";
-            this.clmNomP.Name = "clmNomP";
-            this.clmNomP.ReadOnly = true;
-            // 
-            // clmMARCA
-            // 
-            this.clmMARCA.HeaderText = "MARCA";
-            this.clmMARCA.Name = "clmMARCA";
-            this.clmMARCA.ReadOnly = true;
-            // 
-            // clmCNETO
-            // 
-            this.clmCNETO.HeaderText = "CONTENIDO NETO";
-            this.clmCNETO.Name = "clmCNETO";
-            this.clmCNETO.ReadOnly = true;
-            // 
-            // clmULT_ACT
-            // 
-            this.clmULT_ACT.HeaderText = "ULTIMA ACTUALIZACION";
-            this.clmULT_ACT.Name = "clmULT_ACT";
-            this.clmULT_ACT.ReadOnly = true;
-            this.clmULT_ACT.Visible = false;
-            // 
-            // clmID
-            // 
-            this.clmID.HeaderText = "ID";
-            this.clmID.Name = "clmID";
-            this.clmID.ReadOnly = true;
-            this.clmID.Visible = false;
-            // 
-            // clmNombre
-            // 
-            this.clmNombre.HeaderText = "NOMBRE";
-            this.clmNombre.Name = "clmNombre";
-            this.clmNombre.ReadOnly = true;
-            // 
-            // clmAPPAT
-            // 
-            this.clmAPPAT.HeaderText = "APELLIDO PATERNO";
-            this.clmAPPAT.Name = "clmAPPAT";
-            this.clmAPPAT.ReadOnly = true;
-            // 
-            // clmAPMAT
-            // 
-            this.clmAPMAT.HeaderText = "APELLIDO MATERNO";
-            this.clmAPMAT.Name = "clmAPMAT";
-            this.clmAPMAT.ReadOnly = true;
-            // 
-            // clmRFC
-            // 
-            this.clmRFC.HeaderText = "RFC";
-            this.clmRFC.Name = "clmRFC";
-            this.clmRFC.ReadOnly = true;
-            // 
-            // clmTEL
-            // 
-            this.clmTEL.HeaderText = "TELEFONO";
-            this.clmTEL.Name = "clmTEL";
-            this.clmTEL.ReadOnly = true;
-            // 
-            // clmDIRECCION
-            // 
-            this.clmDIRECCION.HeaderText = "DIRECCION";
-            this.clmDIRECCION.Name = "clmDIRECCION";
-            this.clmDIRECCION.ReadOnly = true;
-            // 
-            // clmULTACT
-            // 
-            this.clmULTACT.HeaderText = "ULTIMA ACTUALIZACION";
-            this.clmULTACT.Name = "clmULTACT";
-            this.clmULTACT.ReadOnly = true;
-            this.clmULTACT.Visible = false;
             // 
             // clmIDE
             // 
@@ -545,12 +458,99 @@
             this.clmULT_ACT_EVE.ReadOnly = true;
             this.clmULT_ACT_EVE.Visible = false;
             // 
-            // txtTEVE
+            // txtNomEve
             // 
-            this.txtTEVE.Location = new System.Drawing.Point(203, 55);
-            this.txtTEVE.Name = "txtTEVE";
-            this.txtTEVE.Size = new System.Drawing.Size(121, 20);
-            this.txtTEVE.TabIndex = 8;
+            this.txtNomEve.Location = new System.Drawing.Point(45, 34);
+            this.txtNomEve.Name = "txtNomEve";
+            this.txtNomEve.Size = new System.Drawing.Size(100, 20);
+            this.txtNomEve.TabIndex = 6;
+            // 
+            // lblTipEv
+            // 
+            this.lblTipEv.AutoSize = true;
+            this.lblTipEv.Location = new System.Drawing.Point(157, 17);
+            this.lblTipEv.Name = "lblTipEv";
+            this.lblTipEv.Size = new System.Drawing.Size(79, 13);
+            this.lblTipEv.TabIndex = 2;
+            this.lblTipEv.Text = "Tipo de evento";
+            // 
+            // lblNombreE
+            // 
+            this.lblNombreE.AutoSize = true;
+            this.lblNombreE.Location = new System.Drawing.Point(27, 18);
+            this.lblNombreE.Name = "lblNombreE";
+            this.lblNombreE.Size = new System.Drawing.Size(95, 13);
+            this.lblNombreE.TabIndex = 1;
+            this.lblNombreE.Text = "Nombre de evento";
+            // 
+            // btnBuscarE
+            // 
+            this.btnBuscarE.Location = new System.Drawing.Point(326, 33);
+            this.btnBuscarE.Name = "btnBuscarE";
+            this.btnBuscarE.Size = new System.Drawing.Size(75, 21);
+            this.btnBuscarE.TabIndex = 0;
+            this.btnBuscarE.Text = "Buscar";
+            this.btnBuscarE.UseVisualStyleBackColor = true;
+            this.btnBuscarE.Click += new System.EventHandler(this.busquedaEVE);
+            // 
+            // gpbResumen
+            // 
+            this.gpbResumen.Controls.Add(this.btnCarga);
+            this.gpbResumen.Controls.Add(this.btnElim);
+            this.gpbResumen.Controls.Add(this.btnAgre);
+            this.gpbResumen.Controls.Add(this.dgvRes);
+            this.gpbResumen.Location = new System.Drawing.Point(633, 312);
+            this.gpbResumen.Name = "gpbResumen";
+            this.gpbResumen.Size = new System.Drawing.Size(540, 281);
+            this.gpbResumen.TabIndex = 4;
+            this.gpbResumen.TabStop = false;
+            this.gpbResumen.Text = "Resumen";
+            // 
+            // btnCarga
+            // 
+            this.btnCarga.Location = new System.Drawing.Point(436, 27);
+            this.btnCarga.Name = "btnCarga";
+            this.btnCarga.Size = new System.Drawing.Size(90, 45);
+            this.btnCarga.TabIndex = 3;
+            this.btnCarga.Text = "Cargar donaciones";
+            this.btnCarga.UseVisualStyleBackColor = true;
+            this.btnCarga.Click += new System.EventHandler(this.btnCarga_Click);
+            // 
+            // btnElim
+            // 
+            this.btnElim.Location = new System.Drawing.Point(125, 35);
+            this.btnElim.Name = "btnElim";
+            this.btnElim.Size = new System.Drawing.Size(90, 45);
+            this.btnElim.TabIndex = 2;
+            this.btnElim.Text = "Eliminar seleccionado";
+            this.btnElim.UseVisualStyleBackColor = true;
+            this.btnElim.Click += new System.EventHandler(this.btnElim_Click);
+            // 
+            // btnAgre
+            // 
+            this.btnAgre.Location = new System.Drawing.Point(19, 35);
+            this.btnAgre.Name = "btnAgre";
+            this.btnAgre.Size = new System.Drawing.Size(91, 45);
+            this.btnAgre.TabIndex = 1;
+            this.btnAgre.Text = "Agregar al listado";
+            this.btnAgre.UseVisualStyleBackColor = true;
+            this.btnAgre.Click += new System.EventHandler(this.btnAgre_Click);
+            // 
+            // dgvRes
+            // 
+            this.dgvRes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvRes.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.clmIDD,
+            this.cmnDonante,
+            this.cmnCantidad,
+            this.clmIDPR,
+            this.cmn,
+            this.clmIDEV,
+            this.cmnEve});
+            this.dgvRes.Location = new System.Drawing.Point(19, 86);
+            this.dgvRes.Name = "dgvRes";
+            this.dgvRes.Size = new System.Drawing.Size(507, 182);
+            this.dgvRes.TabIndex = 0;
             // 
             // clmIDD
             // 
@@ -599,18 +599,18 @@
             this.Controls.Add(this.gpbProd);
             this.Controls.Add(this.gpbDonante);
             this.Name = "UCDonaciones";
-            this.Size = new System.Drawing.Size(1500, 804);
+            this.Size = new System.Drawing.Size(1192, 605);
             this.gpbDonante.ResumeLayout(false);
             this.gpbDonante.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDon)).EndInit();
             this.gpbProd.ResumeLayout(false);
             this.gpbProd.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvProd)).EndInit();
             this.gpbEve.ResumeLayout(false);
             this.gpbEve.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvEve)).EndInit();
             this.gpbResumen.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvRes)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvProd)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvEve)).EndInit();
             this.ResumeLayout(false);
 
         }
