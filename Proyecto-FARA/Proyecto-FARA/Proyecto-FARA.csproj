@@ -49,6 +49,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="itextsharp">
+      <HintPath>Librerias\itextsharp-dll-core\itextsharp.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -61,29 +64,41 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Formas\Autenticacion.cs">
+    <Compile Include="Autenticacion.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formas\Autenticacion.Designer.cs">
+    <Compile Include="Autenticacion.Designer.cs">
       <DependentUpon>Autenticacion.cs</DependentUpon>
     </Compile>
     <Compile Include="Clases\conexion.cs" />
-    <Compile Include="Controles\UCAltaDon.cs">
+    <Compile Include="conEvento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="conEvento.Designer.cs">
+      <DependentUpon>conEvento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="conProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="conProducto.Designer.cs">
+      <DependentUpon>conProducto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UCAltaDon.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Controles\UCAltaDon.Designer.cs">
+    <Compile Include="UCAltaDon.Designer.cs">
       <DependentUpon>UCAltaDon.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formas\conDonante.cs">
+    <Compile Include="conDonante.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formas\conDonante.Designer.cs">
+    <Compile Include="conDonante.Designer.cs">
       <DependentUpon>conDonante.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formas\Home.cs">
+    <Compile Include="Home.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formas\Home.Designer.cs">
+    <Compile Include="Home.Designer.cs">
       <DependentUpon>Home.cs</DependentUpon>
     </Compile>
     <Compile Include="Clases\iModulo.cs" />
@@ -95,23 +110,29 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>PROYECTO_FARADataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="Controles\UCDonaciones.cs">
+    <Compile Include="UCDonaciones.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Controles\UCDonaciones.Designer.cs">
+    <Compile Include="UCDonaciones.Designer.cs">
       <DependentUpon>UCDonaciones.cs</DependentUpon>
     </Compile>
     <Compile Include="Clases\User.cs" />
-    <EmbeddedResource Include="Formas\Autenticacion.resx">
+    <EmbeddedResource Include="Autenticacion.resx">
       <DependentUpon>Autenticacion.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Controles\UCAltaDon.resx">
+    <EmbeddedResource Include="conEvento.resx">
+      <DependentUpon>conEvento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="conProducto.resx">
+      <DependentUpon>conProducto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCAltaDon.resx">
       <DependentUpon>UCAltaDon.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formas\conDonante.resx">
+    <EmbeddedResource Include="conDonante.resx">
       <DependentUpon>conDonante.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formas\Home.resx">
+    <EmbeddedResource Include="Home.resx">
       <DependentUpon>Home.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -123,7 +144,7 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Controles\UCDonaciones.resx">
+    <EmbeddedResource Include="UCDonaciones.resx">
       <DependentUpon>UCDonaciones.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="app.config" />
@@ -169,6 +190,10 @@
       <ProductName>Windows Installer 3.1</ProductName>
       <Install>true</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Controles\" />
+    <Folder Include="Formas\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

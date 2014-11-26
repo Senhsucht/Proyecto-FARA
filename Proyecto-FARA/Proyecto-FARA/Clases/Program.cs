@@ -29,18 +29,13 @@ namespace Proyecto_FARA
             
         }
 
-        public static void BuscaDonante()
-        {
-            conDonanate bdon = new conDonanate();
-
-            Application.EnableVisualStyles();
-            bdon.ShowDialog();
-
-        }
-        //public void iniciarDelegados()
+        //public static void BuscaDonante()
         //{
-        //    Metodos mt = new Metodos();
-        //    Delegados.miUsuario = mt.Iniciado;
+        //    conDonanate bdon = new conDonanate();
+
+        //    Application.EnableVisualStyles();
+        //    bdon.ShowDialog();
+
         //}
 
     }

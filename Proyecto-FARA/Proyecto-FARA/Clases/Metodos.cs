@@ -28,7 +28,7 @@ namespace Proyecto_FARA
             {
                 resultado = true;
                 this.mensaje = "Bienvenido " + usr.ToString();
-                //Crear objero Usuario
+                //Crear objeto Usuario
                 CreateUser(usr);
                 
             }
@@ -205,7 +205,6 @@ namespace Proyecto_FARA
                         else
                         {
                             Descr = lector.GetString(lector.GetOrdinal("DESCR"));
-
                         }
 
                         LugEve = lector.GetString(lector.GetOrdinal("LUGAR"));
