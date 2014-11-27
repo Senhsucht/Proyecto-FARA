@@ -70,6 +70,66 @@ namespace Proyecto_FARA
 
             switch (nomCom)
             {
+                case "Alta de rescate":
+
+                    cambiarMod(new UCAltaResc());
+                    break;
+
+                case "Modificación de afiliado":
+
+                    cambiarMod(new UCModResc());
+                    break;
+
+                case "Consulta de rescate":
+
+                    cambiarMod(new UCConResc());
+                    break;
+
+                case "Alta de inventario":
+
+                    cambiarMod(new UCAltaDon());
+                    break;
+
+                case "Baja de inventario":
+
+                    cambiarMod(new UCBajaInv());
+                    break;
+
+                case "Consulta de inventario":
+
+                    cambiarMod(new UCConInv());
+                    break;
+
+                case "Alta de adopciones":
+
+                    cambiarMod(new UCAltaAdop());
+                    break;
+
+                case "Modificación de adopciones":
+
+                    cambiarMod(new UCModAdop());
+                    break;
+
+                case "Consulta de adopciones":
+
+                    cambiarMod(new UCConAdop());
+                    break;
+
+                case "Alta de eventos":
+
+                    cambiarMod(new UCAltaEve());
+                    break;
+
+                case "Modificación de eventos":
+
+                    cambiarMod(new UCModEve());
+                    break;
+
+                case "Consulta de eventos":
+
+                    cambiarMod(new UCConEve());
+                    break;
+
                 case "Alta de donaciones":
                     
                     cambiarMod(new UCAltaDon());

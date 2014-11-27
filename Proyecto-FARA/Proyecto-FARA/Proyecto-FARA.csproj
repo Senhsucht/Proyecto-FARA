@@ -83,6 +83,12 @@
     <Compile Include="conProducto.Designer.cs">
       <DependentUpon>conProducto.cs</DependentUpon>
     </Compile>
+    <Compile Include="UCAltaAdop.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCAltaAdop.Designer.cs">
+      <DependentUpon>UCAltaAdop.cs</DependentUpon>
+    </Compile>
     <Compile Include="UCAltaDon.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -110,6 +116,54 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>PROYECTO_FARADataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="UCAltaEve.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCAltaEve.Designer.cs">
+      <DependentUpon>UCAltaEve.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UCAltaInv.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCAltaInv.Designer.cs">
+      <DependentUpon>UCAltaInv.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UCAltaResc.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCAltaResc.Designer.cs">
+      <DependentUpon>UCAltaResc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UCBajaInv.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCBajaInv.Designer.cs">
+      <DependentUpon>UCBajaInv.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UCConAdop.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCConAdop.Designer.cs">
+      <DependentUpon>UCConAdop.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UCConEve.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCConEve.Designer.cs">
+      <DependentUpon>UCConEve.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UCConInv.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCConInv.Designer.cs">
+      <DependentUpon>UCConInv.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UCConResc.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCConResc.Designer.cs">
+      <DependentUpon>UCConResc.cs</DependentUpon>
+    </Compile>
     <Compile Include="UCDonaciones.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -117,6 +171,24 @@
       <DependentUpon>UCDonaciones.cs</DependentUpon>
     </Compile>
     <Compile Include="Clases\User.cs" />
+    <Compile Include="UCModAdop.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCModAdop.Designer.cs">
+      <DependentUpon>UCModAdop.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UCModEve.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCModEve.Designer.cs">
+      <DependentUpon>UCModEve.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UCModResc.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCModResc.Designer.cs">
+      <DependentUpon>UCModResc.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Autenticacion.resx">
       <DependentUpon>Autenticacion.cs</DependentUpon>
     </EmbeddedResource>
@@ -125,6 +197,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="conProducto.resx">
       <DependentUpon>conProducto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCAltaAdop.resx">
+      <DependentUpon>UCAltaAdop.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UCAltaDon.resx">
       <DependentUpon>UCAltaDon.cs</DependentUpon>
@@ -144,8 +219,41 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="UCAltaEve.resx">
+      <DependentUpon>UCAltaEve.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCAltaInv.resx">
+      <DependentUpon>UCAltaInv.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCAltaResc.resx">
+      <DependentUpon>UCAltaResc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCBajaInv.resx">
+      <DependentUpon>UCBajaInv.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCConAdop.resx">
+      <DependentUpon>UCConAdop.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCConEve.resx">
+      <DependentUpon>UCConEve.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCConInv.resx">
+      <DependentUpon>UCConInv.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCConResc.resx">
+      <DependentUpon>UCConResc.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UCDonaciones.resx">
       <DependentUpon>UCDonaciones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCModAdop.resx">
+      <DependentUpon>UCModAdop.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCModEve.resx">
+      <DependentUpon>UCModEve.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCModResc.resx">
+      <DependentUpon>UCModResc.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="app.config" />
     <None Include="Properties\Settings.settings">

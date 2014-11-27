@@ -15,3 +15,15 @@ C:\Users\Angel\Documents\GitHub\Proyecto-FARA\Proyecto-FARA\Proyecto-FARA\obj\x8
 C:\Users\Angel\Documents\GitHub\Proyecto-FARA\Proyecto-FARA\Proyecto-FARA\obj\x86\Debug\Proyecto_FARA.conDonante.resources
 C:\Users\Angel\Documents\GitHub\Proyecto-FARA\Proyecto-FARA\Proyecto-FARA\bin\Debug\itextsharp.dll
 C:\Users\Angel\Documents\GitHub\Proyecto-FARA\Proyecto-FARA\Proyecto-FARA\bin\Debug\itextsharp.xml
+C:\Users\Angel\Documents\GitHub\Proyecto-FARA\Proyecto-FARA\Proyecto-FARA\obj\x86\Debug\Proyecto_FARA.UCAltaAdop.resources
+C:\Users\Angel\Documents\GitHub\Proyecto-FARA\Proyecto-FARA\Proyecto-FARA\obj\x86\Debug\Proyecto_FARA.UCAltaEve.resources
+C:\Users\Angel\Documents\GitHub\Proyecto-FARA\Proyecto-FARA\Proyecto-FARA\obj\x86\Debug\Proyecto_FARA.UCAltaInv.resources
+C:\Users\Angel\Documents\GitHub\Proyecto-FARA\Proyecto-FARA\Proyecto-FARA\obj\x86\Debug\Proyecto_FARA.UCAltaResc.resources
+C:\Users\Angel\Documents\GitHub\Proyecto-FARA\Proyecto-FARA\Proyecto-FARA\obj\x86\Debug\Proyecto_FARA.UCConAdop.resources
+C:\Users\Angel\Documents\GitHub\Proyecto-FARA\Proyecto-FARA\Proyecto-FARA\obj\x86\Debug\Proyecto_FARA.UCConEve.resources
+C:\Users\Angel\Documents\GitHub\Proyecto-FARA\Proyecto-FARA\Proyecto-FARA\obj\x86\Debug\Proyecto_FARA.UCConInv.resources
+C:\Users\Angel\Documents\GitHub\Proyecto-FARA\Proyecto-FARA\Proyecto-FARA\obj\x86\Debug\Proyecto_FARA.UCConResc.resources
+C:\Users\Angel\Documents\GitHub\Proyecto-FARA\Proyecto-FARA\Proyecto-FARA\obj\x86\Debug\Proyecto_FARA.UCModAdop.resources
+C:\Users\Angel\Documents\GitHub\Proyecto-FARA\Proyecto-FARA\Proyecto-FARA\obj\x86\Debug\Proyecto_FARA.UCModEve.resources
+C:\Users\Angel\Documents\GitHub\Proyecto-FARA\Proyecto-FARA\Proyecto-FARA\obj\x86\Debug\Proyecto_FARA.UCModResc.resources
+C:\Users\Angel\Documents\GitHub\Proyecto-FARA\Proyecto-FARA\Proyecto-FARA\obj\x86\Debug\Proyecto_FARA.UCBajaInv.resources

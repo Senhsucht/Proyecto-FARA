@@ -29,28 +29,29 @@
         private void InitializeComponent()
         {
             this.gpbDonante = new System.Windows.Forms.GroupBox();
+            this.lblIDDR = new System.Windows.Forms.Label();
             this.lblDirecDR = new System.Windows.Forms.Label();
             this.lblTelDR = new System.Windows.Forms.Label();
             this.lblRFCDR = new System.Windows.Forms.Label();
             this.lblNombreDR = new System.Windows.Forms.Label();
             this.btnBuscarD = new System.Windows.Forms.Button();
             this.gpbProd = new System.Windows.Forms.GroupBox();
-            this.btnBuscarP = new System.Windows.Forms.Button();
-            this.lblNombrePR = new System.Windows.Forms.Label();
-            this.lblMarcaPR = new System.Windows.Forms.Label();
-            this.lblCNetoPR = new System.Windows.Forms.Label();
-            this.lblIDDR = new System.Windows.Forms.Label();
             this.lblIDPR = new System.Windows.Forms.Label();
+            this.lblCNetoPR = new System.Windows.Forms.Label();
+            this.lblMarcaPR = new System.Windows.Forms.Label();
+            this.lblNombrePR = new System.Windows.Forms.Label();
+            this.btnBuscarP = new System.Windows.Forms.Button();
             this.gpbEve = new System.Windows.Forms.GroupBox();
+            this.lblIDER = new System.Windows.Forms.Label();
+            this.lblEdoER = new System.Windows.Forms.Label();
+            this.lblFecER = new System.Windows.Forms.Label();
+            this.lblLugER = new System.Windows.Forms.Label();
+            this.lblDescER = new System.Windows.Forms.Label();
             this.lblTipoER = new System.Windows.Forms.Label();
             this.lblNombreER = new System.Windows.Forms.Label();
             this.btnBuscarE = new System.Windows.Forms.Button();
-            this.lblDescER = new System.Windows.Forms.Label();
-            this.lblLugER = new System.Windows.Forms.Label();
-            this.lblFecER = new System.Windows.Forms.Label();
-            this.lblEdoER = new System.Windows.Forms.Label();
-            this.lblIDER = new System.Windows.Forms.Label();
             this.gpbResumen = new System.Windows.Forms.GroupBox();
+            this.btnExpPDF = new System.Windows.Forms.Button();
             this.btnCarga = new System.Windows.Forms.Button();
             this.btnElim = new System.Windows.Forms.Button();
             this.btnAgre = new System.Windows.Forms.Button();
@@ -62,7 +63,6 @@
             this.cmn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clmIDEV = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cmnEve = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnExpPDF = new System.Windows.Forms.Button();
             this.gpbDonante.SuspendLayout();
             this.gpbProd.SuspendLayout();
             this.gpbEve.SuspendLayout();
@@ -84,6 +84,16 @@
             this.gpbDonante.TabIndex = 1;
             this.gpbDonante.TabStop = false;
             this.gpbDonante.Text = "Donante";
+            // 
+            // lblIDDR
+            // 
+            this.lblIDDR.AutoSize = true;
+            this.lblIDDR.Location = new System.Drawing.Point(361, 59);
+            this.lblIDDR.Name = "lblIDDR";
+            this.lblIDDR.Size = new System.Drawing.Size(18, 13);
+            this.lblIDDR.TabIndex = 13;
+            this.lblIDDR.Text = "ID";
+            this.lblIDDR.Visible = false;
             // 
             // lblDirecDR
             // 
@@ -145,33 +155,15 @@
             this.gpbProd.TabStop = false;
             this.gpbProd.Text = "Producto";
             // 
-            // btnBuscarP
+            // lblIDPR
             // 
-            this.btnBuscarP.Location = new System.Drawing.Point(364, 7);
-            this.btnBuscarP.Name = "btnBuscarP";
-            this.btnBuscarP.Size = new System.Drawing.Size(83, 37);
-            this.btnBuscarP.TabIndex = 4;
-            this.btnBuscarP.Text = "Buscar producto";
-            this.btnBuscarP.UseVisualStyleBackColor = true;
-            this.btnBuscarP.Click += new System.EventHandler(this.btnBuscarP_Click);
-            // 
-            // lblNombrePR
-            // 
-            this.lblNombrePR.AutoSize = true;
-            this.lblNombrePR.Location = new System.Drawing.Point(20, 31);
-            this.lblNombrePR.Name = "lblNombrePR";
-            this.lblNombrePR.Size = new System.Drawing.Size(112, 13);
-            this.lblNombrePR.TabIndex = 5;
-            this.lblNombrePR.Text = "Nombre del producto: ";
-            // 
-            // lblMarcaPR
-            // 
-            this.lblMarcaPR.AutoSize = true;
-            this.lblMarcaPR.Location = new System.Drawing.Point(20, 55);
-            this.lblMarcaPR.Name = "lblMarcaPR";
-            this.lblMarcaPR.Size = new System.Drawing.Size(40, 13);
-            this.lblMarcaPR.TabIndex = 6;
-            this.lblMarcaPR.Text = "Marca:";
+            this.lblIDPR.AutoSize = true;
+            this.lblIDPR.Location = new System.Drawing.Point(361, 47);
+            this.lblIDPR.Name = "lblIDPR";
+            this.lblIDPR.Size = new System.Drawing.Size(18, 13);
+            this.lblIDPR.TabIndex = 8;
+            this.lblIDPR.Text = "ID";
+            this.lblIDPR.Visible = false;
             // 
             // lblCNetoPR
             // 
@@ -182,25 +174,33 @@
             this.lblCNetoPR.TabIndex = 7;
             this.lblCNetoPR.Text = "C. Neto:";
             // 
-            // lblIDDR
+            // lblMarcaPR
             // 
-            this.lblIDDR.AutoSize = true;
-            this.lblIDDR.Location = new System.Drawing.Point(361, 59);
-            this.lblIDDR.Name = "lblIDDR";
-            this.lblIDDR.Size = new System.Drawing.Size(18, 13);
-            this.lblIDDR.TabIndex = 13;
-            this.lblIDDR.Text = "ID";
-            this.lblIDDR.Visible = false;
+            this.lblMarcaPR.AutoSize = true;
+            this.lblMarcaPR.Location = new System.Drawing.Point(20, 55);
+            this.lblMarcaPR.Name = "lblMarcaPR";
+            this.lblMarcaPR.Size = new System.Drawing.Size(40, 13);
+            this.lblMarcaPR.TabIndex = 6;
+            this.lblMarcaPR.Text = "Marca:";
             // 
-            // lblIDPR
+            // lblNombrePR
             // 
-            this.lblIDPR.AutoSize = true;
-            this.lblIDPR.Location = new System.Drawing.Point(361, 47);
-            this.lblIDPR.Name = "lblIDPR";
-            this.lblIDPR.Size = new System.Drawing.Size(18, 13);
-            this.lblIDPR.TabIndex = 8;
-            this.lblIDPR.Text = "ID";
-            this.lblIDPR.Visible = false;
+            this.lblNombrePR.AutoSize = true;
+            this.lblNombrePR.Location = new System.Drawing.Point(20, 31);
+            this.lblNombrePR.Name = "lblNombrePR";
+            this.lblNombrePR.Size = new System.Drawing.Size(112, 13);
+            this.lblNombrePR.TabIndex = 5;
+            this.lblNombrePR.Text = "Nombre del producto: ";
+            // 
+            // btnBuscarP
+            // 
+            this.btnBuscarP.Location = new System.Drawing.Point(364, 7);
+            this.btnBuscarP.Name = "btnBuscarP";
+            this.btnBuscarP.Size = new System.Drawing.Size(83, 37);
+            this.btnBuscarP.TabIndex = 4;
+            this.btnBuscarP.Text = "Buscar producto";
+            this.btnBuscarP.UseVisualStyleBackColor = true;
+            this.btnBuscarP.Click += new System.EventHandler(this.btnBuscarP_Click);
             // 
             // gpbEve
             // 
@@ -218,6 +218,52 @@
             this.gpbEve.TabIndex = 3;
             this.gpbEve.TabStop = false;
             this.gpbEve.Text = "Evento";
+            // 
+            // lblIDER
+            // 
+            this.lblIDER.AutoSize = true;
+            this.lblIDER.Location = new System.Drawing.Point(361, 57);
+            this.lblIDER.Name = "lblIDER";
+            this.lblIDER.Size = new System.Drawing.Size(18, 13);
+            this.lblIDER.TabIndex = 7;
+            this.lblIDER.Text = "ID";
+            this.lblIDER.Visible = false;
+            // 
+            // lblEdoER
+            // 
+            this.lblEdoER.AutoSize = true;
+            this.lblEdoER.Location = new System.Drawing.Point(253, 121);
+            this.lblEdoER.Name = "lblEdoER";
+            this.lblEdoER.Size = new System.Drawing.Size(96, 13);
+            this.lblEdoER.TabIndex = 6;
+            this.lblEdoER.Text = "Estado del evento:";
+            // 
+            // lblFecER
+            // 
+            this.lblFecER.AutoSize = true;
+            this.lblFecER.Location = new System.Drawing.Point(20, 99);
+            this.lblFecER.Name = "lblFecER";
+            this.lblFecER.Size = new System.Drawing.Size(93, 13);
+            this.lblFecER.TabIndex = 5;
+            this.lblFecER.Text = "Fecha del evento:";
+            // 
+            // lblLugER
+            // 
+            this.lblLugER.AutoSize = true;
+            this.lblLugER.Location = new System.Drawing.Point(20, 77);
+            this.lblLugER.Name = "lblLugER";
+            this.lblLugER.Size = new System.Drawing.Size(90, 13);
+            this.lblLugER.TabIndex = 4;
+            this.lblLugER.Text = "Lugar del evento:";
+            // 
+            // lblDescER
+            // 
+            this.lblDescER.AutoSize = true;
+            this.lblDescER.Location = new System.Drawing.Point(20, 55);
+            this.lblDescER.Name = "lblDescER";
+            this.lblDescER.Size = new System.Drawing.Size(66, 13);
+            this.lblDescER.TabIndex = 3;
+            this.lblDescER.Text = "Descripción:";
             // 
             // lblTipoER
             // 
@@ -247,52 +293,6 @@
             this.btnBuscarE.UseVisualStyleBackColor = true;
             this.btnBuscarE.Click += new System.EventHandler(this.btnBuscarE_Click);
             // 
-            // lblDescER
-            // 
-            this.lblDescER.AutoSize = true;
-            this.lblDescER.Location = new System.Drawing.Point(20, 55);
-            this.lblDescER.Name = "lblDescER";
-            this.lblDescER.Size = new System.Drawing.Size(66, 13);
-            this.lblDescER.TabIndex = 3;
-            this.lblDescER.Text = "Descripción:";
-            // 
-            // lblLugER
-            // 
-            this.lblLugER.AutoSize = true;
-            this.lblLugER.Location = new System.Drawing.Point(20, 77);
-            this.lblLugER.Name = "lblLugER";
-            this.lblLugER.Size = new System.Drawing.Size(90, 13);
-            this.lblLugER.TabIndex = 4;
-            this.lblLugER.Text = "Lugar del evento:";
-            // 
-            // lblFecER
-            // 
-            this.lblFecER.AutoSize = true;
-            this.lblFecER.Location = new System.Drawing.Point(20, 99);
-            this.lblFecER.Name = "lblFecER";
-            this.lblFecER.Size = new System.Drawing.Size(93, 13);
-            this.lblFecER.TabIndex = 5;
-            this.lblFecER.Text = "Fecha del evento:";
-            // 
-            // lblEdoER
-            // 
-            this.lblEdoER.AutoSize = true;
-            this.lblEdoER.Location = new System.Drawing.Point(253, 121);
-            this.lblEdoER.Name = "lblEdoER";
-            this.lblEdoER.Size = new System.Drawing.Size(96, 13);
-            this.lblEdoER.TabIndex = 6;
-            this.lblEdoER.Text = "Estado del evento:";
-            // 
-            // lblIDER
-            // 
-            this.lblIDER.AutoSize = true;
-            this.lblIDER.Location = new System.Drawing.Point(361, 57);
-            this.lblIDER.Name = "lblIDER";
-            this.lblIDER.Size = new System.Drawing.Size(18, 13);
-            this.lblIDER.TabIndex = 7;
-            this.lblIDER.Text = "ID";
-            this.lblIDER.Visible = false;
-            // 
             // gpbResumen
             // 
             this.gpbResumen.Controls.Add(this.btnExpPDF);
@@ -306,6 +306,16 @@
             this.gpbResumen.TabIndex = 5;
             this.gpbResumen.TabStop = false;
             this.gpbResumen.Text = "Resumen";
+            // 
+            // btnExpPDF
+            // 
+            this.btnExpPDF.Location = new System.Drawing.Point(436, 350);
+            this.btnExpPDF.Name = "btnExpPDF";
+            this.btnExpPDF.Size = new System.Drawing.Size(90, 45);
+            this.btnExpPDF.TabIndex = 4;
+            this.btnExpPDF.Text = "Exportar donaciones";
+            this.btnExpPDF.UseVisualStyleBackColor = true;
+            this.btnExpPDF.Click += new System.EventHandler(this.btnExpPDF_Click);
             // 
             // btnCarga
             // 
@@ -399,16 +409,6 @@
             this.cmnEve.Name = "cmnEve";
             this.cmnEve.ReadOnly = true;
             // 
-            // btnExpPDF
-            // 
-            this.btnExpPDF.Location = new System.Drawing.Point(436, 350);
-            this.btnExpPDF.Name = "btnExpPDF";
-            this.btnExpPDF.Size = new System.Drawing.Size(90, 45);
-            this.btnExpPDF.TabIndex = 4;
-            this.btnExpPDF.Text = "Exportar donaciones";
-            this.btnExpPDF.UseVisualStyleBackColor = true;
-            this.btnExpPDF.Click += new System.EventHandler(this.btnExpPDF_Click);
-            // 
             // UCAltaDon
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -418,7 +418,7 @@
             this.Controls.Add(this.gpbProd);
             this.Controls.Add(this.gpbDonante);
             this.Name = "UCAltaDon";
-            this.Size = new System.Drawing.Size(1045, 451);
+            this.Size = new System.Drawing.Size(1045, 453);
             this.gpbDonante.ResumeLayout(false);
             this.gpbDonante.PerformLayout();
             this.gpbProd.ResumeLayout(false);
