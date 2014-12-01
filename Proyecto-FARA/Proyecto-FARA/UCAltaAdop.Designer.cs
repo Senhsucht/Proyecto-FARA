@@ -182,6 +182,7 @@
             this.btnBuscarA.TabIndex = 8;
             this.btnBuscarA.Text = "Buscar adoptante";
             this.btnBuscarA.UseVisualStyleBackColor = true;
+            this.btnBuscarA.Click += new System.EventHandler(this.btnBuscarA_Click);
             // 
             // groupBox1
             // 
@@ -288,6 +289,7 @@
             this.btnBuscarAn.TabIndex = 8;
             this.btnBuscarAn.Text = "Buscar animal";
             this.btnBuscarAn.UseVisualStyleBackColor = true;
+            this.btnBuscarAn.Click += new System.EventHandler(this.btnBuscarAn_Click);
             // 
             // btnAltAdop
             // 
@@ -297,6 +299,7 @@
             this.btnAltAdop.TabIndex = 4;
             this.btnAltAdop.Text = "Alta de adopción";
             this.btnAltAdop.UseVisualStyleBackColor = true;
+            this.btnAltAdop.Click += new System.EventHandler(this.btnAltAdop_Click);
             // 
             // UCAltaAdop
             // 

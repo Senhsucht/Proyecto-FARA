@@ -29,8 +29,8 @@ namespace Proyecto_FARA
             lblIDDR.Text = Metodos.ID;
             lblNombreDR.Text = "Nombre completo: " +Metodos.Nom + " " + Metodos.ApeP + " " + Metodos.ApeM;
             lblRFCDR.Text = "RFC: "+ Metodos.RFCD;
-            lblTelDR.Text = "Telefono: "+ Metodos.TelD;
-            lblDirecDR.Text = "Dirección: "+ Metodos.DirD;
+            lblTelDR.Text = "Telefono: "+ Metodos.Tel;
+            lblDirecDR.Text = "Dirección: "+ Metodos.Dir;
             
         }
 

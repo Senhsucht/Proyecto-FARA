@@ -133,6 +133,14 @@ namespace Proyecto_FARA
                 case "evento":
                      querysql = string.Format(@"SELECT * FROM EVENTO WHERE ID = {0}", id);
                     break;
+                case "adoptante":
+                    querysql = string.Format(@"SELECT * FROM ADOPTANTE WHERE ID = {0}", id);
+                    break;
+                    //*******
+                case "animal":
+                    querysql = string.Format(@"SELECT * FROM ANIMAL WHERE ID = {0}", id);
+                    break;
+                    //*******
             }
 
             SqlCommand cmdsql = new SqlCommand(querysql, cnn);
@@ -141,6 +149,28 @@ namespace Proyecto_FARA
             {
                 switch (tcon)
                 {
+                    case "adoptante":
+                        ID = (lector.GetInt32(lector.GetOrdinal("ID"))).ToString();
+                        Nom = lector.GetString(lector.GetOrdinal("NOMBRE"));
+                        ApeP = lector.GetString(lector.GetOrdinal("APE_PAT"));
+                        ApeM = lector.GetString(lector.GetOrdinal("APE_MAT"));
+                        Edad = lector.GetString(lector.GetOrdinal("EDAD"));
+
+                        Tel = lector.GetString(lector.GetOrdinal("TEL"));
+                        Dir = lector.GetString(lector.GetOrdinal("DIRECCION"));
+                        Email = lector.GetString(lector.GetOrdinal("EMAIL"));
+                        UA = (lector.GetDateTime(lector.GetOrdinal("ULT_ACT"))).ToString();
+
+                        break;
+                    case "animal":
+                        ID = (lector.GetInt32(lector.GetOrdinal("ID"))).ToString();
+                        Nom = lector.GetString(lector.GetOrdinal("NOMBRE"));
+                        tAni = lector.GetString(lector.GetOrdinal("TANIMAL"));
+                        rAni = lector.GetString(lector.GetOrdinal("RAZA"));
+                        Edad = lector.GetString(lector.GetOrdinal("EDAD"));
+                        UA = (lector.GetDateTime(lector.GetOrdinal("ULT_ACT"))).ToString();
+
+                        break;
                     case "donante":
                         ID = (lector.GetInt32(lector.GetOrdinal("ID"))).ToString();
                         Nom = lector.GetString(lector.GetOrdinal("NOMBRE"));
@@ -156,8 +186,8 @@ namespace Proyecto_FARA
                             RFCD = lector.GetString(lector.GetOrdinal("RFC"));
                             
                         }
-                        TelD = lector.GetString(lector.GetOrdinal("TEL"));
-                        DirD = lector.GetString(lector.GetOrdinal("DIRECCION"));
+                        Tel = lector.GetString(lector.GetOrdinal("TEL"));
+                        Dir = lector.GetString(lector.GetOrdinal("DIRECCION"));
                         UA = (lector.GetDateTime(lector.GetOrdinal("ULT_ACT"))).ToString();
 
                         break;
@@ -234,9 +264,9 @@ namespace Proyecto_FARA
 
         public static string RFCD { get; set; }
 
-        public static string TelD { get; set; }
+        public static string Tel { get; set; }
 
-        public static string DirD { get; set; }
+        public static string Dir { get; set; }
 
         public static string UA { get; set; }
 
@@ -259,6 +289,14 @@ namespace Proyecto_FARA
         public static string IDtEve { get; set; }
 
         public static string EveEdo { get; set; }
+        
+        public static string Edad { get; set; }
+
+        public static string tAni { get; set; }
+
+        public static string rAni { get; set; }
+
+        public static string Email { get; set; }
 
         //---- ******* -----//
 

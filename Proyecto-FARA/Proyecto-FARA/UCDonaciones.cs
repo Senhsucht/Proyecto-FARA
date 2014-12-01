@@ -96,8 +96,8 @@ namespace Proyecto_FARA
                 renglon[2] = Metodos.ApeP;
                 renglon[3] = Metodos.ApeM;
                 renglon[4] = Metodos.RFCD;
-                renglon[5] = Metodos.TelD;
-                renglon[6] = Metodos.DirD;
+                renglon[5] = Metodos.Tel;
+                renglon[6] = Metodos.Dir;
                 renglon[7] = Metodos.UA;
 
                 dgvDon.Rows.Add(renglon);

@@ -71,6 +71,18 @@
       <DependentUpon>Autenticacion.cs</DependentUpon>
     </Compile>
     <Compile Include="Clases\conexion.cs" />
+    <Compile Include="conAdoptante.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="conAdoptante.Designer.cs">
+      <DependentUpon>conAdoptante.cs</DependentUpon>
+    </Compile>
+    <Compile Include="conAnimal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="conAnimal.Designer.cs">
+      <DependentUpon>conAnimal.cs</DependentUpon>
+    </Compile>
     <Compile Include="conEvento.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -191,6 +203,12 @@
     </Compile>
     <EmbeddedResource Include="Autenticacion.resx">
       <DependentUpon>Autenticacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="conAdoptante.resx">
+      <DependentUpon>conAdoptante.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="conAnimal.resx">
+      <DependentUpon>conAnimal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="conEvento.resx">
       <DependentUpon>conEvento.cs</DependentUpon>
