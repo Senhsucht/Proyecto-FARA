@@ -35,12 +35,6 @@
             this.cbxTAni = new System.Windows.Forms.ComboBox();
             this.cbxRAni = new System.Windows.Forms.ComboBox();
             this.dgvAni = new System.Windows.Forms.DataGridView();
-            this.clmID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clmNombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clmTiAni = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clmRANI = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clmEDAD = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clmULTACT = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.lblEdAni = new System.Windows.Forms.Label();
             this.txtEdad = new System.Windows.Forms.TextBox();
@@ -48,6 +42,11 @@
             this.lblRAni = new System.Windows.Forms.Label();
             this.lblNombreD = new System.Windows.Forms.Label();
             this.txtNom = new System.Windows.Forms.TextBox();
+            this.clmID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clmNombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clmRANI = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clmEDAD = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clmULTACT = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gpbDonante.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAni)).BeginInit();
             this.SuspendLayout();
@@ -70,6 +69,7 @@
             this.btnAceptar.TabIndex = 5;
             this.btnAceptar.Text = "Aceptar";
             this.btnAceptar.UseVisualStyleBackColor = true;
+            this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
             // 
             // gpbDonante
             // 
@@ -114,7 +114,6 @@
             this.dgvAni.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.clmID,
             this.clmNombre,
-            this.clmTiAni,
             this.clmRANI,
             this.clmEDAD,
             this.clmULTACT});
@@ -123,44 +122,6 @@
             this.dgvAni.ReadOnly = true;
             this.dgvAni.Size = new System.Drawing.Size(562, 210);
             this.dgvAni.TabIndex = 10;
-            // 
-            // clmID
-            // 
-            this.clmID.HeaderText = "ID";
-            this.clmID.Name = "clmID";
-            this.clmID.ReadOnly = true;
-            this.clmID.Visible = false;
-            // 
-            // clmNombre
-            // 
-            this.clmNombre.HeaderText = "NOMBRE";
-            this.clmNombre.Name = "clmNombre";
-            this.clmNombre.ReadOnly = true;
-            // 
-            // clmTiAni
-            // 
-            this.clmTiAni.HeaderText = "TIPO";
-            this.clmTiAni.Name = "clmTiAni";
-            this.clmTiAni.ReadOnly = true;
-            // 
-            // clmRANI
-            // 
-            this.clmRANI.HeaderText = "RAZA";
-            this.clmRANI.Name = "clmRANI";
-            this.clmRANI.ReadOnly = true;
-            // 
-            // clmEDAD
-            // 
-            this.clmEDAD.HeaderText = "EDAD";
-            this.clmEDAD.Name = "clmEDAD";
-            this.clmEDAD.ReadOnly = true;
-            // 
-            // clmULTACT
-            // 
-            this.clmULTACT.HeaderText = "ULTIMA ACTUALIZACION";
-            this.clmULTACT.Name = "clmULTACT";
-            this.clmULTACT.ReadOnly = true;
-            this.clmULTACT.Visible = false;
             // 
             // btnBuscar
             // 
@@ -222,6 +183,38 @@
             this.txtNom.Size = new System.Drawing.Size(100, 20);
             this.txtNom.TabIndex = 0;
             // 
+            // clmID
+            // 
+            this.clmID.HeaderText = "ID";
+            this.clmID.Name = "clmID";
+            this.clmID.ReadOnly = true;
+            this.clmID.Visible = false;
+            // 
+            // clmNombre
+            // 
+            this.clmNombre.HeaderText = "NOMBRE";
+            this.clmNombre.Name = "clmNombre";
+            this.clmNombre.ReadOnly = true;
+            // 
+            // clmRANI
+            // 
+            this.clmRANI.HeaderText = "RAZA";
+            this.clmRANI.Name = "clmRANI";
+            this.clmRANI.ReadOnly = true;
+            // 
+            // clmEDAD
+            // 
+            this.clmEDAD.HeaderText = "EDAD";
+            this.clmEDAD.Name = "clmEDAD";
+            this.clmEDAD.ReadOnly = true;
+            // 
+            // clmULTACT
+            // 
+            this.clmULTACT.HeaderText = "ULTIMA ACTUALIZACION";
+            this.clmULTACT.Name = "clmULTACT";
+            this.clmULTACT.ReadOnly = true;
+            this.clmULTACT.Visible = false;
+            // 
             // conAnimal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -257,7 +250,6 @@
         private System.Windows.Forms.ComboBox cbxRAni;
         private System.Windows.Forms.DataGridViewTextBoxColumn clmID;
         private System.Windows.Forms.DataGridViewTextBoxColumn clmNombre;
-        private System.Windows.Forms.DataGridViewTextBoxColumn clmTiAni;
         private System.Windows.Forms.DataGridViewTextBoxColumn clmRANI;
         private System.Windows.Forms.DataGridViewTextBoxColumn clmEDAD;
         private System.Windows.Forms.DataGridViewTextBoxColumn clmULTACT;

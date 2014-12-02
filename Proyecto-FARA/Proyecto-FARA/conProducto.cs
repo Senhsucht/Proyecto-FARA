@@ -79,7 +79,7 @@ namespace Proyecto_FARA
             int total = Metodos.ConsultaIds(busqueda);
             for (int i = 0; i < total; i++)
             {
-                object[] renglon = new Object[5];
+                object[] renglon = new Object[dgvProd.ColumnCount];
                 Metodos.consultarDatos(ids[i], "producto");
                 renglon[0] = Metodos.ID;
                 renglon[1] = Metodos.Nom;

@@ -136,6 +136,10 @@ namespace Proyecto_FARA
                 case "adoptante":
                     querysql = string.Format(@"SELECT * FROM ADOPTANTE WHERE ID = {0}", id);
                     break;
+                case "conInv":
+                    querysql = string.Format(@"SELECT I.ID,P.NOMBRE,P.MARCA,I.CANTIDAD,P.CNETO,I.DESCR,I.ULT_ACT  FROM [INVENTARIO] I INNER JOIN [PRODUCTO] P ON I.ID_PRODUCTO=P.ID WHERE I.ID = {0}", id);
+                    break;
+
                     //*******
                 case "animal":
                     querysql = string.Format(@"SELECT * FROM ANIMAL WHERE ID = {0}", id);
@@ -149,12 +153,50 @@ namespace Proyecto_FARA
             {
                 switch (tcon)
                 {
+                    case "conInv":
+                        Cantidad = (lector.GetInt32(lector.GetOrdinal("CANTIDAD"))).ToString();
+
+                        if (lector.IsDBNull(lector.GetOrdinal("DESCR")))
+                        {
+                            Descr = "";
+                        }
+                        else
+                        {
+                            Descr = lector.GetString(lector.GetOrdinal("DESCR"));
+
+                        }
+
+                        Nom = lector.GetString(lector.GetOrdinal("NOMBRE"));
+                        if (lector.IsDBNull(lector.GetOrdinal("MARCA")))
+                        {
+                            MarPro = "";
+
+                        }
+                        else
+                        {
+                            MarPro = lector.GetString(lector.GetOrdinal("MARCA"));
+
+                        }
+
+                        if (lector.IsDBNull(lector.GetOrdinal("CNETO")))
+                        {
+                            CNetPro = "";
+
+                        }
+                        else
+                        {
+                            CNetPro = lector.GetString(lector.GetOrdinal("CNETO"));
+
+                        }
+
+
+                        break;
                     case "adoptante":
                         ID = (lector.GetInt32(lector.GetOrdinal("ID"))).ToString();
                         Nom = lector.GetString(lector.GetOrdinal("NOMBRE"));
                         ApeP = lector.GetString(lector.GetOrdinal("APE_PAT"));
                         ApeM = lector.GetString(lector.GetOrdinal("APE_MAT"));
-                        Edad = lector.GetString(lector.GetOrdinal("EDAD"));
+                        Edad = (lector.GetInt32(lector.GetOrdinal("EDAD"))).ToString();
 
                         Tel = lector.GetString(lector.GetOrdinal("TEL"));
                         Dir = lector.GetString(lector.GetOrdinal("DIRECCION"));
@@ -165,9 +207,8 @@ namespace Proyecto_FARA
                     case "animal":
                         ID = (lector.GetInt32(lector.GetOrdinal("ID"))).ToString();
                         Nom = lector.GetString(lector.GetOrdinal("NOMBRE"));
-                        tAni = lector.GetString(lector.GetOrdinal("TANIMAL"));
-                        rAni = lector.GetString(lector.GetOrdinal("RAZA"));
-                        Edad = lector.GetString(lector.GetOrdinal("EDAD"));
+                        rAni = (lector.GetInt32(lector.GetOrdinal("ID_RAZA"))).ToString();
+                        Edad = (lector.GetInt32(lector.GetOrdinal("EDAD"))).ToString();
                         UA = (lector.GetDateTime(lector.GetOrdinal("ULT_ACT"))).ToString();
 
                         break;
@@ -298,6 +339,8 @@ namespace Proyecto_FARA
 
         public static string Email { get; set; }
 
+        public static string Cantidad { get; set; }
+
         //---- ******* -----//
 
 
@@ -305,16 +348,52 @@ namespace Proyecto_FARA
         internal static void AltaInv(string idDon, string Cant, string idProd, string idEve)
         {
             string usrU = UsuarioON.usr;
-            string sqlInv = string.Format(@"INSERT INTO INVENTARIO(ID_PRODUCTO,CANTIDAD,DESCR,ULT_ACT) VALUES ({0},{1},'',GETDATE());",idProd,Cant);
+            string cadena = string.Format(@"SELECT * FROM INVENTARIO WHERE ID_PRODUCTO = " + idProd);
             string sqlInvH = string.Format(@"INSERT INTO INV_HIST(ID_AFILIADO,ID_PRODUCTO,CANTIDAD,DESCR,CADUCIDAD,ID_DONANTE,ID_EVENTO,ALTA_BAJA,ULT_ACT) SELECT (SELECT ID_AFIL FROM USR WHERE USR='{0}'),{1},{2},'','TEMPORAL/PRUEBA',{3},{4},1,GETDATE()",usrU,idProd,Cant,idDon,idEve);
+            string sqlInv;
+
+            SqlConnection con = conect();
+            con.Open();
+            
+            if (ConsultaIds(cadena) == 0)
+            {
+                sqlInv = string.Format(@"INSERT INTO INVENTARIO(ID_PRODUCTO,CANTIDAD,DESCR,ULT_ACT) VALUES ({0},{1},'',GETDATE());", idProd, Cant);
+            }
+            else
+            {
+                int[] ids = Metodos.colecDatos(cadena);
+
+                sqlInv = string.Format(@"UPDATE INVENTARIO SET CANTIDAD = CANTIDAD + "+Cant+" WHERE ID = "+ ids[0]);
+            }
+
+
+            SqlCommand cmd = new SqlCommand(sqlInvH, con);
+            cmd.ExecuteNonQuery();
+
+            cmd = new SqlCommand(sqlInv, con);
+            cmd.ExecuteNonQuery();
+
+            con.Close();
+        }
+
+        internal static void bajaInv(string id, string cant,string concep)
+        {
+            string usrU = UsuarioON.usr;
+            string cadena = string.Format(@"SELECT * FROM INVENTARIO WHERE ID_PRODUCTO = " + id);
+            string sqlInvH = string.Format(@"INSERT INTO INV_HIST(ID_AFILIADO,ID_PRODUCTO,CANTIDAD,DESCR,CADUCIDAD,ID_DONANTE,ID_EVENTO,ALTA_BAJA,ULT_ACT) SELECT (SELECT ID_AFIL FROM USR WHERE USR='{0}'),{1},{2},'','{3}',null,null,0,GETDATE()", usrU, id, cant, concep);
+            string sqlInv;
 
             SqlConnection con = conect();
             con.Open();
 
-            SqlCommand cmd = new SqlCommand(sqlInv, con);
+            int[] ids = Metodos.colecDatos(cadena);
+
+            sqlInv = string.Format(@"UPDATE INVENTARIO SET CANTIDAD = CANTIDAD - " + cant + " WHERE ID = " + ids[0]);
+        
+            SqlCommand cmd = new SqlCommand(sqlInvH, con);
             cmd.ExecuteNonQuery();
 
-            cmd = new SqlCommand(sqlInvH, con);
+            cmd = new SqlCommand(sqlInv, con);
             cmd.ExecuteNonQuery();
 
             con.Close();

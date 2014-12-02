@@ -78,11 +78,10 @@ namespace Proyecto_FARA
             int total = Metodos.ConsultaIds(busqueda);
             for (int i = 0; i < total; i++)
             {
-                object[] renglon = new Object[8];
+                object[] renglon = new Object[dgvAni.ColumnCount];
                 Metodos.consultarDatos(ids[i], "animal");
                 renglon[0] = Metodos.ID;
                 renglon[1] = Metodos.Nom;
-                renglon[2] = Metodos.tAni;
                 renglon[3] = Metodos.rAni;
                 renglon[4] = Metodos.Edad;
                 renglon[5] = Metodos.UA;
@@ -93,6 +92,19 @@ namespace Proyecto_FARA
 
         }
 
+
+        private void btnAceptar_Click(object sender, EventArgs e)
+        {
+            int idD = int.Parse(dgvAni.CurrentRow.Cells["clmID"].Value.ToString());
+            Metodos.consultarDatos(idD, "animal");
+
+            Close();
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
 
     }
 }

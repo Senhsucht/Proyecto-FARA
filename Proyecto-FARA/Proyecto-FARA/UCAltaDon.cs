@@ -27,10 +27,10 @@ namespace Proyecto_FARA
             cd.ShowDialog();
 
             lblIDDR.Text = Metodos.ID;
-            lblNombreDR.Text = "Nombre completo: " +Metodos.Nom + " " + Metodos.ApeP + " " + Metodos.ApeM;
-            lblRFCDR.Text = "RFC: "+ Metodos.RFCD;
-            lblTelDR.Text = "Telefono: "+ Metodos.Tel;
-            lblDirecDR.Text = "Dirección: "+ Metodos.Dir;
+            lblNombreDR.Text = Metodos.Nom + " " + Metodos.ApeP + " " + Metodos.ApeM;
+            lblRFCDR.Text =  Metodos.RFCD;
+            lblTelDR.Text =  Metodos.Tel;
+            lblDirecDR.Text =  Metodos.Dir;
             
         }
 
@@ -40,9 +40,9 @@ namespace Proyecto_FARA
             cp.ShowDialog();
 
             lblIDPR.Text = Metodos.ID;
-            lblNombrePR.Text = "Nombre del producto: " + Metodos.Nom;
-            lblMarcaPR.Text = "Marca: "+Metodos.MarPro;
-            lblCNetoPR.Text = "C. Neto: "+Metodos.CNetPro;
+            lblNombrePR.Text =  Metodos.Nom;
+            lblMarcaPR.Text = Metodos.MarPro;
+            lblCNetoPR.Text = Metodos.CNetPro;
         }
 
         private void btnBuscarE_Click(object sender, EventArgs e)
@@ -84,14 +84,13 @@ namespace Proyecto_FARA
 
         private void btnElim_Click(object sender, EventArgs e)
         {
-
+            dgvRes.Rows.RemoveAt(dgvRes.SelectedRows[0].Index);
         }
 
         private void btnCarga_Click(object sender, EventArgs e)
         {
             int c = dgvRes.Rows.Count;
-
-            
+                        
             for (int i = 0; i < c; i++)
             {
                 if (dgvRes.Rows[i].Cells["clmIDEV"].Value.ToString() != "ID")
@@ -104,10 +103,12 @@ namespace Proyecto_FARA
 
                 }
             }
-
+            
             createPDFcarga();
 
             MessageBox.Show("Datos cargados exitosamente");
+
+            dgvRes.Rows.Clear();
         }
 
         private void btnExpPDF_Click(object sender, EventArgs e)
@@ -167,5 +168,7 @@ namespace Proyecto_FARA
 
             document.Close();
         }
+
+
     }
 }

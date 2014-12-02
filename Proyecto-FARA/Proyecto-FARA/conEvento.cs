@@ -24,7 +24,7 @@ namespace Proyecto_FARA
 
         private void busquedaEVE(object sender, EventArgs e)
         {
-            datos.Clear();
+            dgvEve.Rows.Clear();
 
             string busqueda = "SELECT * FROM EVENTO";
             string NEVE = this.txtNomEve.Text;
@@ -64,7 +64,7 @@ namespace Proyecto_FARA
             int total = Metodos.ConsultaIds(busqueda);
             for (int i = 0; i < total; i++)
             {
-                object[] renglon = new Object[8];
+                object[] renglon = new Object[dgvEve.ColumnCount];
                 Metodos.consultarDatos(ids[i], "evento");
                 renglon[0] = Metodos.ID;
                 renglon[1] = Metodos.Nom;
@@ -78,10 +78,7 @@ namespace Proyecto_FARA
                 dgvEve.Rows.Add(renglon);
 
             }
-
-
-
-
+            
         }
 
         private void btnAceptar_Click(object sender, EventArgs e)

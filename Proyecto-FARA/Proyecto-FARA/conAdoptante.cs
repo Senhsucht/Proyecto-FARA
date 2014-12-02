@@ -78,7 +78,7 @@ namespace Proyecto_FARA
             int total = Metodos.ConsultaIds(busqueda);
             for (int i = 0; i < total; i++)
             {
-                object[] renglon = new Object[8];
+                object[] renglon = new Object[9];
                 Metodos.consultarDatos(ids[i], "donante");
                 renglon[0] = Metodos.ID;
                 renglon[1] = Metodos.Nom;

@@ -43,7 +43,6 @@
             this.btnAdop = new System.Windows.Forms.Button();
             this.btnModEve = new System.Windows.Forms.Button();
             this.btnModUsr = new System.Windows.Forms.Button();
-            this.btnModDon = new System.Windows.Forms.Button();
             this.btnModAfil = new System.Windows.Forms.Button();
             this.btnModInv = new System.Windows.Forms.Button();
             this.btnModResc = new System.Windows.Forms.Button();
@@ -179,7 +178,6 @@
             this.gpbMods.Controls.Add(this.btnAdop);
             this.gpbMods.Controls.Add(this.btnModEve);
             this.gpbMods.Controls.Add(this.btnModUsr);
-            this.gpbMods.Controls.Add(this.btnModDon);
             this.gpbMods.Controls.Add(this.btnModAfil);
             this.gpbMods.Controls.Add(this.btnModInv);
             this.gpbMods.Controls.Add(this.btnModResc);
@@ -202,7 +200,7 @@
             // 
             // btnModEve
             // 
-            this.btnModEve.Location = new System.Drawing.Point(18, 484);
+            this.btnModEve.Location = new System.Drawing.Point(18, 411);
             this.btnModEve.Name = "btnModEve";
             this.btnModEve.Size = new System.Drawing.Size(146, 67);
             this.btnModEve.TabIndex = 0;
@@ -219,16 +217,6 @@
             this.btnModUsr.Text = "USUARIOS";
             this.btnModUsr.UseVisualStyleBackColor = true;
             this.btnModUsr.Click += new System.EventHandler(this.camCom);
-            // 
-            // btnModDon
-            // 
-            this.btnModDon.Location = new System.Drawing.Point(18, 411);
-            this.btnModDon.Name = "btnModDon";
-            this.btnModDon.Size = new System.Drawing.Size(146, 67);
-            this.btnModDon.TabIndex = 0;
-            this.btnModDon.Text = "DONACIONES";
-            this.btnModDon.UseVisualStyleBackColor = true;
-            this.btnModDon.Click += new System.EventHandler(this.camCom);
             // 
             // btnModAfil
             // 
@@ -363,7 +351,6 @@
         private System.Windows.Forms.Label lblTafil;
         private System.Windows.Forms.SplitContainer splitContainer1;
         private System.Windows.Forms.Button btnModEve;
-        private System.Windows.Forms.Button btnModDon;
         private System.Windows.Forms.Button btnModInv;
         private System.Windows.Forms.Button btnModResc;
         private System.Windows.Forms.Button btnModAfil;
