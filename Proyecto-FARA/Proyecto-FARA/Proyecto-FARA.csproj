@@ -70,12 +70,19 @@
     <Compile Include="Autenticacion.Designer.cs">
       <DependentUpon>Autenticacion.cs</DependentUpon>
     </Compile>
+    <Compile Include="catalogos.cs" />
     <Compile Include="Clases\conexion.cs" />
     <Compile Include="conAdoptante.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="conAdoptante.Designer.cs">
       <DependentUpon>conAdoptante.cs</DependentUpon>
+    </Compile>
+    <Compile Include="conAfiliado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="conAfiliado.Designer.cs">
+      <DependentUpon>conAfiliado.cs</DependentUpon>
     </Compile>
     <Compile Include="conAnimal.cs">
       <SubType>Form</SubType>
@@ -94,6 +101,12 @@
     </Compile>
     <Compile Include="conProducto.Designer.cs">
       <DependentUpon>conProducto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="conUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="conUsuario.Designer.cs">
+      <DependentUpon>conUsuario.cs</DependentUpon>
     </Compile>
     <Compile Include="UCAltaAdop.cs">
       <SubType>UserControl</SubType>
@@ -146,6 +159,12 @@
     <Compile Include="UCAltaResc.Designer.cs">
       <DependentUpon>UCAltaResc.cs</DependentUpon>
     </Compile>
+    <Compile Include="UCAltaUsr.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCAltaUsr.Designer.cs">
+      <DependentUpon>UCAltaUsr.cs</DependentUpon>
+    </Compile>
     <Compile Include="UCBajaInv.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -176,6 +195,12 @@
     <Compile Include="UCConResc.Designer.cs">
       <DependentUpon>UCConResc.cs</DependentUpon>
     </Compile>
+    <Compile Include="UCConUsr.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCConUsr.Designer.cs">
+      <DependentUpon>UCConUsr.cs</DependentUpon>
+    </Compile>
     <Compile Include="UCDonaciones.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -201,11 +226,20 @@
     <Compile Include="UCModResc.Designer.cs">
       <DependentUpon>UCModResc.cs</DependentUpon>
     </Compile>
+    <Compile Include="UCModUsr.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCModUsr.Designer.cs">
+      <DependentUpon>UCModUsr.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Autenticacion.resx">
       <DependentUpon>Autenticacion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="conAdoptante.resx">
       <DependentUpon>conAdoptante.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="conAfiliado.resx">
+      <DependentUpon>conAfiliado.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="conAnimal.resx">
       <DependentUpon>conAnimal.cs</DependentUpon>
@@ -215,6 +249,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="conProducto.resx">
       <DependentUpon>conProducto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="conUsuario.resx">
+      <DependentUpon>conUsuario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UCAltaAdop.resx">
       <DependentUpon>UCAltaAdop.cs</DependentUpon>
@@ -246,6 +283,9 @@
     <EmbeddedResource Include="UCAltaResc.resx">
       <DependentUpon>UCAltaResc.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UCAltaUsr.resx">
+      <DependentUpon>UCAltaUsr.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UCBajaInv.resx">
       <DependentUpon>UCBajaInv.cs</DependentUpon>
     </EmbeddedResource>
@@ -261,6 +301,9 @@
     <EmbeddedResource Include="UCConResc.resx">
       <DependentUpon>UCConResc.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UCConUsr.resx">
+      <DependentUpon>UCConUsr.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UCDonaciones.resx">
       <DependentUpon>UCDonaciones.cs</DependentUpon>
     </EmbeddedResource>
@@ -272,6 +315,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UCModResc.resx">
       <DependentUpon>UCModResc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCModUsr.resx">
+      <DependentUpon>UCModUsr.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="app.config" />
     <None Include="Properties\Settings.settings">

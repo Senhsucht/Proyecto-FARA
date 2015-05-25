@@ -443,6 +443,7 @@
             this.btnExpPDF.Name = "btnExpPDF";
             this.btnExpPDF.Size = new System.Drawing.Size(90, 45);
             this.btnExpPDF.TabIndex = 4;
+            this.btnExpPDF.Text = "Exportar PDF";
             this.btnExpPDF.UseVisualStyleBackColor = true;
             this.btnExpPDF.Click += new System.EventHandler(this.btnExpPDF_Click);
             // 

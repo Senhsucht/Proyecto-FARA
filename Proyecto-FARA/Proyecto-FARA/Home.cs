@@ -134,6 +134,19 @@ namespace Proyecto_FARA
                     
                     cambiarMod(new UCAltaDon());
                     break;
+                case "Alta de usuario":
+
+                    cambiarMod(new UCAltaUsr());
+                    break;
+                case "Modificación de usuario":
+
+                    cambiarMod(new UCModUsr());
+                    break;
+                case "Consulta de usuario":
+
+                    cambiarMod(new UCConUsr());
+                    break;
+
 
             }
         }

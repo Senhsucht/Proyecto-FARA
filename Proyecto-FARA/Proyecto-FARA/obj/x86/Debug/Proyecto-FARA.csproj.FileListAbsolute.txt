@@ -29,3 +29,8 @@ C:\Users\Angel\Documents\GitHub\Proyecto-FARA\Proyecto-FARA\Proyecto-FARA\obj\x8
 C:\Users\Angel\Documents\GitHub\Proyecto-FARA\Proyecto-FARA\Proyecto-FARA\obj\x86\Debug\Proyecto_FARA.UCBajaInv.resources
 C:\Users\Angel\Documents\GitHub\Proyecto-FARA\Proyecto-FARA\Proyecto-FARA\obj\x86\Debug\Proyecto_FARA.conAdoptante.resources
 C:\Users\Angel\Documents\GitHub\Proyecto-FARA\Proyecto-FARA\Proyecto-FARA\obj\x86\Debug\Proyecto_FARA.conAnimal.resources
+C:\Users\Angel\Documents\GitHub\Proyecto-FARA\Proyecto-FARA\Proyecto-FARA\obj\x86\Debug\Proyecto_FARA.conAfiliado.resources
+C:\Users\Angel\Documents\GitHub\Proyecto-FARA\Proyecto-FARA\Proyecto-FARA\obj\x86\Debug\Proyecto_FARA.UCAltaUsr.resources
+C:\Users\Angel\Documents\GitHub\Proyecto-FARA\Proyecto-FARA\Proyecto-FARA\obj\x86\Debug\Proyecto_FARA.conUsuario.resources
+C:\Users\Angel\Documents\GitHub\Proyecto-FARA\Proyecto-FARA\Proyecto-FARA\obj\x86\Debug\Proyecto_FARA.UCConUsr.resources
+C:\Users\Angel\Documents\GitHub\Proyecto-FARA\Proyecto-FARA\Proyecto-FARA\obj\x86\Debug\Proyecto_FARA.UCModUsr.resources

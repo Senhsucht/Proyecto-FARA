@@ -24,11 +24,23 @@ namespace Proyecto_FARA
         private void Conexion_Click(object sender, EventArgs e)
         {
             //Establecer y confirmar conexión
+            try
+            {
+                SqlConnection cnn = conexion.conect();
+                cnn.Open();
+
+                gpbLogin.Enabled = true;
+                lblConexion.Text = "Conexion establecida correctamente";
+                lblConexion.ForeColor = System.Drawing.Color.Lime;
+
+                cnn.Close();
+            }
+            catch (Exception exException)
+            {
+                lblConexion.Text = "Ha ocurrido un error conectandose a la base de datos";
+                lblConexion.ForeColor = System.Drawing.Color.DarkRed;
+            }
             
-            //System.Threading.Thread.Sleep(1000);
-            gpbLogin.Enabled = true;
-            lblConexion.Text = "Conexion establecida correctamente";
-            lblConexion.ForeColor = System.Drawing.Color.Lime;
         }
 
         private bool LoginSesion(string usr, string pwd)

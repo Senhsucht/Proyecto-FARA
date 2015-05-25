@@ -34,15 +34,19 @@ namespace Proyecto_FARA
 
         private void btnBaja_Click(object sender, EventArgs e)
         {
-            if (lblIDPR.Text != "ID" && textBox1.Text != "" && textBox2.Text != "")
+            if(MessageBox.Show("Seguro que desea realizar la baja?", "Baja de Inventario", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
-                Metodos.bajaInv(lblIDPR.Text, textBox1.Text, textBox2.Text);
-                MessageBox.Show("Baja realizada correctamente");
-            }
-            else
-            {
-                MessageBox.Show("Llene los campos corresponientes");
-            }
+                if (lblIDPR.Text != "ID" && textBox1.Text != "" && textBox2.Text != "")
+                {
+                    Metodos.bajaInv(lblIDPR.Text, textBox1.Text, textBox2.Text);
+                    MessageBox.Show("Baja realizada correctamente");
+                }
+                else
+                {
+                    MessageBox.Show("Llene los campos corresponientes");
+                }
+}
+            
         }
 
     }

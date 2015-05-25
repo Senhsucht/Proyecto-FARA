@@ -29,12 +29,13 @@
         private void InitializeComponent()
         {
             this.gpbProd = new System.Windows.Forms.GroupBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.btnExp = new System.Windows.Forms.Button();
             this.dgvProd = new System.Windows.Forms.DataGridView();
             this.clmID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clmNom = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clmMARCA = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clm = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clmCant = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clmCNETO = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clmDESCR = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clmULT_ACT = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -49,7 +50,8 @@
             // 
             // gpbProd
             // 
-            this.gpbProd.Controls.Add(this.button1);
+            this.gpbProd.Controls.Add(this.textBox1);
+            this.gpbProd.Controls.Add(this.btnExp);
             this.gpbProd.Controls.Add(this.dgvProd);
             this.gpbProd.Controls.Add(this.btnBuscarP);
             this.gpbProd.Controls.Add(this.txtMarProd);
@@ -63,14 +65,22 @@
             this.gpbProd.TabStop = false;
             this.gpbProd.Text = "Producto";
             // 
-            // button1
+            // textBox1
             // 
-            this.button1.Location = new System.Drawing.Point(468, 384);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 35);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "Importar inventario";
-            this.button1.UseVisualStyleBackColor = true;
+            this.textBox1.Location = new System.Drawing.Point(180, 389);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(100, 20);
+            this.textBox1.TabIndex = 7;
+            // 
+            // btnExp
+            // 
+            this.btnExp.Location = new System.Drawing.Point(468, 378);
+            this.btnExp.Name = "btnExp";
+            this.btnExp.Size = new System.Drawing.Size(93, 41);
+            this.btnExp.TabIndex = 6;
+            this.btnExp.Text = "Exportar inventario";
+            this.btnExp.UseVisualStyleBackColor = true;
+            this.btnExp.Click += new System.EventHandler(this.btnExpPDF_Click);
             // 
             // dgvProd
             // 
@@ -81,7 +91,7 @@
             this.clmID,
             this.clmNom,
             this.clmMARCA,
-            this.clm,
+            this.clmCant,
             this.clmCNETO,
             this.clmDESCR,
             this.clmULT_ACT});
@@ -110,11 +120,11 @@
             this.clmMARCA.Name = "clmMARCA";
             this.clmMARCA.ReadOnly = true;
             // 
-            // clm
+            // clmCant
             // 
-            this.clm.HeaderText = "CANTIDAD";
-            this.clm.Name = "clm";
-            this.clm.ReadOnly = true;
+            this.clmCant.HeaderText = "CANTIDAD";
+            this.clmCant.Name = "clmCant";
+            this.clmCant.ReadOnly = true;
             // 
             // clmCNETO
             // 
@@ -194,17 +204,18 @@
         #endregion
 
         private System.Windows.Forms.GroupBox gpbProd;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnExp;
         private System.Windows.Forms.DataGridView dgvProd;
         private System.Windows.Forms.Button btnBuscarP;
         private System.Windows.Forms.TextBox txtMarProd;
         private System.Windows.Forms.Label lblMarcaP;
         private System.Windows.Forms.Label lblNombreP;
         private System.Windows.Forms.TextBox txtNomProd;
+        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.DataGridViewTextBoxColumn clmID;
         private System.Windows.Forms.DataGridViewTextBoxColumn clmNom;
         private System.Windows.Forms.DataGridViewTextBoxColumn clmMARCA;
-        private System.Windows.Forms.DataGridViewTextBoxColumn clm;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clmCant;
         private System.Windows.Forms.DataGridViewTextBoxColumn clmCNETO;
         private System.Windows.Forms.DataGridViewTextBoxColumn clmDESCR;
         private System.Windows.Forms.DataGridViewTextBoxColumn clmULT_ACT;

@@ -21,23 +21,30 @@ namespace Proyecto_FARA
             this.cmdsql = new SqlCommand(this.sql, this.cnn);
             this.cnn.Open();
             SqlDataReader reg = null;
-            reg = this.cmdsql.ExecuteReader();
-            reg.Read();
-            //Comprobar que el usuario se encuentra activo
-            if (reg["ACTIVO"].ToString() == "True")
+            try
             {
-                resultado = true;
-                this.mensaje = "Bienvenido " + usr.ToString();
-                //Crear objeto Usuario
-                CreateUser(usr);
-                
-            }
+                reg = this.cmdsql.ExecuteReader();
+                reg.Read();
 
-            else
-            {
-                this.mensaje = "Datos incorrectos, verifique por favor";
-            }
 
+                //Comprobar que el usuario se encuentra activo
+                if (reg["ACTIVO"].ToString() == "True")
+                {
+                    resultado = true;
+                    this.mensaje = "Bienvenido " + usr.ToString();
+                    //Crear objeto Usuario
+                    CreateUser(usr);
+
+                }
+
+                else
+                {
+                    this.mensaje = "Datos incorrectos, verifique por favor";
+                }
+            }
+            catch { 
+                            
+            }
             this.cnn.Close();
             return resultado;
         }
@@ -47,13 +54,20 @@ namespace Proyecto_FARA
             //Consultar JOIN para extrael todos los datos del usuario
             this.sql = string.Format(@"SELECT U.USR,U.PWD,A.NOMBRE,A.APE_PAT,A.APE_MAT,A.EDAD,A.DIRECCION,A.TEL,A.EMAIL,TA.TAFIL,TU.TUSR,U.ACTIVO,U.ULT_ACT FROM USR U INNER JOIN AFIL A ON U.ID_AFIL=A.ID INNER JOIN TUSR TU ON TU.ID=U.ID_TUSR INNER JOIN TAFIL TA ON TA.ID=A.ID_TAFIL WHERE U.USR='{0}'", p);
             this.cmdsql0 = new SqlCommand(this.sql, this.cnn);
-            SqlDataReader cus = null;
-            cus = this.cmdsql0.ExecuteReader();
-            cus.Read();
-            //Crear el objeto tipo USUARIO
-            User u = new User(cus["USR"].ToString(), cus["PWD"].ToString(), cus["NOMBRE"].ToString(), cus["APE_PAT"].ToString(), cus["APE_MAT"].ToString(), cus["DIRECCION"].ToString(), cus["TEL"].ToString(), cus["EMAIL"].ToString(), cus["TAFIL"].ToString(), cus["TUSR"].ToString(), cus["ACTIVO"].ToString(), cus["EDAD"].ToString());
-            // Asignar usuario a nuestra variable global
-             UsuarioON = u;
+            try
+            {
+                SqlDataReader cus = null;
+                cus = this.cmdsql0.ExecuteReader();
+                cus.Read();
+                //Crear el objeto tipo USUARIO
+                User u = new User(cus["USR"].ToString(), cus["PWD"].ToString(), cus["NOMBRE"].ToString(), cus["APE_PAT"].ToString(), cus["APE_MAT"].ToString(), cus["DIRECCION"].ToString(), cus["TEL"].ToString(), cus["EMAIL"].ToString(), cus["TAFIL"].ToString(), cus["TUSR"].ToString(), cus["ACTIVO"].ToString(), cus["EDAD"].ToString());
+                // Asignar usuario a nuestra variable global
+                UsuarioON = u;
+            }
+            catch
+            {
+
+            }
          }
 
 
@@ -65,16 +79,19 @@ namespace Proyecto_FARA
 
         public SqlDataAdapter BusquedaC(string cmd)
         {
-            
-            this.sql = string.Format(@"{0}", cmd);
-            this.cmdsql = new SqlCommand(this.sql, this.cnn);
-            this.cnn.Open();
-            SqlDataAdapter da = new SqlDataAdapter(cmdsql);
-            
+            try
+            {
+                this.sql = string.Format(@"{0}", cmd);
+                this.cmdsql = new SqlCommand(this.sql, this.cnn);
+                this.cnn.Open();
+                                               
+            }
+            catch {    }
+
             this.cnn.Close();
 
+            SqlDataAdapter da = new SqlDataAdapter(cmdsql);
             return da;
-
         }
 
         public static int ConsultaIds(string cmd)
@@ -83,12 +100,34 @@ namespace Proyecto_FARA
             SqlConnection cnn = conect();
             SqlCommand cmdsql= new SqlCommand(cmd, cnn);
             cnn.Open();
-            SqlDataReader lector = cmdsql.ExecuteReader();
-            while (lector.Read())
+            try
             {
-                total++;
+                SqlDataReader lector = cmdsql.ExecuteReader();
+                while (lector.Read())
+                {
+                    total++;
+                }
             }
+            catch { }
+            return total;
+        }
 
+        public static int ConfirmaUSR(string usr)
+        {
+            int total = 0;
+            string cmd = string.Format(@"SELECT * FROM USR WHERE USR = '{0}'", usr);
+            SqlConnection cnn = conect();
+            SqlCommand cmdsql = new SqlCommand(cmd, cnn);
+            cnn.Open();
+            try
+            {
+                SqlDataReader lector = cmdsql.ExecuteReader();
+                if (lector.Read())
+                {
+                    total=1;
+                }
+            }
+            catch { }
             return total;
         }
 
@@ -101,15 +140,18 @@ namespace Proyecto_FARA
             Array.Resize(ref temp, total);
             cnn.Open();
             SqlCommand cmdsql = new SqlCommand(cmd, cnn);
-            SqlDataReader lector = cmdsql.ExecuteReader();
-            int c = 0;
-
-            while (lector.Read())
+            try
             {
-                temp[c]=lector.GetInt32(lector.GetOrdinal("ID"));
-                c++;
-            }
+                SqlDataReader lector = cmdsql.ExecuteReader();
+                int c = 0;
 
+                while (lector.Read())
+                {
+                    temp[c] = lector.GetInt32(lector.GetOrdinal("ID"));
+                    c++;
+                }
+            }
+            catch { }
             return temp;
         }
 
@@ -139,6 +181,12 @@ namespace Proyecto_FARA
                 case "conInv":
                     querysql = string.Format(@"SELECT I.ID,P.NOMBRE,P.MARCA,I.CANTIDAD,P.CNETO,I.DESCR,I.ULT_ACT  FROM [INVENTARIO] I INNER JOIN [PRODUCTO] P ON I.ID_PRODUCTO=P.ID WHERE I.ID = {0}", id);
                     break;
+                case "afiliado":
+                    querysql = string.Format(@"SELECT * FROM AFIL WHERE ID = {0}", id);
+                    break;
+                case "usuario":
+                    querysql = string.Format(@"SELECT u.id,U.USR,U.PWD,tu.TUSR as TUSR,tu.id as idtusr,u.ACTIVO,ta.descr as TAFIL,A.NOMBRE,a.APE_PAT,a.APE_MAT,a.EDAD,a.DIRECCION,a.TEL,a.EMAIL,U.ULT_ACT FROM USR U INNER JOIN AFIL A ON U.ID_AFIL=A.ID inner join TUSR tu on u.ID_TUSR=tu.id inner join tafil ta on a.id_tafil=ta.id WHERE u.ID = {0}", id);
+                    break;
 
                     //*******
                 case "animal":
@@ -147,9 +195,10 @@ namespace Proyecto_FARA
                     //*******
             }
 
+            try{
             SqlCommand cmdsql = new SqlCommand(querysql, cnn);
             SqlDataReader lector = cmdsql.ExecuteReader();
-            while(lector.Read())
+            while (lector.Read())
             {
                 switch (tcon)
                 {
@@ -201,6 +250,21 @@ namespace Proyecto_FARA
                         Tel = lector.GetString(lector.GetOrdinal("TEL"));
                         Dir = lector.GetString(lector.GetOrdinal("DIRECCION"));
                         Email = lector.GetString(lector.GetOrdinal("EMAIL"));
+                        tAfil = (lector.GetInt32(lector.GetOrdinal("ID_TAFIL"))).ToString();
+
+                        UA = (lector.GetDateTime(lector.GetOrdinal("ULT_ACT"))).ToString();
+
+                        break;
+                    case "afiliado":
+                        ID = (lector.GetInt32(lector.GetOrdinal("ID"))).ToString();
+                        Nom = lector.GetString(lector.GetOrdinal("NOMBRE"));
+                        ApeP = lector.GetString(lector.GetOrdinal("APE_PAT"));
+                        ApeM = lector.GetString(lector.GetOrdinal("APE_MAT"));
+                        Edad = (lector.GetInt32(lector.GetOrdinal("EDAD"))).ToString();
+
+                        Tel = lector.GetString(lector.GetOrdinal("TEL"));
+                        Dir = lector.GetString(lector.GetOrdinal("DIRECCION"));
+                        Email = lector.GetString(lector.GetOrdinal("EMAIL"));
                         UA = (lector.GetDateTime(lector.GetOrdinal("ULT_ACT"))).ToString();
 
                         break;
@@ -225,7 +289,7 @@ namespace Proyecto_FARA
                         else
                         {
                             RFCD = lector.GetString(lector.GetOrdinal("RFC"));
-                            
+
                         }
                         Tel = lector.GetString(lector.GetOrdinal("TEL"));
                         Dir = lector.GetString(lector.GetOrdinal("DIRECCION"));
@@ -246,7 +310,7 @@ namespace Proyecto_FARA
                             MarPro = lector.GetString(lector.GetOrdinal("MARCA"));
 
                         }
-                       // MarPro = lector.GetString(lector.GetOrdinal("MARCA"));
+                        // MarPro = lector.GetString(lector.GetOrdinal("MARCA"));
 
                         if (lector.IsDBNull(lector.GetOrdinal("CNETO")))
                         {
@@ -283,14 +347,38 @@ namespace Proyecto_FARA
                         IDtEve = (lector.GetInt32(lector.GetOrdinal("ID_TEVENTO"))).ToString();
                         EveEdo = (lector.GetInt32(lector.GetOrdinal("ID_EVE_EDO"))).ToString();
                         UA = (lector.GetDateTime(lector.GetOrdinal("ULT_ACT"))).ToString();
-                        
+
+                        break;
+
+                    case "usuario":
+                        ID = (lector.GetInt32(lector.GetOrdinal("ID"))).ToString();
+                        Usr = lector.GetString(lector.GetOrdinal("USR"));
+                        Pwd = lector.GetString(lector.GetOrdinal("PWD"));
+                        tAfil = lector.GetString(lector.GetOrdinal("TAFIL"));
+                        activo = (lector.GetBoolean(lector.GetOrdinal("ACTIVO"))).ToString();
+                        tUsr = lector.GetString(lector.GetOrdinal("TUSR"));
+                        Nom = lector.GetString(lector.GetOrdinal("NOMBRE"));
+                        ApeP = lector.GetString(lector.GetOrdinal("APE_PAT"));
+                        ApeM = lector.GetString(lector.GetOrdinal("APE_MAT"));
+                        Edad = (lector.GetInt32(lector.GetOrdinal("EDAD"))).ToString();
+
+                        Tel = lector.GetString(lector.GetOrdinal("TEL"));
+                        Dir = lector.GetString(lector.GetOrdinal("DIRECCION"));
+                        Email = lector.GetString(lector.GetOrdinal("EMAIL"));
+                        UA = (lector.GetDateTime(lector.GetOrdinal("ULT_ACT"))).ToString();
+                        IdTUsr = lector.GetInt32(lector.GetOrdinal("idtusr"));
+
                         break;
 
                 }
+            
+
                 r = true;
             }
 
 
+            }
+            catch { }
 
             return r;
 
@@ -300,6 +388,10 @@ namespace Proyecto_FARA
 
 
         //-----Variables de consulta----//
+        
+        public static string Pwd { get; set; }
+        
+        public static string Usr { get; set; }
 
         public static string Nom { get; set; }
 
@@ -341,6 +433,14 @@ namespace Proyecto_FARA
 
         public static string Cantidad { get; set; }
 
+        public static string tAfil { get; set; }
+
+        public static string tUsr { get; set; }
+
+        public static string activo { get; set; }
+
+        public static int IdTUsr { get; set; }
+
         //---- ******* -----//
 
 
@@ -366,12 +466,16 @@ namespace Proyecto_FARA
                 sqlInv = string.Format(@"UPDATE INVENTARIO SET CANTIDAD = CANTIDAD + "+Cant+" WHERE ID = "+ ids[0]);
             }
 
+            try
+            {
 
-            SqlCommand cmd = new SqlCommand(sqlInvH, con);
-            cmd.ExecuteNonQuery();
+                SqlCommand cmd = new SqlCommand(sqlInvH, con);
+                cmd.ExecuteNonQuery();
 
-            cmd = new SqlCommand(sqlInv, con);
-            cmd.ExecuteNonQuery();
+                cmd = new SqlCommand(sqlInv, con);
+                cmd.ExecuteNonQuery();
+            }
+            catch { }
 
             con.Close();
         }
@@ -380,7 +484,7 @@ namespace Proyecto_FARA
         {
             string usrU = UsuarioON.usr;
             string cadena = string.Format(@"SELECT * FROM INVENTARIO WHERE ID_PRODUCTO = " + id);
-            string sqlInvH = string.Format(@"INSERT INTO INV_HIST(ID_AFILIADO,ID_PRODUCTO,CANTIDAD,DESCR,CADUCIDAD,ID_DONANTE,ID_EVENTO,ALTA_BAJA,ULT_ACT) SELECT (SELECT ID_AFIL FROM USR WHERE USR='{0}'),{1},{2},'','{3}',null,null,0,GETDATE()", usrU, id, cant, concep);
+            string sqlInvH = string.Format(@"INSERT INTO INV_HIST(ID_AFILIADO,ID_PRODUCTO,CANTIDAD,DESCR,CADUCIDAD,ID_DONANTE,ID_EVENTO,ALTA_BAJA,ULT_ACT) SELECT (SELECT ID_AFIL FROM USR WHERE USR='{0}'),{1},{2},'{3}','',null,null,0,GETDATE()", usrU, id, cant, concep);
             string sqlInv;
 
             SqlConnection con = conect();
@@ -389,14 +493,62 @@ namespace Proyecto_FARA
             int[] ids = Metodos.colecDatos(cadena);
 
             sqlInv = string.Format(@"UPDATE INVENTARIO SET CANTIDAD = CANTIDAD - " + cant + " WHERE ID = " + ids[0]);
-        
-            SqlCommand cmd = new SqlCommand(sqlInvH, con);
-            cmd.ExecuteNonQuery();
 
-            cmd = new SqlCommand(sqlInv, con);
-            cmd.ExecuteNonQuery();
+            try
+            {
+                SqlCommand cmd = new SqlCommand(sqlInvH, con);
+                cmd.ExecuteNonQuery();
+
+                cmd = new SqlCommand(sqlInv, con);
+                cmd.ExecuteNonQuery();
+
+            }
+            catch { }
 
             con.Close();
+        }
+
+        internal static void AltaUsr(string usr, string pwd, string ida, string idtusr)
+        {
+            string sqlusr = string.Format(@"INSERT INTO USR(USR,PWD,ID_AFIL,ID_TUSR,ACTIVO,ULT_ACT) VALUES ('{0}','{1}',{2},{3},1,GETDATE())", usr, pwd, ida, idtusr);
+            SqlConnection con = conect();
+            con.Open();
+            try
+            {
+                SqlCommand cmd = new SqlCommand(sqlusr, con);
+                cmd.ExecuteNonQuery();
+                                
+            }
+            catch { }
+
+            con.Close();
+        }
+
+        public static List<catalogos> LlenarCombo(string llenado)
+        {
+            List<catalogos> val = new List<catalogos>();
+            SqlConnection cnn = conect();
+            string cmd = string.Format(@"SELECT * FROM {0}",llenado);
+            
+            cnn.Open();
+            SqlCommand cmdsql = new SqlCommand(cmd, cnn);
+            try
+            {
+                SqlDataReader lector = cmdsql.ExecuteReader();
+
+                while (lector.Read())
+                {
+                    catalogos cat = new catalogos();
+                    
+                    cat.ID = lector.GetInt32(lector.GetOrdinal("ID"));
+                    cat.Nombre = lector.GetString(lector.GetOrdinal(llenado));
+                    
+                    val.Add(cat);
+                }
+            }
+            catch { }
+
+            return val;
         }
     }
 }

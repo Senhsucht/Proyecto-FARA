@@ -108,12 +108,13 @@ namespace Proyecto_FARA
 
             MessageBox.Show("Datos cargados exitosamente");
 
-            dgvRes.Rows.Clear();
         }
 
         private void btnExpPDF_Click(object sender, EventArgs e)
         {
+            createPDFcarga();
 
+            MessageBox.Show("Archivo creado.");
         }
 
         private void createPDFcarga()

@@ -90,7 +90,7 @@ namespace Proyecto_FARA
             int total = Metodos.ConsultaIds(busqueda);
             for (int i = 0; i < total; i++)
             {
-                object[] renglon = new Object[8];
+                object[] renglon = new Object[dgvDon.ColumnCount];
                 Metodos.consultarDatos(ids[i],"donante");
                 renglon[0] = Metodos.ID;
                 renglon[1] = Metodos.Nom;
@@ -105,10 +105,7 @@ namespace Proyecto_FARA
                 dgvDon.Rows.Add(renglon);
 
             }
-
-
-            
-            
+                        
         }
 
         private void btnAceptar_Click(object sender, EventArgs e)

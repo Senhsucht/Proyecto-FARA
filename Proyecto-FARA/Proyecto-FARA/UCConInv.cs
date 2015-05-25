@@ -7,6 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using iTextSharp.text;
+using iTextSharp.text.pdf;
+using System.IO; 
 
 namespace Proyecto_FARA
 {
@@ -73,17 +76,84 @@ namespace Proyecto_FARA
                 renglon[2] = Metodos.MarPro;
                 renglon[3] = Metodos.Cantidad;
                 renglon[4] = Metodos.CNetPro;
-                renglon[5] = Metodos.UA;
+                renglon[5] = Metodos.Descr;
+                renglon[6] = Metodos.UA;
 
 
                 dgvProd.Rows.Add(renglon);
 
             }
 
+            double cant=0;
 
-
+            for (int i = 0; i < dgvProd.RowCount; i++)
+            {
+                cant = cant + Convert.ToDouble(dgvProd.Rows[i].Cells["clmCant"].Value);
+            }
+            textBox1.Text = cant.ToString();
 
         }
+
+        private void btnExpPDF_Click(object sender, EventArgs e)
+        {
+            createPDFcarga();
+
+            MessageBox.Show("Archivo creado.");
+        }
+
+        private void createPDFcarga()
+        {
+
+            string fecha = DateTime.Now.ToString("M-d-yyyy H.mm.ss");
+            string nombreDoc = "INVENTARIO " + fecha + ".pdf";
+            string RESULT = (@"C:\Users\Angel\Documents\GitHub\Proyecto-FARA\Proyecto-FARA\Proyecto-FARA\PDF\AltaDonacion " + fecha + ".pdf");
+            Document document = new Document();
+
+            PdfWriter wri = PdfWriter.GetInstance(document,
+                          new FileStream(RESULT, FileMode.Create));
+
+
+            iTextSharp.text.Image logo =
+                iTextSharp.text.Image.GetInstance(@"C:\Users\Angel\Documents\GitHub\Proyecto-FARA\Proyecto-FARA\Proyecto-FARA\Recursos\FARA-LOGO.jpg");
+
+            logo.Alignment = iTextSharp.text.Image.LEFT_ALIGN;
+
+            iTextSharp.text.Paragraph cabecero = new Paragraph("INVENTARIO ACTUAL " + fecha);
+
+            PdfPTable tabla = new PdfPTable(dgvProd.Columns.Count);
+
+            for (int i = 0; i < dgvProd.Columns.Count; i++)
+            {
+                tabla.AddCell(dgvProd.Columns[i].HeaderText);
+            }
+
+            for (int i = 0; i < dgvProd.Rows.Count; i++)
+            {
+                for (int j = 0; j < dgvProd.Columns.Count; j++)
+                {
+                    if (dgvProd[j, i].Value != null)
+                    {
+                        tabla.AddCell(new Phrase(dgvProd[j, i].Value.ToString()));
+                    }
+                    else
+                    {
+                        tabla.AddCell(new Phrase(""));
+                    }
+                }
+            }
+
+
+
+            document.Open();
+            document.Add(logo);
+            document.Add(cabecero);
+
+            document.Add(tabla);
+
+
+            document.Close();
+        }
+
 
     }
 }
