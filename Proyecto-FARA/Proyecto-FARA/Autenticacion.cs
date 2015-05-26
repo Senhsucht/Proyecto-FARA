@@ -35,7 +35,7 @@ namespace Proyecto_FARA
 
                 cnn.Close();
             }
-            catch (Exception exException)
+            catch
             {
                 lblConexion.Text = "Ha ocurrido un error conectandose a la base de datos";
                 lblConexion.ForeColor = System.Drawing.Color.DarkRed;

@@ -39,7 +39,7 @@ namespace Proyecto_FARA
 
         private void busquedaProd(object sender, EventArgs e)
         {
-            datos.Clear();
+            dgvProd.Rows.Clear();
 
             string busqueda = "SELECT * FROM PRODUCTO";
             string NPROD = this.txtNomProd.Text;

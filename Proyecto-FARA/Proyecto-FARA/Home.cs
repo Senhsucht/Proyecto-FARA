@@ -75,7 +75,7 @@ namespace Proyecto_FARA
                     cambiarMod(new UCAltaResc());
                     break;
 
-                case "Modificación de afiliado":
+                case "Modificación de rescate":
 
                     cambiarMod(new UCModResc());
                     break;
@@ -145,6 +145,18 @@ namespace Proyecto_FARA
                 case "Consulta de usuario":
 
                     cambiarMod(new UCConUsr());
+                    break;
+                case "Alta de afiliado":
+
+                    cambiarMod(new UCAltaAfi());
+                    break;
+                case "Modificación de afiliado":
+
+                    //cambiarMod(new UCModAfi());
+                    break;
+                case "Consulta de afiliado":
+
+                    //cambiarMod(new UCConAfi());
                     break;
 
 

@@ -131,6 +131,25 @@ namespace Proyecto_FARA
             return total;
         }
 
+        public static int ConfirmaAfil(string nom,string apep,string apem)
+        {
+            int total = 0;
+            string cmd = string.Format(@"SELECT * FROM AFIL WHERE NOMBRE= '{0}' AND APE_PAT = '{1}' AND APE_MAT= '{2}'", nom,apep,apem);
+            SqlConnection cnn = conect();
+            SqlCommand cmdsql = new SqlCommand(cmd, cnn);
+            cnn.Open();
+            try
+            {
+                SqlDataReader lector = cmdsql.ExecuteReader();
+                if (lector.Read())
+                {
+                    total = 1;
+                }
+            }
+            catch { }
+            return total;
+        }
+
         public static int[] colecDatos(string cmd)
         {
             SqlConnection cnn = conect();
@@ -441,10 +460,11 @@ namespace Proyecto_FARA
 
         public static int IdTUsr { get; set; }
 
+        public static bool conAdm { get; set; }
+
+
         //---- ******* -----//
-
-
-
+        
         internal static void AltaInv(string idDon, string Cant, string idProd, string idEve)
         {
             string usrU = UsuarioON.usr;
@@ -549,6 +569,49 @@ namespace Proyecto_FARA
             catch { }
 
             return val;
+        }
+
+        internal static void ConfirmaBien()
+        {
+            conAdm = true;
+        }
+
+        internal static void UsrUpdate(string usr, string pwd, object idtusr, string idafil)
+        {
+            string update = string.Format(@"UPDATE USR SET PWD = '" + pwd + "' , id_tusr= " + idtusr.ToString() +" , id_afil= "+idafil+"  WHERE usr = '" + usr +"'");
+
+            SqlConnection cnn = conect();
+            cnn.Open();
+            try
+            {
+                SqlCommand cmd = new SqlCommand(update, cnn);
+                cmd.ExecuteNonQuery();
+            }
+            catch { };
+
+            cnn.Close();
+        }
+
+        internal static void ConfirmaMal()
+        {
+            conAdm = false;
+        }
+
+        internal static void AltaAfil(string nom, string apepat, string apemat, string edad, string tel, string email, object idtafil, string direc)
+        {
+
+            string sqlusr = string.Format(@"INSERT INTO AFIL(NOMBRE,APE_PAT,APE_MAT,EDAD,DIRECCION,TEL,EMAIL,ID_TAFIL,ULT_ACT) VALUES ('{0}','{1}','{2}',{3},'{4}','{5}','{6}',{7},GETDATE())", nom,apepat,apemat,edad,direc,tel,email,idtafil.ToString());
+            SqlConnection con = conect();
+            con.Open();
+            try
+            {
+                SqlCommand cmd = new SqlCommand(sqlusr, con);
+                cmd.ExecuteNonQuery();
+
+            }
+            catch { }
+
+            con.Close();
         }
     }
 }

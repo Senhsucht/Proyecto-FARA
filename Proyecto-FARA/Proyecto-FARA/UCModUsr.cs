@@ -62,5 +62,17 @@ namespace Proyecto_FARA
             cbbTusr.DisplayMember = "Nombre";
             cbbTusr.ValueMember = "ID";
         }
+
+        private void btnMod_Click(object sender, EventArgs e)
+        {
+            ConfirmacionAdmin ca = new ConfirmacionAdmin();
+            ca.ShowDialog();
+
+            if(Metodos.conAdm==true)
+            {
+                Metodos.UsrUpdate(txtUsr.Text,txtPwd.Text,cbbTusr.SelectedValue,lblIDAR.Text);
+                MessageBox.Show("Modificacion exitosa");
+            }
+        }
     }
 }

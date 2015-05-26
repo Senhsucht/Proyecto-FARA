@@ -30,10 +30,23 @@
         {
             this.components = new System.ComponentModel.Container();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.ckbActivo = new System.Windows.Forms.CheckBox();
+            this.cbbTusr = new System.Windows.Forms.ComboBox();
+            this.txtPwd = new System.Windows.Forms.TextBox();
+            this.txtUsr = new System.Windows.Forms.TextBox();
+            this.btnMod = new System.Windows.Forms.Button();
+            this.lblactivo = new System.Windows.Forms.Label();
             this.lblTusr = new System.Windows.Forms.Label();
             this.lblPwd = new System.Windows.Forms.Label();
             this.lblUsr = new System.Windows.Forms.Label();
             this.gpbAfil = new System.Windows.Forms.GroupBox();
+            this.txtTAfil = new System.Windows.Forms.TextBox();
+            this.btnCamAfil = new System.Windows.Forms.Button();
+            this.txtDirec = new System.Windows.Forms.TextBox();
+            this.txtEmail = new System.Windows.Forms.TextBox();
+            this.txtTel = new System.Windows.Forms.TextBox();
+            this.txtEdad = new System.Windows.Forms.TextBox();
+            this.txtNom = new System.Windows.Forms.TextBox();
             this.lblTAfil = new System.Windows.Forms.Label();
             this.lblEmailA = new System.Windows.Forms.Label();
             this.lblIDAR = new System.Windows.Forms.Label();
@@ -42,24 +55,11 @@
             this.lblEdadA = new System.Windows.Forms.Label();
             this.lblNombreA = new System.Windows.Forms.Label();
             this.btnBuscarA = new System.Windows.Forms.Button();
-            this.btnMod = new System.Windows.Forms.Button();
-            this.txtUsr = new System.Windows.Forms.TextBox();
-            this.txtPwd = new System.Windows.Forms.TextBox();
-            this.lblactivo = new System.Windows.Forms.Label();
-            this.cbbTusr = new System.Windows.Forms.ComboBox();
-            this.ckbActivo = new System.Windows.Forms.CheckBox();
-            this.txtNom = new System.Windows.Forms.TextBox();
-            this.txtEdad = new System.Windows.Forms.TextBox();
-            this.txtTel = new System.Windows.Forms.TextBox();
-            this.txtEmail = new System.Windows.Forms.TextBox();
-            this.txtDirec = new System.Windows.Forms.TextBox();
-            this.btnCamAfil = new System.Windows.Forms.Button();
             this.pROYECTO_FARADataSet = new Proyecto_FARA.PROYECTO_FARADataSet();
             this.tUSRBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tUSRTableAdapter = new Proyecto_FARA.PROYECTO_FARADataSetTableAdapters.TUSRTableAdapter();
             this.tAFILBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tAFILTableAdapter = new Proyecto_FARA.PROYECTO_FARADataSetTableAdapters.TAFILTableAdapter();
-            this.txtTAfil = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.gpbAfil.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pROYECTO_FARADataSet)).BeginInit();
@@ -85,6 +85,57 @@
             this.groupBox1.Size = new System.Drawing.Size(470, 406);
             this.groupBox1.TabIndex = 5;
             this.groupBox1.TabStop = false;
+            // 
+            // ckbActivo
+            // 
+            this.ckbActivo.AutoSize = true;
+            this.ckbActivo.Location = new System.Drawing.Point(115, 104);
+            this.ckbActivo.Name = "ckbActivo";
+            this.ckbActivo.Size = new System.Drawing.Size(15, 14);
+            this.ckbActivo.TabIndex = 18;
+            this.ckbActivo.UseVisualStyleBackColor = true;
+            // 
+            // cbbTusr
+            // 
+            this.cbbTusr.FormattingEnabled = true;
+            this.cbbTusr.Location = new System.Drawing.Point(115, 77);
+            this.cbbTusr.Name = "cbbTusr";
+            this.cbbTusr.Size = new System.Drawing.Size(157, 21);
+            this.cbbTusr.TabIndex = 17;
+            // 
+            // txtPwd
+            // 
+            this.txtPwd.Location = new System.Drawing.Point(115, 51);
+            this.txtPwd.Name = "txtPwd";
+            this.txtPwd.Size = new System.Drawing.Size(157, 20);
+            this.txtPwd.TabIndex = 16;
+            // 
+            // txtUsr
+            // 
+            this.txtUsr.Enabled = false;
+            this.txtUsr.Location = new System.Drawing.Point(115, 27);
+            this.txtUsr.Name = "txtUsr";
+            this.txtUsr.Size = new System.Drawing.Size(157, 20);
+            this.txtUsr.TabIndex = 15;
+            // 
+            // btnMod
+            // 
+            this.btnMod.Location = new System.Drawing.Point(366, 68);
+            this.btnMod.Name = "btnMod";
+            this.btnMod.Size = new System.Drawing.Size(83, 37);
+            this.btnMod.TabIndex = 14;
+            this.btnMod.Text = "Modificar Usuario";
+            this.btnMod.UseVisualStyleBackColor = true;
+            this.btnMod.Click += new System.EventHandler(this.btnMod_Click);
+            // 
+            // lblactivo
+            // 
+            this.lblactivo.AutoSize = true;
+            this.lblactivo.Location = new System.Drawing.Point(29, 103);
+            this.lblactivo.Name = "lblactivo";
+            this.lblactivo.Size = new System.Drawing.Size(40, 13);
+            this.lblactivo.TabIndex = 12;
+            this.lblactivo.Text = "Activo:";
             // 
             // lblTusr
             // 
@@ -136,6 +187,64 @@
             this.gpbAfil.TabStop = false;
             this.gpbAfil.Text = "Afiliado";
             this.gpbAfil.Enter += new System.EventHandler(this.gpbAfil_Enter);
+            // 
+            // txtTAfil
+            // 
+            this.txtTAfil.Enabled = false;
+            this.txtTAfil.Location = new System.Drawing.Point(120, 121);
+            this.txtTAfil.Name = "txtTAfil";
+            this.txtTAfil.Size = new System.Drawing.Size(231, 20);
+            this.txtTAfil.TabIndex = 27;
+            // 
+            // btnCamAfil
+            // 
+            this.btnCamAfil.Location = new System.Drawing.Point(360, 19);
+            this.btnCamAfil.Name = "btnCamAfil";
+            this.btnCamAfil.Size = new System.Drawing.Size(83, 37);
+            this.btnCamAfil.TabIndex = 26;
+            this.btnCamAfil.Text = "Cambiar Afiliado";
+            this.btnCamAfil.UseVisualStyleBackColor = true;
+            this.btnCamAfil.Click += new System.EventHandler(this.btnCamAfil_Click);
+            // 
+            // txtDirec
+            // 
+            this.txtDirec.Enabled = false;
+            this.txtDirec.Location = new System.Drawing.Point(120, 147);
+            this.txtDirec.Name = "txtDirec";
+            this.txtDirec.Size = new System.Drawing.Size(231, 20);
+            this.txtDirec.TabIndex = 25;
+            // 
+            // txtEmail
+            // 
+            this.txtEmail.Enabled = false;
+            this.txtEmail.Location = new System.Drawing.Point(120, 94);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(146, 20);
+            this.txtEmail.TabIndex = 23;
+            // 
+            // txtTel
+            // 
+            this.txtTel.Enabled = false;
+            this.txtTel.Location = new System.Drawing.Point(120, 68);
+            this.txtTel.Name = "txtTel";
+            this.txtTel.Size = new System.Drawing.Size(146, 20);
+            this.txtTel.TabIndex = 22;
+            // 
+            // txtEdad
+            // 
+            this.txtEdad.Enabled = false;
+            this.txtEdad.Location = new System.Drawing.Point(120, 46);
+            this.txtEdad.Name = "txtEdad";
+            this.txtEdad.Size = new System.Drawing.Size(146, 20);
+            this.txtEdad.TabIndex = 21;
+            // 
+            // txtNom
+            // 
+            this.txtNom.Enabled = false;
+            this.txtNom.Location = new System.Drawing.Point(120, 22);
+            this.txtNom.Name = "txtNom";
+            this.txtNom.Size = new System.Drawing.Size(146, 20);
+            this.txtNom.TabIndex = 20;
             // 
             // lblTAfil
             // 
@@ -211,106 +320,6 @@
             this.btnBuscarA.UseVisualStyleBackColor = true;
             this.btnBuscarA.Click += new System.EventHandler(this.btnBuscarA_Click);
             // 
-            // btnMod
-            // 
-            this.btnMod.Location = new System.Drawing.Point(366, 68);
-            this.btnMod.Name = "btnMod";
-            this.btnMod.Size = new System.Drawing.Size(83, 37);
-            this.btnMod.TabIndex = 14;
-            this.btnMod.Text = "Modificar Usuario";
-            this.btnMod.UseVisualStyleBackColor = true;
-            // 
-            // txtUsr
-            // 
-            this.txtUsr.Enabled = false;
-            this.txtUsr.Location = new System.Drawing.Point(115, 27);
-            this.txtUsr.Name = "txtUsr";
-            this.txtUsr.Size = new System.Drawing.Size(157, 20);
-            this.txtUsr.TabIndex = 15;
-            // 
-            // txtPwd
-            // 
-            this.txtPwd.Location = new System.Drawing.Point(115, 51);
-            this.txtPwd.Name = "txtPwd";
-            this.txtPwd.Size = new System.Drawing.Size(157, 20);
-            this.txtPwd.TabIndex = 16;
-            // 
-            // lblactivo
-            // 
-            this.lblactivo.AutoSize = true;
-            this.lblactivo.Location = new System.Drawing.Point(29, 103);
-            this.lblactivo.Name = "lblactivo";
-            this.lblactivo.Size = new System.Drawing.Size(40, 13);
-            this.lblactivo.TabIndex = 12;
-            this.lblactivo.Text = "Activo:";
-            // 
-            // cbbTusr
-            // 
-            this.cbbTusr.FormattingEnabled = true;
-            this.cbbTusr.Location = new System.Drawing.Point(115, 77);
-            this.cbbTusr.Name = "cbbTusr";
-            this.cbbTusr.Size = new System.Drawing.Size(157, 21);
-            this.cbbTusr.TabIndex = 17;
-            // 
-            // ckbActivo
-            // 
-            this.ckbActivo.AutoSize = true;
-            this.ckbActivo.Location = new System.Drawing.Point(115, 104);
-            this.ckbActivo.Name = "ckbActivo";
-            this.ckbActivo.Size = new System.Drawing.Size(15, 14);
-            this.ckbActivo.TabIndex = 18;
-            this.ckbActivo.UseVisualStyleBackColor = true;
-            // 
-            // txtNom
-            // 
-            this.txtNom.Enabled = false;
-            this.txtNom.Location = new System.Drawing.Point(120, 22);
-            this.txtNom.Name = "txtNom";
-            this.txtNom.Size = new System.Drawing.Size(146, 20);
-            this.txtNom.TabIndex = 20;
-            // 
-            // txtEdad
-            // 
-            this.txtEdad.Enabled = false;
-            this.txtEdad.Location = new System.Drawing.Point(120, 46);
-            this.txtEdad.Name = "txtEdad";
-            this.txtEdad.Size = new System.Drawing.Size(146, 20);
-            this.txtEdad.TabIndex = 21;
-            // 
-            // txtTel
-            // 
-            this.txtTel.Enabled = false;
-            this.txtTel.Location = new System.Drawing.Point(120, 68);
-            this.txtTel.Name = "txtTel";
-            this.txtTel.Size = new System.Drawing.Size(146, 20);
-            this.txtTel.TabIndex = 22;
-            // 
-            // txtEmail
-            // 
-            this.txtEmail.Enabled = false;
-            this.txtEmail.Location = new System.Drawing.Point(120, 94);
-            this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(146, 20);
-            this.txtEmail.TabIndex = 23;
-            // 
-            // txtDirec
-            // 
-            this.txtDirec.Enabled = false;
-            this.txtDirec.Location = new System.Drawing.Point(120, 147);
-            this.txtDirec.Name = "txtDirec";
-            this.txtDirec.Size = new System.Drawing.Size(231, 20);
-            this.txtDirec.TabIndex = 25;
-            // 
-            // btnCamAfil
-            // 
-            this.btnCamAfil.Location = new System.Drawing.Point(360, 19);
-            this.btnCamAfil.Name = "btnCamAfil";
-            this.btnCamAfil.Size = new System.Drawing.Size(83, 37);
-            this.btnCamAfil.TabIndex = 26;
-            this.btnCamAfil.Text = "Cambiar Afiliado";
-            this.btnCamAfil.UseVisualStyleBackColor = true;
-            this.btnCamAfil.Click += new System.EventHandler(this.btnCamAfil_Click);
-            // 
             // pROYECTO_FARADataSet
             // 
             this.pROYECTO_FARADataSet.DataSetName = "PROYECTO_FARADataSet";
@@ -333,14 +342,6 @@
             // tAFILTableAdapter
             // 
             this.tAFILTableAdapter.ClearBeforeFill = true;
-            // 
-            // txtTAfil
-            // 
-            this.txtTAfil.Enabled = false;
-            this.txtTAfil.Location = new System.Drawing.Point(120, 121);
-            this.txtTAfil.Name = "txtTAfil";
-            this.txtTAfil.Size = new System.Drawing.Size(231, 20);
-            this.txtTAfil.TabIndex = 27;
             // 
             // UCModUsr
             // 

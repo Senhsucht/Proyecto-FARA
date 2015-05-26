@@ -49,7 +49,7 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cbbTusr = new System.Windows.Forms.ComboBox();
             this.txtPwd = new System.Windows.Forms.TextBox();
             this.txtUsr = new System.Windows.Forms.TextBox();
             this.lblPwd = new System.Windows.Forms.Label();
@@ -74,7 +74,7 @@
             this.gpbAfil.Controls.Add(this.lblEdadA);
             this.gpbAfil.Controls.Add(this.lblNombreA);
             this.gpbAfil.Controls.Add(this.btnBuscarA);
-            this.gpbAfil.Location = new System.Drawing.Point(6, 196);
+            this.gpbAfil.Location = new System.Drawing.Point(9, 154);
             this.gpbAfil.Name = "gpbAfil";
             this.gpbAfil.Size = new System.Drawing.Size(455, 176);
             this.gpbAfil.TabIndex = 2;
@@ -211,7 +211,7 @@
             this.groupBox1.Controls.Add(this.textBox1);
             this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.comboBox1);
+            this.groupBox1.Controls.Add(this.cbbTusr);
             this.groupBox1.Controls.Add(this.txtPwd);
             this.groupBox1.Controls.Add(this.txtUsr);
             this.groupBox1.Controls.Add(this.lblPwd);
@@ -225,7 +225,7 @@
             // 
             // btnConfirmarUsr
             // 
-            this.btnConfirmarUsr.Location = new System.Drawing.Point(186, 47);
+            this.btnConfirmarUsr.Location = new System.Drawing.Point(195, 45);
             this.btnConfirmarUsr.Name = "btnConfirmarUsr";
             this.btnConfirmarUsr.Size = new System.Drawing.Size(101, 23);
             this.btnConfirmarUsr.TabIndex = 12;
@@ -236,7 +236,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(183, 73);
+            this.label2.Location = new System.Drawing.Point(183, 71);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(51, 13);
             this.label2.TabIndex = 11;
@@ -244,7 +244,7 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(195, 89);
+            this.textBox1.Location = new System.Drawing.Point(195, 87);
             this.textBox1.Name = "textBox1";
             this.textBox1.PasswordChar = '*';
             this.textBox1.Size = new System.Drawing.Size(126, 20);
@@ -252,7 +252,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(349, 33);
+            this.button1.Location = new System.Drawing.Point(175, 336);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(104, 52);
             this.button1.TabIndex = 9;
@@ -263,31 +263,23 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(26, 113);
+            this.label1.Location = new System.Drawing.Point(26, 111);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(80, 13);
             this.label1.TabIndex = 8;
             this.label1.Text = "Tipo de usuario";
             // 
-            // comboBox1
+            // cbbTusr
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "1",
-            "2",
-            "3",
-            "4",
-            "5",
-            "6",
-            "7"});
-            this.comboBox1.Location = new System.Drawing.Point(41, 129);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
-            this.comboBox1.TabIndex = 7;
+            this.cbbTusr.FormattingEnabled = true;
+            this.cbbTusr.Location = new System.Drawing.Point(41, 127);
+            this.cbbTusr.Name = "cbbTusr";
+            this.cbbTusr.Size = new System.Drawing.Size(156, 21);
+            this.cbbTusr.TabIndex = 7;
             // 
             // txtPwd
             // 
-            this.txtPwd.Location = new System.Drawing.Point(41, 89);
+            this.txtPwd.Location = new System.Drawing.Point(41, 87);
             this.txtPwd.Name = "txtPwd";
             this.txtPwd.PasswordChar = '*';
             this.txtPwd.Size = new System.Drawing.Size(121, 20);
@@ -295,7 +287,7 @@
             // 
             // txtUsr
             // 
-            this.txtUsr.Location = new System.Drawing.Point(41, 50);
+            this.txtUsr.Location = new System.Drawing.Point(41, 48);
             this.txtUsr.Name = "txtUsr";
             this.txtUsr.Size = new System.Drawing.Size(121, 20);
             this.txtUsr.TabIndex = 5;
@@ -303,7 +295,7 @@
             // lblPwd
             // 
             this.lblPwd.AutoSize = true;
-            this.lblPwd.Location = new System.Drawing.Point(23, 73);
+            this.lblPwd.Location = new System.Drawing.Point(23, 71);
             this.lblPwd.Name = "lblPwd";
             this.lblPwd.Size = new System.Drawing.Size(61, 13);
             this.lblPwd.TabIndex = 4;
@@ -312,7 +304,7 @@
             // lblUsr
             // 
             this.lblUsr.AutoSize = true;
-            this.lblUsr.Location = new System.Drawing.Point(23, 34);
+            this.lblUsr.Location = new System.Drawing.Point(23, 32);
             this.lblUsr.Name = "lblUsr";
             this.lblUsr.Size = new System.Drawing.Size(43, 13);
             this.lblUsr.TabIndex = 3;
@@ -353,7 +345,7 @@
         private System.Windows.Forms.Label lblEmailA;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cbbTusr;
         private System.Windows.Forms.TextBox txtPwd;
         private System.Windows.Forms.TextBox txtUsr;
         private System.Windows.Forms.Label lblPwd;

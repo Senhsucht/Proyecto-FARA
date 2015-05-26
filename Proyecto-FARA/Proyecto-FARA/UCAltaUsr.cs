@@ -48,7 +48,9 @@ namespace Proyecto_FARA
 
         private void UCAltaUsr_Load(object sender, EventArgs e)
         {
-
+            cbbTusr.DataSource = Metodos.LlenarCombo("TUSR");
+            cbbTusr.DisplayMember = "Nombre";
+            cbbTusr.ValueMember = "ID";
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -63,7 +65,8 @@ namespace Proyecto_FARA
                     }
                     else
                     {
-                        Metodos.AltaUsr(txtUsr.Text, txtPwd.Text, lblIDAR.Text, comboBox1.SelectedItem.ToString());
+                        Metodos.AltaUsr(txtUsr.Text.ToUpper(), txtPwd.Text, lblIDAR.Text, cbbTusr.ValueMember.ToString());
+                        MessageBox.Show("Usuario dado de alta correctamente");
                     }
                 }
                 else
