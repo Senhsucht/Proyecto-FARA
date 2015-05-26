@@ -280,6 +280,7 @@ namespace Proyecto_FARA
                         ApeP = lector.GetString(lector.GetOrdinal("APE_PAT"));
                         ApeM = lector.GetString(lector.GetOrdinal("APE_MAT"));
                         Edad = (lector.GetInt32(lector.GetOrdinal("EDAD"))).ToString();
+                        IdTAfil = lector.GetInt32(lector.GetOrdinal("id_tafil"));
 
                         Tel = lector.GetString(lector.GetOrdinal("TEL"));
                         Dir = lector.GetString(lector.GetOrdinal("DIRECCION"));
@@ -460,6 +461,8 @@ namespace Proyecto_FARA
 
         public static int IdTUsr { get; set; }
 
+        public static int IdTAfil { get; set; }
+
         public static bool conAdm { get; set; }
 
 
@@ -601,6 +604,22 @@ namespace Proyecto_FARA
         {
 
             string sqlusr = string.Format(@"INSERT INTO AFIL(NOMBRE,APE_PAT,APE_MAT,EDAD,DIRECCION,TEL,EMAIL,ID_TAFIL,ULT_ACT) VALUES ('{0}','{1}','{2}',{3},'{4}','{5}','{6}',{7},GETDATE())", nom,apepat,apemat,edad,direc,tel,email,idtafil.ToString());
+            SqlConnection con = conect();
+            con.Open();
+            try
+            {
+                SqlCommand cmd = new SqlCommand(sqlusr, con);
+                cmd.ExecuteNonQuery();
+
+            }
+            catch { }
+
+            con.Close();
+        }
+
+        internal static void AfilUpdate(string ida,string nom, string apepat, string apemat, string edad, string tel, string email, object idtafil, string direc)
+        {
+            string sqlusr = string.Format(@"UPDATE AFIL SET NOMBRE = '{0}' , APE_PAT = '{1}' , APE_MAT='{2}',EDAD={3},DIRECCION='{4}',TEL='{5}',EMAIL='{6}',ID_TAFIL={7}  WHERE id = {8}", nom, apepat, apemat, edad, direc, tel, email, idtafil.ToString(), ida);
             SqlConnection con = conect();
             con.Open();
             try

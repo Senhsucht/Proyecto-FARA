@@ -97,6 +97,7 @@
             // 
             // cbbTusr
             // 
+            this.cbbTusr.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbbTusr.FormattingEnabled = true;
             this.cbbTusr.Location = new System.Drawing.Point(115, 77);
             this.cbbTusr.Name = "cbbTusr";
@@ -120,9 +121,9 @@
             // 
             // btnMod
             // 
-            this.btnMod.Location = new System.Drawing.Point(366, 68);
+            this.btnMod.Location = new System.Drawing.Point(171, 311);
             this.btnMod.Name = "btnMod";
-            this.btnMod.Size = new System.Drawing.Size(83, 37);
+            this.btnMod.Size = new System.Drawing.Size(101, 39);
             this.btnMod.TabIndex = 14;
             this.btnMod.Text = "Modificar Usuario";
             this.btnMod.UseVisualStyleBackColor = true;

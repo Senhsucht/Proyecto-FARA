@@ -152,7 +152,7 @@ namespace Proyecto_FARA
                     break;
                 case "Modificación de afiliado":
 
-                    //cambiarMod(new UCModAfi());
+                    cambiarMod(new UCModAfi());
                     break;
                 case "Consulta de afiliado":
 

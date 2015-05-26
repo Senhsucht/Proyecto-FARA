@@ -33,7 +33,7 @@ namespace Proyecto_FARA
             {
                 if (Metodos.ConfirmaAfil(txtNom.Text, txtApeP.Text, txtApeM.Text) == 0)
                 {
-                    Metodos.AltaAfil(txtNom.Text.ToUpper(), txtApeP.Text.ToUpper(), txtApeM.Text.ToUpper(), txtEdad.Text.ToUpper(), txtTel.Text.ToUpper(), txtEmail.Text, cbbTAfil.ValueMember.ToString(), txtDirec.Text.ToUpper());
+                    Metodos.AltaAfil(txtNom.Text.ToUpper(), txtApeP.Text.ToUpper(), txtApeM.Text.ToUpper(), txtEdad.Text.ToUpper(), txtTel.Text.ToUpper(), txtEmail.Text, cbbTAfil.SelectedValue.ToString() , txtDirec.Text.ToUpper());
                     MessageBox.Show("Afiliado dado de alta exitosamente");
                 }
                 else

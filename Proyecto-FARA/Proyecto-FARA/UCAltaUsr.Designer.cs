@@ -271,7 +271,7 @@
             // 
             // cbbTusr
             // 
-            this.cbbTusr.FormattingEnabled = true;
+            this.cbbTusr.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbbTusr.Location = new System.Drawing.Point(41, 127);
             this.cbbTusr.Name = "cbbTusr";
             this.cbbTusr.Size = new System.Drawing.Size(156, 21);
@@ -345,7 +345,6 @@
         private System.Windows.Forms.Label lblEmailA;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox cbbTusr;
         private System.Windows.Forms.TextBox txtPwd;
         private System.Windows.Forms.TextBox txtUsr;
         private System.Windows.Forms.Label lblPwd;
@@ -354,5 +353,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button btnConfirmarUsr;
+        public System.Windows.Forms.ComboBox cbbTusr;
     }
 }

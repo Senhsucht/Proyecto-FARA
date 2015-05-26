@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnAfil = new System.Windows.Forms.Button();
             this.txtDirec = new System.Windows.Forms.TextBox();
             this.cbbTAfil = new System.Windows.Forms.ComboBox();
             this.txtEmail = new System.Windows.Forms.TextBox();
@@ -45,7 +46,6 @@
             this.lblEdad = new System.Windows.Forms.Label();
             this.lblTel = new System.Windows.Forms.Label();
             this.lblDirec = new System.Windows.Forms.Label();
-            this.btnAfil = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -70,9 +70,19 @@
             this.groupBox1.Controls.Add(this.lblDirec);
             this.groupBox1.Location = new System.Drawing.Point(287, 23);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(470, 406);
+            this.groupBox1.Size = new System.Drawing.Size(454, 406);
             this.groupBox1.TabIndex = 5;
             this.groupBox1.TabStop = false;
+            // 
+            // btnAfil
+            // 
+            this.btnAfil.Location = new System.Drawing.Point(174, 258);
+            this.btnAfil.Name = "btnAfil";
+            this.btnAfil.Size = new System.Drawing.Size(104, 52);
+            this.btnAfil.TabIndex = 10;
+            this.btnAfil.Text = "Alta de afiliado";
+            this.btnAfil.UseVisualStyleBackColor = true;
+            this.btnAfil.Click += new System.EventHandler(this.btnAfil_Click);
             // 
             // txtDirec
             // 
@@ -83,6 +93,7 @@
             // 
             // cbbTAfil
             // 
+            this.cbbTAfil.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbbTAfil.FormattingEnabled = true;
             this.cbbTAfil.Location = new System.Drawing.Point(122, 190);
             this.cbbTAfil.Name = "cbbTAfil";
@@ -203,16 +214,6 @@
             this.lblDirec.Size = new System.Drawing.Size(55, 13);
             this.lblDirec.TabIndex = 12;
             this.lblDirec.Text = "Dirección:";
-            // 
-            // btnAfil
-            // 
-            this.btnAfil.Location = new System.Drawing.Point(178, 276);
-            this.btnAfil.Name = "btnAfil";
-            this.btnAfil.Size = new System.Drawing.Size(104, 52);
-            this.btnAfil.TabIndex = 10;
-            this.btnAfil.Text = "Alta de afiliado";
-            this.btnAfil.UseVisualStyleBackColor = true;
-            this.btnAfil.Click += new System.EventHandler(this.btnAfil_Click);
             // 
             // UCAltaAfi
             // 
