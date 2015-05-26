@@ -156,7 +156,7 @@ namespace Proyecto_FARA
                     break;
                 case "Consulta de afiliado":
 
-                    //cambiarMod(new UCConAfi());
+                    cambiarMod(new UCConAfi());
                     break;
 
 
